@@ -82,10 +82,11 @@ namespace RISTORANTE
         private void Form1_Load(object sender, EventArgs e)
         {
             textBoxPINCheck.Hide();
-            pnlAccesso.Location = new Point(307, 120);
-            pnlForgotPassword.Location = new Point(307, 120);
-            pnlEmailInviata.Location = new Point(307, 120);
-            pnlPin.Location = new Point(307, 120);
+            pnlAccesso.Location = new Point(271, 146);
+            pnlForgotPassword.Location = new Point(295, 132);
+            pnlEmailInviata.Location = new Point(295, 132);
+            pnlPin.Location = new Point(295, 132);
+            pnlCliente.Location = new Point(295, 132);
             this.pnlAggiungi.Location = new Point(200,0);
             this.pnlGestisciMenu.Location = new Point(200, 0);
 
@@ -234,6 +235,12 @@ namespace RISTORANTE
             lblDessert3Prezzo.Location = pictureBoxMenu.PointToClient(lblDessert3Prezzo.Parent.PointToScreen(lblDessert3Prezzo.Location));
             lblDessert3Prezzo.Parent = pictureBoxMenu;
             lblDessert3Prezzo.BackColor = Color.Transparent;
+            lblPriceA.Location = pictureBoxMenu.PointToClient(lblPriceA.Parent.PointToScreen(lblPriceA.Location));
+            lblPriceA.Parent = pictureBoxMenu;
+            lblPriceA.BackColor = Color.Transparent;
+            lblPriceB.Location = pictureBoxMenu.PointToClient(lblPriceB.Parent.PointToScreen(lblPriceB.Location));
+            lblPriceB.Parent = pictureBoxMenu;
+            lblPriceB.BackColor = Color.Transparent;
         }
 
         private void btnProprietario_Click(object sender, EventArgs e)
@@ -399,6 +406,7 @@ namespace RISTORANTE
 
         private void btnAccedi_Click(object sender, EventArgs e)
         {
+            panel3.Hide();
             btnOrdinaAntipasto1.Hide();
             btnOrdinaAntipasto2.Hide();
             btnOrdinaAntipasto3.Hide();
@@ -496,6 +504,41 @@ namespace RISTORANTE
         {
             window = 0;
             pnlPrincipale.Hide();
+            rimuoviOrdine();
+        }
+
+        void rimuoviOrdine()//rimuove valori ordine in caso di logout
+        {
+            btnOrdinaAntipasto1.Text = "";
+            btnOrdinaAntipasto2.Text = "";
+            btnOrdinaAntipasto3.Text = "";
+            btnOrdinaPrimo1.Text = "";
+            btnOrdinaPrimo2.Text = "";
+            btnOrdinaPrimo3.Text = "";
+            btnOrdinaPrimo4.Text = "";
+            btnOrdinaSecondo1.Text = "";
+            btnOrdinaSecondo2.Text = "";
+            btnOrdinaSecondo3.Text = "";
+            btnOrdinaSecondo4.Text = "";
+            btnOrdinaDessert1.Text = "";
+            btnOrdinaDessert2.Text = "";
+            btnOrdinaDessert3.Text = "";
+            Prim1 = false;
+            Prim2 = false;
+            Prim3 = false;
+            Prim4 = false;
+            Ant1 = false;
+            Ant2 = false;
+            Ant3 = false;
+            Sec1 = false;
+            Sec2 = false;
+            Sec3 = false;
+            Sec4 = false;
+            Des1 = false;
+            Des2 = false;
+            Des3 = false;
+            textBoxTotale.Text = "0,00€";
+            totale = 0;
         }
 
         private void btnVisualizzaMenu_Click(object sender, EventArgs e)
@@ -923,9 +966,11 @@ namespace RISTORANTE
             pnlCliente.Hide();
             pnlGestisciMenu.Hide();
             btnAggiungiPiatto.Hide();
-            btnGestisciMenu.Hide(); 
+            btnGestisciMenu.Hide();
+            pictureBoxMenu.Hide();
             lblNomeProprietario.Text = "Ospite";
             nascondiPulsantiOrdine();
+            panel3.Show();
             pnlPrincipale.Show();
         }
 
@@ -972,11 +1017,15 @@ namespace RISTORANTE
                 if (Prim1 == false)
                 {
                     btnOrdinaPrimo1.Text = "X";
+                    totale = totale + float.Parse(lblPrimo1Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim1 = true;
                 }
                 else if (Prim1 == true)
                 {
                     btnOrdinaPrimo1.Text = null;
+                    totale = totale - float.Parse(lblPrimo1Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim1 = false;
                 }
             }
@@ -989,11 +1038,15 @@ namespace RISTORANTE
                 if (Prim2 == false)
                 {
                     btnOrdinaPrimo2.Text = "X";
+                    totale = totale + float.Parse(lblPrimo2Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim2 = true;
                 }
                 else if (Prim2 == true)
                 {
                     btnOrdinaPrimo2.Text = null;
+                    totale = totale - float.Parse(lblPrimo2Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim2 = false;
                 }
             }
@@ -1006,11 +1059,15 @@ namespace RISTORANTE
                 if (Prim3 == false)
                 {
                     btnOrdinaPrimo3.Text = "X";
+                    totale = totale + float.Parse(lblPrimo3Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim3 = true;
                 }
                 else if (Prim3 == true)
                 {
                     btnOrdinaPrimo3.Text = null;
+                    totale = totale - float.Parse(lblPrimo3Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim3 = false;
                 }
             }
@@ -1023,12 +1080,163 @@ namespace RISTORANTE
                 if (Prim4 == false)
                 {
                     btnOrdinaPrimo4.Text = "X";
+                    totale = totale + float.Parse(lblPrimo4Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim4 = true;
                 }
                 else if (Prim4 == true)
                 {
                     btnOrdinaPrimo4.Text = null;
+                    totale = totale - float.Parse(lblPrimo4Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
                     Prim4 = false;
+                }
+            }
+        }
+
+        private void btnOrdinaSecondo1_Click(object sender, EventArgs e)
+        {
+            if (lblSecondo1.Text != "Secondo1")
+            {
+                if (Sec1 == false)
+                {
+                    btnOrdinaSecondo1.Text = "X";
+                    totale = totale + float.Parse(lblSecondo1Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec1 = true;
+                }
+                else if (Sec1 == true)
+                {
+                    btnOrdinaSecondo1.Text = null;
+                    totale = totale - float.Parse(lblSecondo1Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec1 = false;
+                }
+            }
+        }
+
+        private void btnOrdinaSecondo2_Click(object sender, EventArgs e)
+        {
+            if (lblSecondo2.Text != "Secondo2")
+            {
+                if (Sec2== false)
+                {
+                    btnOrdinaSecondo2.Text = "X";
+                    totale = totale + float.Parse(lblSecondo2Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec2 = true;
+                }
+                else if (Sec2 == true)
+                {
+                    btnOrdinaSecondo2.Text = null;
+                    totale = totale - float.Parse(lblSecondo2Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec2 = false;
+                }
+            }
+        }
+
+        private void btnOrdinaSecondo3_Click(object sender, EventArgs e)
+        {
+            if (lblSecondo3.Text != "Secondo3")
+            {
+                if (Sec3 == false)
+                {
+                    btnOrdinaSecondo3.Text = "X";
+                    totale = totale + float.Parse(lblSecondo3Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec3 = true;
+                }
+                else if (Sec3 == true)
+                {
+                    btnOrdinaSecondo3.Text = null;
+                    totale = totale - float.Parse(lblSecondo3Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec3 = false;
+                }
+            }
+        }
+
+        private void btnOrdinaSecondo4_Click(object sender, EventArgs e)
+        {
+            if (lblSecondo4.Text != "Secondo4")
+            {
+                if (Sec4 == false)
+                {
+                    btnOrdinaSecondo4.Text = "X";
+                    totale = totale + float.Parse(lblSecondo4Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec4 = true;
+                }
+                else if (Sec4 == true)
+                {
+                    btnOrdinaSecondo4.Text = null;
+                    totale = totale - float.Parse(lblSecondo4Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Sec4 = false;
+                }
+            }
+        }
+
+        private void btnOrdinaDessert1_Click(object sender, EventArgs e)
+        {
+            if (lblDessert1.Text != "Dessert1")
+            {
+                if (Des1 == false)
+                {
+                    btnOrdinaDessert1.Text = "X";
+                    totale = totale + float.Parse(lblDessert1Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Des1 = true;
+                }
+                else if (Des1 == true)
+                {
+                    btnOrdinaDessert1.Text = null;
+                    totale = totale - float.Parse(lblDessert1Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Des1 = false;
+                }
+            }
+        }
+
+        private void btnOrdinaDessert2_Click(object sender, EventArgs e)
+        {
+            if (lblDessert2.Text != "Dessert2")
+            {
+                if (Des2 == false)
+                {
+                    btnOrdinaDessert2.Text = "X";
+                    totale = totale + float.Parse(lblDessert2Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Des2 = true;
+                }
+                else if (Des2 == true)
+                {
+                    btnOrdinaDessert2.Text = null;
+                    totale = totale - float.Parse(lblDessert2Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Des2 = false;
+                }
+            }
+        }
+
+        private void btnOrdinaDessert3_Click(object sender, EventArgs e)
+        {
+            if (lblDessert3.Text != "Dessert3")
+            {
+                if (Des3 == false)
+                {
+                    btnOrdinaDessert3.Text = "X";
+                    totale = totale + float.Parse(lblDessert3Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Des3 = true;
+                }
+                else if (Des3 == true)
+                {
+                    btnOrdinaDessert3.Text = null;
+                    totale = totale - float.Parse(lblDessert3Prezzo.Text);
+                    textBoxTotale.Text = Convert.ToString(totale) + " €";
+                    Des3 = false;
                 }
             }
         }

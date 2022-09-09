@@ -158,6 +158,8 @@
             this.btnClienteRegistrati = new System.Windows.Forms.Button();
             this.btnClienteOspite = new System.Windows.Forms.Button();
             this.btnClienteAccedi = new System.Windows.Forms.Button();
+            this.lblPriceA = new System.Windows.Forms.Label();
+            this.lblPriceB = new System.Windows.Forms.Label();
             this.pnlAccesso.SuspendLayout();
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
@@ -192,11 +194,11 @@
             // lblNomeRistorante
             // 
             this.lblNomeRistorante.AutoSize = true;
-            this.lblNomeRistorante.Font = new System.Drawing.Font("Constantia", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeRistorante.Font = new System.Drawing.Font("Algerian", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeRistorante.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblNomeRistorante.Location = new System.Drawing.Point(335, 18);
+            this.lblNomeRistorante.Location = new System.Drawing.Point(232, 14);
             this.lblNomeRistorante.Name = "lblNomeRistorante";
-            this.lblNomeRistorante.Size = new System.Drawing.Size(355, 39);
+            this.lblNomeRistorante.Size = new System.Drawing.Size(524, 54);
             this.lblNomeRistorante.TabIndex = 2;
             this.lblNomeRistorante.Text = "BOTEZ\'S RESTAURANT";
             // 
@@ -209,7 +211,7 @@
             this.pnlAccesso.Controls.Add(this.lblPassword);
             this.pnlAccesso.Controls.Add(this.lblUsername);
             this.pnlAccesso.Controls.Add(this.linkLabelForgotPassword);
-            this.pnlAccesso.Location = new System.Drawing.Point(757, 56);
+            this.pnlAccesso.Location = new System.Drawing.Point(734, 70);
             this.pnlAccesso.Name = "pnlAccesso";
             this.pnlAccesso.Size = new System.Drawing.Size(404, 248);
             this.pnlAccesso.TabIndex = 3;
@@ -218,7 +220,7 @@
             // 
             this.btnShowPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowPass.BackgroundImage")));
             this.btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowPass.Location = new System.Drawing.Point(291, 96);
+            this.btnShowPass.Location = new System.Drawing.Point(316, 97);
             this.btnShowPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnShowPass.Name = "btnShowPass";
             this.btnShowPass.Size = new System.Drawing.Size(39, 30);
@@ -228,21 +230,24 @@
             // 
             // btnAccedi
             // 
-            this.btnAccedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccedi.Location = new System.Drawing.Point(145, 168);
+            this.btnAccedi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnAccedi.FlatAppearance.BorderSize = 2;
+            this.btnAccedi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccedi.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccedi.Location = new System.Drawing.Point(146, 192);
             this.btnAccedi.Name = "btnAccedi";
-            this.btnAccedi.Size = new System.Drawing.Size(125, 40);
+            this.btnAccedi.Size = new System.Drawing.Size(150, 46);
             this.btnAccedi.TabIndex = 4;
             this.btnAccedi.Text = "Accedi";
-            this.btnAccedi.UseVisualStyleBackColor = true;
+            this.btnAccedi.UseVisualStyleBackColor = false;
             this.btnAccedi.Click += new System.EventHandler(this.btnAccedi_Click);
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(129, 96);
+            this.textBoxPassword.Location = new System.Drawing.Point(133, 98);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(156, 29);
+            this.textBoxPassword.Size = new System.Drawing.Size(178, 29);
             this.textBoxPassword.TabIndex = 3;
             this.textBoxPassword.UseSystemPasswordChar = true;
             this.textBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPassword_KeyDown);
@@ -250,9 +255,9 @@
             // textBoxNome
             // 
             this.textBoxNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNome.Location = new System.Drawing.Point(129, 36);
+            this.textBoxNome.Location = new System.Drawing.Point(133, 36);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(156, 29);
+            this.textBoxNome.Size = new System.Drawing.Size(178, 29);
             this.textBoxNome.TabIndex = 2;
             // 
             // lblPassword
@@ -260,7 +265,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblPassword.Location = new System.Drawing.Point(11, 98);
+            this.lblPassword.Location = new System.Drawing.Point(3, 100);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(112, 25);
             this.lblPassword.TabIndex = 1;
@@ -271,7 +276,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblUsername.Location = new System.Drawing.Point(49, 38);
+            this.lblUsername.Location = new System.Drawing.Point(41, 38);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(74, 25);
             this.lblUsername.TabIndex = 0;
@@ -282,7 +287,7 @@
             this.linkLabelForgotPassword.AutoSize = true;
             this.linkLabelForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelForgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.linkLabelForgotPassword.Location = new System.Drawing.Point(109, 136);
+            this.linkLabelForgotPassword.Location = new System.Drawing.Point(119, 152);
             this.linkLabelForgotPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelForgotPassword.Name = "linkLabelForgotPassword";
             this.linkLabelForgotPassword.Size = new System.Drawing.Size(202, 18);
@@ -456,6 +461,8 @@
             // pnlPrincipale
             // 
             this.pnlPrincipale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
+            this.pnlPrincipale.Controls.Add(this.lblPriceB);
+            this.pnlPrincipale.Controls.Add(this.lblPriceA);
             this.pnlPrincipale.Controls.Add(this.pnlGestisciMenu);
             this.pnlPrincipale.Controls.Add(this.pnlAggiungi);
             this.pnlPrincipale.Controls.Add(this.btnOrdinaDessert3);
@@ -521,7 +528,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(15, 18);
+            this.pnlPrincipale.Location = new System.Drawing.Point(653, 402);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -530,7 +537,7 @@
             // 
             this.pnlGestisciMenu.Controls.Add(this.pnlGestisciMenu2);
             this.pnlGestisciMenu.Controls.Add(this.lblGestisciMenu);
-            this.pnlGestisciMenu.Location = new System.Drawing.Point(726, 230);
+            this.pnlGestisciMenu.Location = new System.Drawing.Point(248, 524);
             this.pnlGestisciMenu.Name = "pnlGestisciMenu";
             this.pnlGestisciMenu.Size = new System.Drawing.Size(788, 562);
             this.pnlGestisciMenu.TabIndex = 23;
@@ -560,7 +567,7 @@
             this.pnlAggiungi.Controls.Add(this.btnAggiungiPiattoInvia);
             this.pnlAggiungi.Controls.Add(this.panel1);
             this.pnlAggiungi.Controls.Add(this.lblCreaPiatto);
-            this.pnlAggiungi.Location = new System.Drawing.Point(799, 91);
+            this.pnlAggiungi.Location = new System.Drawing.Point(335, 506);
             this.pnlAggiungi.Name = "pnlAggiungi";
             this.pnlAggiungi.Size = new System.Drawing.Size(788, 562);
             this.pnlAggiungi.TabIndex = 12;
@@ -780,72 +787,79 @@
             // btnOrdinaDessert3
             // 
             this.btnOrdinaDessert3.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdinaDessert3.Location = new System.Drawing.Point(916, 487);
+            this.btnOrdinaDessert3.Location = new System.Drawing.Point(909, 483);
             this.btnOrdinaDessert3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdinaDessert3.Name = "btnOrdinaDessert3";
             this.btnOrdinaDessert3.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaDessert3.TabIndex = 67;
             this.btnOrdinaDessert3.UseVisualStyleBackColor = true;
+            this.btnOrdinaDessert3.Click += new System.EventHandler(this.btnOrdinaDessert3_Click);
             // 
             // btnOrdinaDessert2
             // 
             this.btnOrdinaDessert2.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdinaDessert2.Location = new System.Drawing.Point(916, 441);
+            this.btnOrdinaDessert2.Location = new System.Drawing.Point(909, 437);
             this.btnOrdinaDessert2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdinaDessert2.Name = "btnOrdinaDessert2";
             this.btnOrdinaDessert2.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaDessert2.TabIndex = 66;
             this.btnOrdinaDessert2.UseVisualStyleBackColor = true;
+            this.btnOrdinaDessert2.Click += new System.EventHandler(this.btnOrdinaDessert2_Click);
             // 
             // btnOrdinaDessert1
             // 
             this.btnOrdinaDessert1.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdinaDessert1.Location = new System.Drawing.Point(916, 395);
+            this.btnOrdinaDessert1.Location = new System.Drawing.Point(909, 391);
             this.btnOrdinaDessert1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdinaDessert1.Name = "btnOrdinaDessert1";
             this.btnOrdinaDessert1.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaDessert1.TabIndex = 65;
             this.btnOrdinaDessert1.UseVisualStyleBackColor = true;
+            this.btnOrdinaDessert1.Click += new System.EventHandler(this.btnOrdinaDessert1_Click);
             // 
             // btnOrdinaSecondo4
             // 
             this.btnOrdinaSecondo4.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdinaSecondo4.Location = new System.Drawing.Point(916, 295);
+            this.btnOrdinaSecondo4.Location = new System.Drawing.Point(909, 291);
             this.btnOrdinaSecondo4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdinaSecondo4.Name = "btnOrdinaSecondo4";
             this.btnOrdinaSecondo4.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo4.TabIndex = 64;
             this.btnOrdinaSecondo4.UseVisualStyleBackColor = true;
+            this.btnOrdinaSecondo4.Click += new System.EventHandler(this.btnOrdinaSecondo4_Click);
             // 
             // btnOrdinaSecondo3
             // 
             this.btnOrdinaSecondo3.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdinaSecondo3.Location = new System.Drawing.Point(916, 247);
+            this.btnOrdinaSecondo3.Location = new System.Drawing.Point(909, 243);
             this.btnOrdinaSecondo3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdinaSecondo3.Name = "btnOrdinaSecondo3";
             this.btnOrdinaSecondo3.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo3.TabIndex = 63;
             this.btnOrdinaSecondo3.UseVisualStyleBackColor = true;
+            this.btnOrdinaSecondo3.Click += new System.EventHandler(this.btnOrdinaSecondo3_Click);
             // 
             // btnOrdinaSecondo2
             // 
             this.btnOrdinaSecondo2.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdinaSecondo2.Location = new System.Drawing.Point(916, 193);
+            this.btnOrdinaSecondo2.Location = new System.Drawing.Point(909, 189);
             this.btnOrdinaSecondo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdinaSecondo2.Name = "btnOrdinaSecondo2";
             this.btnOrdinaSecondo2.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo2.TabIndex = 62;
             this.btnOrdinaSecondo2.UseVisualStyleBackColor = true;
+            this.btnOrdinaSecondo2.Click += new System.EventHandler(this.btnOrdinaSecondo2_Click);
             // 
             // btnOrdinaSecondo1
             // 
             this.btnOrdinaSecondo1.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdinaSecondo1.Location = new System.Drawing.Point(916, 141);
+            this.btnOrdinaSecondo1.Location = new System.Drawing.Point(909, 143);
             this.btnOrdinaSecondo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrdinaSecondo1.Name = "btnOrdinaSecondo1";
             this.btnOrdinaSecondo1.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo1.TabIndex = 61;
             this.btnOrdinaSecondo1.UseVisualStyleBackColor = true;
+            this.btnOrdinaSecondo1.Click += new System.EventHandler(this.btnOrdinaSecondo1_Click);
             // 
             // btnOrdinaPrimo4
             // 
@@ -932,9 +946,10 @@
             this.lblDessert3Prezzo.ForeColor = System.Drawing.Color.Black;
             this.lblDessert3Prezzo.Location = new System.Drawing.Point(848, 488);
             this.lblDessert3Prezzo.Name = "lblDessert3Prezzo";
-            this.lblDessert3Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblDessert3Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblDessert3Prezzo.TabIndex = 51;
-            this.lblDessert3Prezzo.Text = "XX,XX€";
+            this.lblDessert3Prezzo.Text = "XX,XX";
+            this.lblDessert3Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblDessert2Prezzo
             // 
@@ -944,9 +959,10 @@
             this.lblDessert2Prezzo.ForeColor = System.Drawing.Color.Black;
             this.lblDessert2Prezzo.Location = new System.Drawing.Point(848, 442);
             this.lblDessert2Prezzo.Name = "lblDessert2Prezzo";
-            this.lblDessert2Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblDessert2Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblDessert2Prezzo.TabIndex = 50;
-            this.lblDessert2Prezzo.Text = "XX,XX€";
+            this.lblDessert2Prezzo.Text = "XX,XX";
+            this.lblDessert2Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblDessert1Prezzo
             // 
@@ -956,9 +972,10 @@
             this.lblDessert1Prezzo.ForeColor = System.Drawing.Color.Black;
             this.lblDessert1Prezzo.Location = new System.Drawing.Point(848, 396);
             this.lblDessert1Prezzo.Name = "lblDessert1Prezzo";
-            this.lblDessert1Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblDessert1Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblDessert1Prezzo.TabIndex = 49;
-            this.lblDessert1Prezzo.Text = "XX,XX€";
+            this.lblDessert1Prezzo.Text = "XX,XX";
+            this.lblDessert1Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblDessert3Ingr
             // 
@@ -1052,9 +1069,10 @@
             this.lblSecondo4Prezzo.ForeColor = System.Drawing.Color.Black;
             this.lblSecondo4Prezzo.Location = new System.Drawing.Point(848, 296);
             this.lblSecondo4Prezzo.Name = "lblSecondo4Prezzo";
-            this.lblSecondo4Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblSecondo4Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblSecondo4Prezzo.TabIndex = 41;
-            this.lblSecondo4Prezzo.Text = "XX,XX€";
+            this.lblSecondo4Prezzo.Text = "XX,XX";
+            this.lblSecondo4Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblSecondo3Prezzo
             // 
@@ -1064,9 +1082,10 @@
             this.lblSecondo3Prezzo.ForeColor = System.Drawing.Color.Black;
             this.lblSecondo3Prezzo.Location = new System.Drawing.Point(848, 248);
             this.lblSecondo3Prezzo.Name = "lblSecondo3Prezzo";
-            this.lblSecondo3Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblSecondo3Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblSecondo3Prezzo.TabIndex = 40;
-            this.lblSecondo3Prezzo.Text = "XX,XX€";
+            this.lblSecondo3Prezzo.Text = "XX,XX";
+            this.lblSecondo3Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblSecondo4Ingr
             // 
@@ -1124,9 +1143,10 @@
             this.lblSecondo2Prezzo.ForeColor = System.Drawing.Color.Black;
             this.lblSecondo2Prezzo.Location = new System.Drawing.Point(848, 193);
             this.lblSecondo2Prezzo.Name = "lblSecondo2Prezzo";
-            this.lblSecondo2Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblSecondo2Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblSecondo2Prezzo.TabIndex = 35;
-            this.lblSecondo2Prezzo.Text = "XX,XX€";
+            this.lblSecondo2Prezzo.Text = "XX,XX";
+            this.lblSecondo2Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblSecondo2Ingr
             // 
@@ -1160,9 +1180,10 @@
             this.lblSecondo1Prezzo.ForeColor = System.Drawing.Color.Black;
             this.lblSecondo1Prezzo.Location = new System.Drawing.Point(848, 146);
             this.lblSecondo1Prezzo.Name = "lblSecondo1Prezzo";
-            this.lblSecondo1Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblSecondo1Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblSecondo1Prezzo.TabIndex = 32;
-            this.lblSecondo1Prezzo.Text = "XX,XX€";
+            this.lblSecondo1Prezzo.Text = "XX,XX";
+            this.lblSecondo1Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblSecondo1Ingr
             // 
@@ -1194,11 +1215,12 @@
             this.lblPrimo4Prezzo.BackColor = System.Drawing.Color.White;
             this.lblPrimo4Prezzo.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrimo4Prezzo.ForeColor = System.Drawing.Color.Black;
-            this.lblPrimo4Prezzo.Location = new System.Drawing.Point(489, 488);
+            this.lblPrimo4Prezzo.Location = new System.Drawing.Point(495, 488);
             this.lblPrimo4Prezzo.Name = "lblPrimo4Prezzo";
-            this.lblPrimo4Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblPrimo4Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblPrimo4Prezzo.TabIndex = 29;
-            this.lblPrimo4Prezzo.Text = "XX,XX€";
+            this.lblPrimo4Prezzo.Text = "XX,XX";
+            this.lblPrimo4Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPrimo4Ingr
             // 
@@ -1230,11 +1252,12 @@
             this.lblPrimo3Prezzo.BackColor = System.Drawing.Color.White;
             this.lblPrimo3Prezzo.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrimo3Prezzo.ForeColor = System.Drawing.Color.Black;
-            this.lblPrimo3Prezzo.Location = new System.Drawing.Point(489, 442);
+            this.lblPrimo3Prezzo.Location = new System.Drawing.Point(495, 442);
             this.lblPrimo3Prezzo.Name = "lblPrimo3Prezzo";
-            this.lblPrimo3Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblPrimo3Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblPrimo3Prezzo.TabIndex = 26;
-            this.lblPrimo3Prezzo.Text = "XX,XX€";
+            this.lblPrimo3Prezzo.Text = "XX,XX";
+            this.lblPrimo3Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPrimo3Ingr
             // 
@@ -1266,11 +1289,12 @@
             this.lblPrimo2Prezzo.BackColor = System.Drawing.Color.White;
             this.lblPrimo2Prezzo.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrimo2Prezzo.ForeColor = System.Drawing.Color.Black;
-            this.lblPrimo2Prezzo.Location = new System.Drawing.Point(489, 396);
+            this.lblPrimo2Prezzo.Location = new System.Drawing.Point(495, 396);
             this.lblPrimo2Prezzo.Name = "lblPrimo2Prezzo";
-            this.lblPrimo2Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblPrimo2Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblPrimo2Prezzo.TabIndex = 23;
-            this.lblPrimo2Prezzo.Text = "XX,XX€";
+            this.lblPrimo2Prezzo.Text = "XX,XX";
+            this.lblPrimo2Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPrimo2Ingr
             // 
@@ -1302,11 +1326,12 @@
             this.lblPrimo1Prezzo.BackColor = System.Drawing.Color.White;
             this.lblPrimo1Prezzo.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrimo1Prezzo.ForeColor = System.Drawing.Color.Black;
-            this.lblPrimo1Prezzo.Location = new System.Drawing.Point(489, 349);
+            this.lblPrimo1Prezzo.Location = new System.Drawing.Point(495, 349);
             this.lblPrimo1Prezzo.Name = "lblPrimo1Prezzo";
-            this.lblPrimo1Prezzo.Size = new System.Drawing.Size(65, 18);
+            this.lblPrimo1Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblPrimo1Prezzo.TabIndex = 20;
-            this.lblPrimo1Prezzo.Text = "XX,XX€";
+            this.lblPrimo1Prezzo.Text = "XX,XX";
+            this.lblPrimo1Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPrimo1Ingr
             // 
@@ -1362,11 +1387,12 @@
             this.lblAntipasto3Prezzo.BackColor = System.Drawing.Color.White;
             this.lblAntipasto3Prezzo.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAntipasto3Prezzo.ForeColor = System.Drawing.Color.Black;
-            this.lblAntipasto3Prezzo.Location = new System.Drawing.Point(489, 246);
+            this.lblAntipasto3Prezzo.Location = new System.Drawing.Point(495, 244);
             this.lblAntipasto3Prezzo.Name = "lblAntipasto3Prezzo";
             this.lblAntipasto3Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblAntipasto3Prezzo.TabIndex = 15;
             this.lblAntipasto3Prezzo.Text = "XX,XX";
+            this.lblAntipasto3Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblAntipasto3Ingr
             // 
@@ -1386,11 +1412,12 @@
             this.lblAntipasto2Prezzo.BackColor = System.Drawing.Color.White;
             this.lblAntipasto2Prezzo.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAntipasto2Prezzo.ForeColor = System.Drawing.Color.Black;
-            this.lblAntipasto2Prezzo.Location = new System.Drawing.Point(489, 194);
+            this.lblAntipasto2Prezzo.Location = new System.Drawing.Point(495, 194);
             this.lblAntipasto2Prezzo.Name = "lblAntipasto2Prezzo";
             this.lblAntipasto2Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblAntipasto2Prezzo.TabIndex = 13;
             this.lblAntipasto2Prezzo.Text = "XX,XX";
+            this.lblAntipasto2Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblAntipasto3
             // 
@@ -1410,11 +1437,12 @@
             this.lblAntipasto1Prezzo.BackColor = System.Drawing.Color.White;
             this.lblAntipasto1Prezzo.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAntipasto1Prezzo.ForeColor = System.Drawing.Color.Black;
-            this.lblAntipasto1Prezzo.Location = new System.Drawing.Point(489, 146);
+            this.lblAntipasto1Prezzo.Location = new System.Drawing.Point(495, 145);
             this.lblAntipasto1Prezzo.Name = "lblAntipasto1Prezzo";
             this.lblAntipasto1Prezzo.Size = new System.Drawing.Size(56, 18);
             this.lblAntipasto1Prezzo.TabIndex = 12;
             this.lblAntipasto1Prezzo.Text = "XX,XX";
+            this.lblAntipasto1Prezzo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblAntipasto2Ingr
             // 
@@ -1655,7 +1683,7 @@
             this.btnBack.Location = new System.Drawing.Point(8, 8);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(57, 42);
+            this.btnBack.Size = new System.Drawing.Size(75, 60);
             this.btnBack.TabIndex = 5;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -1679,7 +1707,7 @@
             this.pnlCliente.Controls.Add(this.btnClienteRegistrati);
             this.pnlCliente.Controls.Add(this.btnClienteOspite);
             this.pnlCliente.Controls.Add(this.btnClienteAccedi);
-            this.pnlCliente.Location = new System.Drawing.Point(12, 235);
+            this.pnlCliente.Location = new System.Drawing.Point(12, 480);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(404, 289);
             this.pnlCliente.TabIndex = 12;
@@ -1723,6 +1751,30 @@
             this.btnClienteAccedi.TabIndex = 13;
             this.btnClienteAccedi.Text = "Accedi";
             this.btnClienteAccedi.UseVisualStyleBackColor = false;
+            // 
+            // lblPriceA
+            // 
+            this.lblPriceA.AutoSize = true;
+            this.lblPriceA.BackColor = System.Drawing.Color.White;
+            this.lblPriceA.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceA.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceA.Location = new System.Drawing.Point(494, 104);
+            this.lblPriceA.Name = "lblPriceA";
+            this.lblPriceA.Size = new System.Drawing.Size(22, 24);
+            this.lblPriceA.TabIndex = 68;
+            this.lblPriceA.Text = "€";
+            // 
+            // lblPriceB
+            // 
+            this.lblPriceB.AutoSize = true;
+            this.lblPriceB.BackColor = System.Drawing.Color.White;
+            this.lblPriceB.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceB.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceB.Location = new System.Drawing.Point(847, 104);
+            this.lblPriceB.Name = "lblPriceB";
+            this.lblPriceB.Size = new System.Drawing.Size(22, 24);
+            this.lblPriceB.TabIndex = 69;
+            this.lblPriceB.Text = "€";
             // 
             // Form1
             // 
@@ -1907,6 +1959,8 @@
         private System.Windows.Forms.Button btnOrdina;
         private System.Windows.Forms.Label lblTotalePrezzo;
         private System.Windows.Forms.TextBox textBoxTotale;
+        private System.Windows.Forms.Label lblPriceB;
+        private System.Windows.Forms.Label lblPriceA;
     }
 }
 
