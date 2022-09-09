@@ -92,6 +92,7 @@ namespace RISTORANTE
 
             pictureBoxMenu.Hide();
             pnlAggiungi.Hide();
+            pnlOrdine.Hide();
 
             //scritta trasparente sopra il libro
             lblNomeRistoranteProp.Location = pictureBoxMenu.PointToClient(lblNomeRistoranteProp.Parent.PointToScreen(lblNomeRistoranteProp.Location));
@@ -396,7 +397,7 @@ namespace RISTORANTE
                 }
 
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Pin errato! Il pin contiene 6 cifre.");
             }
@@ -793,6 +794,111 @@ namespace RISTORANTE
                 lblPrimo4Ingr.Hide();
                 lblPrimo4Prezzo.Hide();
                 btnOrdinaPrimo4.Hide();
+            }
+
+            if (lblSecondo1.Text != "Secondo1")
+            {
+                lblSecondo1.Show();
+                lblSecondo1Ingr.Show();
+                lblSecondo1Prezzo.Show();
+                btnOrdinaSecondo1.Show();
+            }
+            else
+            {
+                lblSecondo1.Hide();
+                lblSecondo1Ingr.Hide();
+                lblSecondo1Prezzo.Hide();
+                btnOrdinaSecondo1.Hide();
+            }
+
+            if (lblSecondo2.Text != "Secondo2")
+            {
+                lblSecondo2.Show();
+                lblSecondo2Ingr.Show();
+                lblSecondo2Prezzo.Show();
+                btnOrdinaSecondo1.Show();
+            }
+            else
+            {
+                lblSecondo2.Hide();
+                lblSecondo2Ingr.Hide();
+                lblSecondo2Prezzo.Hide();
+                btnOrdinaSecondo2.Hide();
+            }
+
+            if (lblSecondo1.Text != "Secondo3")
+            {
+                lblSecondo3.Show();
+                lblSecondo3Ingr.Show();
+                lblSecondo3Prezzo.Show();
+                btnOrdinaSecondo3.Show();
+            }
+            else
+            {
+                lblSecondo3.Hide();
+                lblSecondo3Ingr.Hide();
+                lblSecondo3Prezzo.Hide();
+                btnOrdinaSecondo3.Hide();
+            }
+
+            if (lblSecondo4.Text != "Secondo4")
+            {
+                lblSecondo4.Show();
+                lblSecondo4Ingr.Show();
+                lblSecondo4Prezzo.Show();
+                btnOrdinaSecondo4.Show();
+            }
+            else
+            {
+                lblSecondo4.Hide();
+                lblSecondo4Ingr.Hide();
+                lblSecondo4Prezzo.Hide();
+                btnOrdinaSecondo4.Hide();
+            }
+
+            if (lblDessert1.Text != "Dessert1")
+            {
+                lblDessert1.Show();
+                lblDessert1Ingr.Show();
+                lblDessert1Prezzo.Show();
+                btnOrdinaDessert1.Show();
+            }
+            else
+            {
+                lblDessert1.Hide();
+                lblDessert1Ingr.Hide();
+                lblDessert1Prezzo.Hide();
+                btnOrdinaDessert1.Hide();
+            }
+
+            if (lblDessert2.Text != "Dessert2")
+            {
+                lblDessert2.Show();
+                lblDessert2Ingr.Show();
+                lblDessert2Prezzo.Show();
+                btnOrdinaDessert2.Show();
+            }
+            else
+            {
+                lblDessert2.Hide();
+                lblDessert2Ingr.Hide();
+                lblDessert2Prezzo.Hide();
+                btnOrdinaDessert2.Hide();
+            }
+
+            if (lblDessert3.Text != "Dessert3")
+            {
+                lblDessert3.Show();
+                lblDessert3Ingr.Show();
+                lblDessert3Prezzo.Show();
+                btnOrdinaDessert3.Show();
+            }
+            else
+            {
+                lblDessert3.Hide();
+                lblDessert3Ingr.Hide();
+                lblDessert3Prezzo.Hide();
+                btnOrdinaDessert3.Hide();
             }
         }
 
@@ -1240,5 +1346,423 @@ namespace RISTORANTE
                 }
             }
         }
+
+        private void btnOrdina_Click(object sender, EventArgs e)
+        {
+            if (btnOrdinaAntipasto1.Text == "X")
+            {
+                piatto p;
+                p.nome = lblAntipasto1.Text;
+                p.prezzo = float.Parse(lblAntipasto1Prezzo.Text);
+                p.portata = "antipasto";
+
+                string stringaIngredienti = lblAntipasto1Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaAntipasto2.Text == "X")
+            {
+                piatto p;
+                p.nome = lblAntipasto2.Text;
+                p.prezzo = float.Parse(lblAntipasto2Prezzo.Text);
+                p.portata = "antipasto";
+
+                string stringaIngredienti = lblAntipasto2Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaAntipasto3.Text == "X")
+            {
+                piatto p;
+                p.nome = lblAntipasto3.Text;
+                p.prezzo = float.Parse(lblAntipasto3Prezzo.Text);
+                p.portata = "antipasto";
+
+                string stringaIngredienti = lblAntipasto3Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaPrimo1.Text == "X")
+            {
+                piatto p;
+                p.nome = lblPrimo1.Text;
+                p.prezzo = float.Parse(lblPrimo1Prezzo.Text);
+                p.portata = "primo";
+
+                string stringaIngredienti = lblPrimo1Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaPrimo2.Text == "X")
+            {
+                piatto p;
+                p.nome = lblPrimo2.Text;
+                p.prezzo = float.Parse(lblPrimo2Prezzo.Text);
+                p.portata = "primo";
+
+                string stringaIngredienti = lblPrimo2Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaPrimo3.Text == "X")
+            {
+                piatto p;
+                p.nome = lblPrimo3.Text;
+                p.prezzo = float.Parse(lblPrimo3Prezzo.Text);
+                p.portata = "primo";
+
+                string stringaIngredienti = lblPrimo3Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaPrimo4.Text == "X")
+            {
+                piatto p;
+                p.nome = lblPrimo4.Text;
+                p.prezzo = float.Parse(lblPrimo4Prezzo.Text);
+                p.portata = "primo";
+
+                string stringaIngredienti = lblPrimo4Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaSecondo1.Text == "X")
+            {
+                piatto p;
+                p.nome = lblSecondo1.Text;
+                p.prezzo = float.Parse(lblSecondo1Prezzo.Text);
+                p.portata = "secondo";
+
+                string stringaIngredienti = lblSecondo1Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaSecondo2.Text == "X")
+            {
+                piatto p;
+                p.nome = lblSecondo2.Text;
+                p.prezzo = float.Parse(lblSecondo2Prezzo.Text);
+                p.portata = "secondo";
+
+                string stringaIngredienti = lblSecondo2Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaSecondo3.Text == "X")
+            {
+                piatto p;
+                p.nome = lblSecondo3.Text;
+                p.prezzo = float.Parse(lblSecondo3Prezzo.Text);
+                p.portata = "secondo";
+
+                string stringaIngredienti = lblSecondo3Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaSecondo4.Text == "X")
+            {
+                piatto p;
+                p.nome = lblSecondo4.Text;
+                p.prezzo = float.Parse(lblSecondo4Prezzo.Text);
+                p.portata = "secondo";
+
+                string stringaIngredienti = lblSecondo4Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaDessert1.Text == "X")
+            {
+                piatto p;
+                p.nome = lblDessert1.Text;
+                p.prezzo = float.Parse(lblDessert1Prezzo.Text);
+                p.portata = "dessert";
+
+                string stringaIngredienti = lblDessert1Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaDessert2.Text == "X")
+            {
+                piatto p;
+                p.nome = lblDessert2.Text;
+                p.prezzo = float.Parse(lblDessert2Prezzo.Text);
+                p.portata = "dessert";
+
+                string stringaIngredienti = lblDessert2Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            if (btnOrdinaDessert3.Text == "X")
+            {
+                piatto p;
+                p.nome = lblDessert3.Text;
+                p.prezzo = float.Parse(lblDessert3Prezzo.Text);
+                p.portata = "dessert";
+
+                string stringaIngredienti = lblDessert3Ingr.Text;
+                string[] piattoDiviso = stringaIngredienti.Split(new char[] { ',' });
+
+                string[] array = new string[5];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                p.ingrediente1 = array[0];
+                p.ingrediente2 = array[1];
+                p.ingrediente3 = array[2];
+                p.ingrediente4 = array[3];
+
+                scriviPiatto(p, @"./ultimoOrdine.txt");
+            }
+
+            pictureBoxMenu.Hide();
+            nascondiPulsantiOrdine();
+            pnlOrdine.Show();
+
+
+
+
+            lblScontrino1.Text = "";
+        }
+
+
+        /*
+        public static string leggiPiatto(string filename, int j)
+        {
+            StreamReader sr = new StreamReader(filePiatti);
+            for (int i = 0; i <= j; i++)
+            {
+                string piatto = sr.ReadLine();
+                if (j == i)
+                {
+                    sr.Close();
+                    return piatto;
+                }
+            }
+            return "////";
+
+        }
+        
+        public static void scriviPiatto(piatto p, string filename)
+        {
+            string s = ";";
+            StreamWriter sw = new StreamWriter(filename, append: true);
+            sw.WriteLine(p.nome + s + p.prezzo + s + p.portata + s + p.ingrediente1 + s + p.ingrediente2 + s + p.ingrediente3 + s + p.ingrediente4 + s );
+            sw.Close();
+        }
+
+         */
     }
 }

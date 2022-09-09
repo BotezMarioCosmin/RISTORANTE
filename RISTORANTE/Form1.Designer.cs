@@ -56,6 +56,8 @@
             this.lblInserisciPin = new System.Windows.Forms.Label();
             this.textBoxPinC = new System.Windows.Forms.TextBox();
             this.pnlPrincipale = new System.Windows.Forms.Panel();
+            this.lblPriceB = new System.Windows.Forms.Label();
+            this.lblPriceA = new System.Windows.Forms.Label();
             this.pnlGestisciMenu = new System.Windows.Forms.Panel();
             this.pnlGestisciMenu2 = new System.Windows.Forms.Panel();
             this.lblGestisciMenu = new System.Windows.Forms.Label();
@@ -158,8 +160,15 @@
             this.btnClienteRegistrati = new System.Windows.Forms.Button();
             this.btnClienteOspite = new System.Windows.Forms.Button();
             this.btnClienteAccedi = new System.Windows.Forms.Button();
-            this.lblPriceA = new System.Windows.Forms.Label();
-            this.lblPriceB = new System.Windows.Forms.Label();
+            this.pnlOrdine = new System.Windows.Forms.Panel();
+            this.lblScontrinoNome = new System.Windows.Forms.Label();
+            this.lblOrdineLuogo = new System.Windows.Forms.Label();
+            this.lblScontrinoTel = new System.Windows.Forms.Label();
+            this.lblSep1 = new System.Windows.Forms.Label();
+            this.lblSep2 = new System.Windows.Forms.Label();
+            this.lblDocumentoCommerciale = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblScontrino1 = new System.Windows.Forms.Label();
             this.pnlAccesso.SuspendLayout();
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
@@ -175,6 +184,7 @@
             this.pnlProfiloeNome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCliente.SuspendLayout();
+            this.pnlOrdine.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -221,7 +231,7 @@
             this.btnShowPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowPass.BackgroundImage")));
             this.btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnShowPass.Location = new System.Drawing.Point(316, 97);
-            this.btnShowPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShowPass.Margin = new System.Windows.Forms.Padding(2);
             this.btnShowPass.Name = "btnShowPass";
             this.btnShowPass.Size = new System.Drawing.Size(39, 30);
             this.btnShowPass.TabIndex = 6;
@@ -302,7 +312,7 @@
             this.pnlForgotPassword.Controls.Add(this.lblEmail);
             this.pnlForgotPassword.Controls.Add(this.btnSendEmail);
             this.pnlForgotPassword.Location = new System.Drawing.Point(785, 37);
-            this.pnlForgotPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlForgotPassword.Margin = new System.Windows.Forms.Padding(2);
             this.pnlForgotPassword.Name = "pnlForgotPassword";
             this.pnlForgotPassword.Size = new System.Drawing.Size(402, 246);
             this.pnlForgotPassword.TabIndex = 6;
@@ -330,7 +340,7 @@
             // 
             this.btnSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendEmail.Location = new System.Drawing.Point(176, 143);
-            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(2);
             this.btnSendEmail.Name = "btnSendEmail";
             this.btnSendEmail.Size = new System.Drawing.Size(68, 36);
             this.btnSendEmail.TabIndex = 0;
@@ -461,6 +471,7 @@
             // pnlPrincipale
             // 
             this.pnlPrincipale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
+            this.pnlPrincipale.Controls.Add(this.pnlOrdine);
             this.pnlPrincipale.Controls.Add(this.lblPriceB);
             this.pnlPrincipale.Controls.Add(this.lblPriceA);
             this.pnlPrincipale.Controls.Add(this.pnlGestisciMenu);
@@ -528,10 +539,34 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(653, 402);
+            this.pnlPrincipale.Location = new System.Drawing.Point(8, 15);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
+            // 
+            // lblPriceB
+            // 
+            this.lblPriceB.AutoSize = true;
+            this.lblPriceB.BackColor = System.Drawing.Color.White;
+            this.lblPriceB.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceB.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceB.Location = new System.Drawing.Point(847, 104);
+            this.lblPriceB.Name = "lblPriceB";
+            this.lblPriceB.Size = new System.Drawing.Size(22, 24);
+            this.lblPriceB.TabIndex = 69;
+            this.lblPriceB.Text = "€";
+            // 
+            // lblPriceA
+            // 
+            this.lblPriceA.AutoSize = true;
+            this.lblPriceA.BackColor = System.Drawing.Color.White;
+            this.lblPriceA.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceA.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceA.Location = new System.Drawing.Point(494, 104);
+            this.lblPriceA.Name = "lblPriceA";
+            this.lblPriceA.Size = new System.Drawing.Size(22, 24);
+            this.lblPriceA.TabIndex = 68;
+            this.lblPriceA.Text = "€";
             // 
             // pnlGestisciMenu
             // 
@@ -788,7 +823,7 @@
             // 
             this.btnOrdinaDessert3.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaDessert3.Location = new System.Drawing.Point(909, 483);
-            this.btnOrdinaDessert3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaDessert3.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaDessert3.Name = "btnOrdinaDessert3";
             this.btnOrdinaDessert3.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaDessert3.TabIndex = 67;
@@ -799,7 +834,7 @@
             // 
             this.btnOrdinaDessert2.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaDessert2.Location = new System.Drawing.Point(909, 437);
-            this.btnOrdinaDessert2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaDessert2.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaDessert2.Name = "btnOrdinaDessert2";
             this.btnOrdinaDessert2.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaDessert2.TabIndex = 66;
@@ -810,7 +845,7 @@
             // 
             this.btnOrdinaDessert1.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaDessert1.Location = new System.Drawing.Point(909, 391);
-            this.btnOrdinaDessert1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaDessert1.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaDessert1.Name = "btnOrdinaDessert1";
             this.btnOrdinaDessert1.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaDessert1.TabIndex = 65;
@@ -821,7 +856,7 @@
             // 
             this.btnOrdinaSecondo4.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaSecondo4.Location = new System.Drawing.Point(909, 291);
-            this.btnOrdinaSecondo4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaSecondo4.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaSecondo4.Name = "btnOrdinaSecondo4";
             this.btnOrdinaSecondo4.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo4.TabIndex = 64;
@@ -832,7 +867,7 @@
             // 
             this.btnOrdinaSecondo3.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaSecondo3.Location = new System.Drawing.Point(909, 243);
-            this.btnOrdinaSecondo3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaSecondo3.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaSecondo3.Name = "btnOrdinaSecondo3";
             this.btnOrdinaSecondo3.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo3.TabIndex = 63;
@@ -843,7 +878,7 @@
             // 
             this.btnOrdinaSecondo2.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaSecondo2.Location = new System.Drawing.Point(909, 189);
-            this.btnOrdinaSecondo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaSecondo2.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaSecondo2.Name = "btnOrdinaSecondo2";
             this.btnOrdinaSecondo2.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo2.TabIndex = 62;
@@ -854,7 +889,7 @@
             // 
             this.btnOrdinaSecondo1.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaSecondo1.Location = new System.Drawing.Point(909, 143);
-            this.btnOrdinaSecondo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaSecondo1.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaSecondo1.Name = "btnOrdinaSecondo1";
             this.btnOrdinaSecondo1.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaSecondo1.TabIndex = 61;
@@ -865,7 +900,7 @@
             // 
             this.btnOrdinaPrimo4.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaPrimo4.Location = new System.Drawing.Point(561, 485);
-            this.btnOrdinaPrimo4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaPrimo4.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaPrimo4.Name = "btnOrdinaPrimo4";
             this.btnOrdinaPrimo4.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaPrimo4.TabIndex = 60;
@@ -876,7 +911,7 @@
             // 
             this.btnOrdinaPrimo3.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaPrimo3.Location = new System.Drawing.Point(561, 439);
-            this.btnOrdinaPrimo3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaPrimo3.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaPrimo3.Name = "btnOrdinaPrimo3";
             this.btnOrdinaPrimo3.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaPrimo3.TabIndex = 59;
@@ -887,7 +922,7 @@
             // 
             this.btnOrdinaPrimo2.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaPrimo2.Location = new System.Drawing.Point(561, 391);
-            this.btnOrdinaPrimo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaPrimo2.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaPrimo2.Name = "btnOrdinaPrimo2";
             this.btnOrdinaPrimo2.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaPrimo2.TabIndex = 58;
@@ -898,7 +933,7 @@
             // 
             this.btnOrdinaPrimo1.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaPrimo1.Location = new System.Drawing.Point(561, 345);
-            this.btnOrdinaPrimo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaPrimo1.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaPrimo1.Name = "btnOrdinaPrimo1";
             this.btnOrdinaPrimo1.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaPrimo1.TabIndex = 57;
@@ -909,7 +944,7 @@
             // 
             this.btnOrdinaAntipasto3.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaAntipasto3.Location = new System.Drawing.Point(561, 243);
-            this.btnOrdinaAntipasto3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaAntipasto3.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaAntipasto3.Name = "btnOrdinaAntipasto3";
             this.btnOrdinaAntipasto3.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaAntipasto3.TabIndex = 56;
@@ -920,7 +955,7 @@
             // 
             this.btnOrdinaAntipasto2.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaAntipasto2.Location = new System.Drawing.Point(561, 189);
-            this.btnOrdinaAntipasto2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaAntipasto2.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaAntipasto2.Name = "btnOrdinaAntipasto2";
             this.btnOrdinaAntipasto2.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaAntipasto2.TabIndex = 55;
@@ -931,7 +966,7 @@
             // 
             this.btnOrdinaAntipasto1.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdinaAntipasto1.Location = new System.Drawing.Point(561, 142);
-            this.btnOrdinaAntipasto1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrdinaAntipasto1.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrdinaAntipasto1.Name = "btnOrdinaAntipasto1";
             this.btnOrdinaAntipasto1.Size = new System.Drawing.Size(25, 23);
             this.btnOrdinaAntipasto1.TabIndex = 54;
@@ -1562,6 +1597,7 @@
             this.btnOrdina.TabIndex = 70;
             this.btnOrdina.Text = "ORDINA";
             this.btnOrdina.UseVisualStyleBackColor = true;
+            this.btnOrdina.Click += new System.EventHandler(this.btnOrdina_Click);
             // 
             // lblTotalePrezzo
             // 
@@ -1681,7 +1717,7 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.btnBack.Location = new System.Drawing.Point(8, 8);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 60);
             this.btnBack.TabIndex = 5;
@@ -1752,29 +1788,101 @@
             this.btnClienteAccedi.Text = "Accedi";
             this.btnClienteAccedi.UseVisualStyleBackColor = false;
             // 
-            // lblPriceA
+            // pnlOrdine
             // 
-            this.lblPriceA.AutoSize = true;
-            this.lblPriceA.BackColor = System.Drawing.Color.White;
-            this.lblPriceA.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceA.ForeColor = System.Drawing.Color.Black;
-            this.lblPriceA.Location = new System.Drawing.Point(494, 104);
-            this.lblPriceA.Name = "lblPriceA";
-            this.lblPriceA.Size = new System.Drawing.Size(22, 24);
-            this.lblPriceA.TabIndex = 68;
-            this.lblPriceA.Text = "€";
+            this.pnlOrdine.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlOrdine.Controls.Add(this.lblScontrino1);
+            this.pnlOrdine.Controls.Add(this.label1);
+            this.pnlOrdine.Controls.Add(this.lblDocumentoCommerciale);
+            this.pnlOrdine.Controls.Add(this.lblSep2);
+            this.pnlOrdine.Controls.Add(this.lblSep1);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoTel);
+            this.pnlOrdine.Controls.Add(this.lblOrdineLuogo);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoNome);
+            this.pnlOrdine.Location = new System.Drawing.Point(550, 30);
+            this.pnlOrdine.Name = "pnlOrdine";
+            this.pnlOrdine.Size = new System.Drawing.Size(341, 512);
+            this.pnlOrdine.TabIndex = 70;
             // 
-            // lblPriceB
+            // lblScontrinoNome
             // 
-            this.lblPriceB.AutoSize = true;
-            this.lblPriceB.BackColor = System.Drawing.Color.White;
-            this.lblPriceB.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceB.ForeColor = System.Drawing.Color.Black;
-            this.lblPriceB.Location = new System.Drawing.Point(847, 104);
-            this.lblPriceB.Name = "lblPriceB";
-            this.lblPriceB.Size = new System.Drawing.Size(22, 24);
-            this.lblPriceB.TabIndex = 69;
-            this.lblPriceB.Text = "€";
+            this.lblScontrinoNome.AutoSize = true;
+            this.lblScontrinoNome.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoNome.Location = new System.Drawing.Point(41, 31);
+            this.lblScontrinoNome.Name = "lblScontrinoNome";
+            this.lblScontrinoNome.Size = new System.Drawing.Size(262, 26);
+            this.lblScontrinoNome.TabIndex = 0;
+            this.lblScontrinoNome.Text = "BOTEZ\'S RESTAURANT";
+            // 
+            // lblOrdineLuogo
+            // 
+            this.lblOrdineLuogo.AutoSize = true;
+            this.lblOrdineLuogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdineLuogo.Location = new System.Drawing.Point(89, 58);
+            this.lblOrdineLuogo.Name = "lblOrdineLuogo";
+            this.lblOrdineLuogo.Size = new System.Drawing.Size(169, 20);
+            this.lblOrdineLuogo.TabIndex = 3;
+            this.lblOrdineLuogo.Text = "24060 TELGATE (BG)";
+            // 
+            // lblScontrinoTel
+            // 
+            this.lblScontrinoTel.AutoSize = true;
+            this.lblScontrinoTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoTel.Location = new System.Drawing.Point(89, 78);
+            this.lblScontrinoTel.Name = "lblScontrinoTel";
+            this.lblScontrinoTel.Size = new System.Drawing.Size(144, 20);
+            this.lblScontrinoTel.TabIndex = 4;
+            this.lblScontrinoTel.Text = "TEL: 366 985 0629";
+            // 
+            // lblSep1
+            // 
+            this.lblSep1.AutoSize = true;
+            this.lblSep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSep1.Location = new System.Drawing.Point(3, 101);
+            this.lblSep1.Name = "lblSep1";
+            this.lblSep1.Size = new System.Drawing.Size(334, 25);
+            this.lblSep1.TabIndex = 5;
+            this.lblSep1.Text = "----------------------------------------------";
+            // 
+            // lblSep2
+            // 
+            this.lblSep2.AutoSize = true;
+            this.lblSep2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSep2.Location = new System.Drawing.Point(3, 377);
+            this.lblSep2.Name = "lblSep2";
+            this.lblSep2.Size = new System.Drawing.Size(334, 25);
+            this.lblSep2.TabIndex = 6;
+            this.lblSep2.Text = "----------------------------------------------";
+            // 
+            // lblDocumentoCommerciale
+            // 
+            this.lblDocumentoCommerciale.AutoSize = true;
+            this.lblDocumentoCommerciale.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumentoCommerciale.Location = new System.Drawing.Point(16, 124);
+            this.lblDocumentoCommerciale.Name = "lblDocumentoCommerciale";
+            this.lblDocumentoCommerciale.Size = new System.Drawing.Size(311, 25);
+            this.lblDocumentoCommerciale.TabIndex = 7;
+            this.lblDocumentoCommerciale.Text = "DOCUMENTO COMMERCIALE";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Descrizione";
+            // 
+            // lblScontrino1
+            // 
+            this.lblScontrino1.AutoSize = true;
+            this.lblScontrino1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrino1.Location = new System.Drawing.Point(17, 186);
+            this.lblScontrino1.Name = "lblScontrino1";
+            this.lblScontrino1.Size = new System.Drawing.Size(92, 20);
+            this.lblScontrino1.TabIndex = 9;
+            this.lblScontrino1.Text = "Descrizione";
             // 
             // Form1
             // 
@@ -1823,6 +1931,8 @@
             this.pnlProfiloeNome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCliente.ResumeLayout(false);
+            this.pnlOrdine.ResumeLayout(false);
+            this.pnlOrdine.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1961,6 +2071,15 @@
         private System.Windows.Forms.TextBox textBoxTotale;
         private System.Windows.Forms.Label lblPriceB;
         private System.Windows.Forms.Label lblPriceA;
+        private System.Windows.Forms.Panel pnlOrdine;
+        private System.Windows.Forms.Label lblOrdineLuogo;
+        private System.Windows.Forms.Label lblScontrinoNome;
+        private System.Windows.Forms.Label lblScontrinoTel;
+        private System.Windows.Forms.Label lblScontrino1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDocumentoCommerciale;
+        private System.Windows.Forms.Label lblSep2;
+        private System.Windows.Forms.Label lblSep1;
     }
 }
 
