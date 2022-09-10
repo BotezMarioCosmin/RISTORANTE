@@ -1706,6 +1706,7 @@
             this.textBoxTotale.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotale.Location = new System.Drawing.Point(94, 17);
             this.textBoxTotale.Name = "textBoxTotale";
+            this.textBoxTotale.ReadOnly = true;
             this.textBoxTotale.Size = new System.Drawing.Size(99, 33);
             this.textBoxTotale.TabIndex = 69;
             this.textBoxTotale.Text = "0,00 €";
