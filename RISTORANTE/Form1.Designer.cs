@@ -57,8 +57,7 @@
             this.textBoxPinC = new System.Windows.Forms.TextBox();
             this.pnlPrincipale = new System.Windows.Forms.Panel();
             this.pnlOrdine = new System.Windows.Forms.Panel();
-            this.lblScontrino1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDescrizione = new System.Windows.Forms.Label();
             this.lblDocumentoCommerciale = new System.Windows.Forms.Label();
             this.lblSep2 = new System.Windows.Forms.Label();
             this.lblSep1 = new System.Windows.Forms.Label();
@@ -169,6 +168,9 @@
             this.btnClienteRegistrati = new System.Windows.Forms.Button();
             this.btnClienteOspite = new System.Windows.Forms.Button();
             this.btnClienteAccedi = new System.Windows.Forms.Button();
+            this.lblScontrinoIva = new System.Windows.Forms.Label();
+            this.lblScontrinoPrezzo = new System.Windows.Forms.Label();
+            this.lblArrivederci = new System.Windows.Forms.Label();
             this.pnlAccesso.SuspendLayout();
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
@@ -539,7 +541,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(8, 15);
+            this.pnlPrincipale.Location = new System.Drawing.Point(8, 14);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -547,46 +549,38 @@
             // pnlOrdine
             // 
             this.pnlOrdine.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlOrdine.Controls.Add(this.lblScontrino1);
-            this.pnlOrdine.Controls.Add(this.label1);
+            this.pnlOrdine.Controls.Add(this.lblArrivederci);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoPrezzo);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoIva);
+            this.pnlOrdine.Controls.Add(this.lblDescrizione);
             this.pnlOrdine.Controls.Add(this.lblDocumentoCommerciale);
             this.pnlOrdine.Controls.Add(this.lblSep2);
             this.pnlOrdine.Controls.Add(this.lblSep1);
             this.pnlOrdine.Controls.Add(this.lblScontrinoTel);
             this.pnlOrdine.Controls.Add(this.lblOrdineLuogo);
             this.pnlOrdine.Controls.Add(this.lblScontrinoNome);
-            this.pnlOrdine.Location = new System.Drawing.Point(550, 30);
+            this.pnlOrdine.Location = new System.Drawing.Point(393, 9);
             this.pnlOrdine.Name = "pnlOrdine";
-            this.pnlOrdine.Size = new System.Drawing.Size(341, 512);
+            this.pnlOrdine.Size = new System.Drawing.Size(341, 528);
             this.pnlOrdine.TabIndex = 70;
             // 
-            // lblScontrino1
+            // lblDescrizione
             // 
-            this.lblScontrino1.AutoSize = true;
-            this.lblScontrino1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrino1.Location = new System.Drawing.Point(17, 186);
-            this.lblScontrino1.Name = "lblScontrino1";
-            this.lblScontrino1.Size = new System.Drawing.Size(92, 20);
-            this.lblScontrino1.TabIndex = 9;
-            this.lblScontrino1.Text = "Descrizione";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Descrizione";
+            this.lblDescrizione.AutoSize = true;
+            this.lblDescrizione.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescrizione.Location = new System.Drawing.Point(13, 133);
+            this.lblDescrizione.Name = "lblDescrizione";
+            this.lblDescrizione.Size = new System.Drawing.Size(103, 20);
+            this.lblDescrizione.TabIndex = 8;
+            this.lblDescrizione.Text = "Descrizione";
             // 
             // lblDocumentoCommerciale
             // 
             this.lblDocumentoCommerciale.AutoSize = true;
-            this.lblDocumentoCommerciale.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocumentoCommerciale.Location = new System.Drawing.Point(16, 124);
+            this.lblDocumentoCommerciale.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumentoCommerciale.Location = new System.Drawing.Point(6, 98);
             this.lblDocumentoCommerciale.Name = "lblDocumentoCommerciale";
-            this.lblDocumentoCommerciale.Size = new System.Drawing.Size(311, 25);
+            this.lblDocumentoCommerciale.Size = new System.Drawing.Size(332, 25);
             this.lblDocumentoCommerciale.TabIndex = 7;
             this.lblDocumentoCommerciale.Text = "DOCUMENTO COMMERCIALE";
             // 
@@ -594,7 +588,7 @@
             // 
             this.lblSep2.AutoSize = true;
             this.lblSep2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSep2.Location = new System.Drawing.Point(3, 377);
+            this.lblSep2.Location = new System.Drawing.Point(4, 435);
             this.lblSep2.Name = "lblSep2";
             this.lblSep2.Size = new System.Drawing.Size(334, 25);
             this.lblSep2.TabIndex = 6;
@@ -604,7 +598,7 @@
             // 
             this.lblSep1.AutoSize = true;
             this.lblSep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSep1.Location = new System.Drawing.Point(3, 101);
+            this.lblSep1.Location = new System.Drawing.Point(4, 80);
             this.lblSep1.Name = "lblSep1";
             this.lblSep1.Size = new System.Drawing.Size(334, 25);
             this.lblSep1.TabIndex = 5;
@@ -614,7 +608,7 @@
             // 
             this.lblScontrinoTel.AutoSize = true;
             this.lblScontrinoTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoTel.Location = new System.Drawing.Point(89, 78);
+            this.lblScontrinoTel.Location = new System.Drawing.Point(92, 60);
             this.lblScontrinoTel.Name = "lblScontrinoTel";
             this.lblScontrinoTel.Size = new System.Drawing.Size(144, 20);
             this.lblScontrinoTel.TabIndex = 4;
@@ -624,7 +618,7 @@
             // 
             this.lblOrdineLuogo.AutoSize = true;
             this.lblOrdineLuogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdineLuogo.Location = new System.Drawing.Point(89, 58);
+            this.lblOrdineLuogo.Location = new System.Drawing.Point(92, 40);
             this.lblOrdineLuogo.Name = "lblOrdineLuogo";
             this.lblOrdineLuogo.Size = new System.Drawing.Size(169, 20);
             this.lblOrdineLuogo.TabIndex = 3;
@@ -634,7 +628,7 @@
             // 
             this.lblScontrinoNome.AutoSize = true;
             this.lblScontrinoNome.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoNome.Location = new System.Drawing.Point(41, 31);
+            this.lblScontrinoNome.Location = new System.Drawing.Point(44, 13);
             this.lblScontrinoNome.Name = "lblScontrinoNome";
             this.lblScontrinoNome.Size = new System.Drawing.Size(262, 26);
             this.lblScontrinoNome.TabIndex = 0;
@@ -1884,6 +1878,36 @@
             this.btnClienteAccedi.Text = "Accedi";
             this.btnClienteAccedi.UseVisualStyleBackColor = false;
             // 
+            // lblScontrinoIva
+            // 
+            this.lblScontrinoIva.AutoSize = true;
+            this.lblScontrinoIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoIva.Location = new System.Drawing.Point(171, 135);
+            this.lblScontrinoIva.Name = "lblScontrinoIva";
+            this.lblScontrinoIva.Size = new System.Drawing.Size(39, 20);
+            this.lblScontrinoIva.TabIndex = 9;
+            this.lblScontrinoIva.Text = "IVA";
+            // 
+            // lblScontrinoPrezzo
+            // 
+            this.lblScontrinoPrezzo.AutoSize = true;
+            this.lblScontrinoPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoPrezzo.Location = new System.Drawing.Point(231, 135);
+            this.lblScontrinoPrezzo.Name = "lblScontrinoPrezzo";
+            this.lblScontrinoPrezzo.Size = new System.Drawing.Size(107, 20);
+            this.lblScontrinoPrezzo.TabIndex = 10;
+            this.lblScontrinoPrezzo.Text = "PREZZO (€)";
+            // 
+            // lblArrivederci
+            // 
+            this.lblArrivederci.AutoSize = true;
+            this.lblArrivederci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrivederci.Location = new System.Drawing.Point(88, 497);
+            this.lblArrivederci.Name = "lblArrivederci";
+            this.lblArrivederci.Size = new System.Drawing.Size(167, 20);
+            this.lblArrivederci.TabIndex = 11;
+            this.lblArrivederci.Text = "Arrivederci e Grazie";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2076,11 +2100,13 @@
         private System.Windows.Forms.Label lblOrdineLuogo;
         private System.Windows.Forms.Label lblScontrinoNome;
         private System.Windows.Forms.Label lblScontrinoTel;
-        private System.Windows.Forms.Label lblScontrino1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDescrizione;
         private System.Windows.Forms.Label lblDocumentoCommerciale;
         private System.Windows.Forms.Label lblSep2;
         private System.Windows.Forms.Label lblSep1;
+        private System.Windows.Forms.Label lblScontrinoIva;
+        private System.Windows.Forms.Label lblScontrinoPrezzo;
+        private System.Windows.Forms.Label lblArrivederci;
     }
 }
 
