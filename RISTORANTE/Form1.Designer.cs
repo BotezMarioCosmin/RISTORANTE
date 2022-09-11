@@ -180,6 +180,14 @@
             this.textBoxClienteNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pnlClienteAccedi = new System.Windows.Forms.Panel();
+            this.btnShowHideClienteAccedi = new System.Windows.Forms.Button();
+            this.btnClienteAccediProsegui = new System.Windows.Forms.Button();
+            this.textBoxClientePassAccedi = new System.Windows.Forms.TextBox();
+            this.textBoxClienteNomeAccedi = new System.Windows.Forms.TextBox();
+            this.lblClientePassAccedi = new System.Windows.Forms.Label();
+            this.lblClienteNomeAccedi = new System.Windows.Forms.Label();
+            this.clientePassDimenticata = new System.Windows.Forms.LinkLabel();
             this.pnlAccesso.SuspendLayout();
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
@@ -197,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCliente.SuspendLayout();
             this.pnlClienteRegistra.SuspendLayout();
+            this.pnlClienteAccedi.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -233,7 +242,7 @@
             this.pnlAccesso.Controls.Add(this.lblPassword);
             this.pnlAccesso.Controls.Add(this.lblUsername);
             this.pnlAccesso.Controls.Add(this.linkLabelForgotPassword);
-            this.pnlAccesso.Location = new System.Drawing.Point(376, 76);
+            this.pnlAccesso.Location = new System.Drawing.Point(768, 53);
             this.pnlAccesso.Name = "pnlAccesso";
             this.pnlAccesso.Size = new System.Drawing.Size(404, 248);
             this.pnlAccesso.TabIndex = 3;
@@ -1874,7 +1883,7 @@
             this.pnlCliente.Controls.Add(this.btnClienteRegistrati);
             this.pnlCliente.Controls.Add(this.btnClienteOspite);
             this.pnlCliente.Controls.Add(this.btnClienteAccedi);
-            this.pnlCliente.Location = new System.Drawing.Point(12, 196);
+            this.pnlCliente.Location = new System.Drawing.Point(131, 528);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(404, 289);
             this.pnlCliente.TabIndex = 12;
@@ -1919,6 +1928,7 @@
             this.btnClienteAccedi.TabIndex = 13;
             this.btnClienteAccedi.Text = "Accedi";
             this.btnClienteAccedi.UseVisualStyleBackColor = false;
+            this.btnClienteAccedi.Click += new System.EventHandler(this.btnClienteAccedi_Click);
             // 
             // pnlClienteRegistra
             // 
@@ -1930,7 +1940,7 @@
             this.pnlClienteRegistra.Controls.Add(this.textBoxClienteNome);
             this.pnlClienteRegistra.Controls.Add(this.label1);
             this.pnlClienteRegistra.Controls.Add(this.label2);
-            this.pnlClienteRegistra.Location = new System.Drawing.Point(162, 132);
+            this.pnlClienteRegistra.Location = new System.Drawing.Point(162, 508);
             this.pnlClienteRegistra.Name = "pnlClienteRegistra";
             this.pnlClienteRegistra.Size = new System.Drawing.Size(404, 245);
             this.pnlClienteRegistra.TabIndex = 17;
@@ -2019,12 +2029,105 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome:";
             // 
+            // pnlClienteAccedi
+            // 
+            this.pnlClienteAccedi.Controls.Add(this.btnShowHideClienteAccedi);
+            this.pnlClienteAccedi.Controls.Add(this.btnClienteAccediProsegui);
+            this.pnlClienteAccedi.Controls.Add(this.textBoxClientePassAccedi);
+            this.pnlClienteAccedi.Controls.Add(this.textBoxClienteNomeAccedi);
+            this.pnlClienteAccedi.Controls.Add(this.lblClientePassAccedi);
+            this.pnlClienteAccedi.Controls.Add(this.lblClienteNomeAccedi);
+            this.pnlClienteAccedi.Controls.Add(this.clientePassDimenticata);
+            this.pnlClienteAccedi.Location = new System.Drawing.Point(261, 105);
+            this.pnlClienteAccedi.Name = "pnlClienteAccedi";
+            this.pnlClienteAccedi.Size = new System.Drawing.Size(404, 270);
+            this.pnlClienteAccedi.TabIndex = 18;
+            // 
+            // btnShowHideClienteAccedi
+            // 
+            this.btnShowHideClienteAccedi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHideClienteAccedi.BackgroundImage")));
+            this.btnShowHideClienteAccedi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowHideClienteAccedi.Location = new System.Drawing.Point(316, 97);
+            this.btnShowHideClienteAccedi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowHideClienteAccedi.Name = "btnShowHideClienteAccedi";
+            this.btnShowHideClienteAccedi.Size = new System.Drawing.Size(39, 30);
+            this.btnShowHideClienteAccedi.TabIndex = 6;
+            this.btnShowHideClienteAccedi.UseVisualStyleBackColor = true;
+            this.btnShowHideClienteAccedi.Click += new System.EventHandler(this.btnShowHideClienteAccedi_Click);
+            // 
+            // btnClienteAccediProsegui
+            // 
+            this.btnClienteAccediProsegui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnClienteAccediProsegui.FlatAppearance.BorderSize = 2;
+            this.btnClienteAccediProsegui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClienteAccediProsegui.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClienteAccediProsegui.Location = new System.Drawing.Point(146, 192);
+            this.btnClienteAccediProsegui.Name = "btnClienteAccediProsegui";
+            this.btnClienteAccediProsegui.Size = new System.Drawing.Size(150, 46);
+            this.btnClienteAccediProsegui.TabIndex = 4;
+            this.btnClienteAccediProsegui.Text = "Accedi";
+            this.btnClienteAccediProsegui.UseVisualStyleBackColor = false;
+            this.btnClienteAccediProsegui.Click += new System.EventHandler(this.btnClienteAccediProsegui_Click);
+            // 
+            // textBoxClientePassAccedi
+            // 
+            this.textBoxClientePassAccedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClientePassAccedi.Location = new System.Drawing.Point(133, 98);
+            this.textBoxClientePassAccedi.Name = "textBoxClientePassAccedi";
+            this.textBoxClientePassAccedi.Size = new System.Drawing.Size(178, 29);
+            this.textBoxClientePassAccedi.TabIndex = 3;
+            this.textBoxClientePassAccedi.UseSystemPasswordChar = true;
+            // 
+            // textBoxClienteNomeAccedi
+            // 
+            this.textBoxClienteNomeAccedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClienteNomeAccedi.Location = new System.Drawing.Point(133, 36);
+            this.textBoxClienteNomeAccedi.Name = "textBoxClienteNomeAccedi";
+            this.textBoxClienteNomeAccedi.Size = new System.Drawing.Size(178, 29);
+            this.textBoxClienteNomeAccedi.TabIndex = 2;
+            // 
+            // lblClientePassAccedi
+            // 
+            this.lblClientePassAccedi.AutoSize = true;
+            this.lblClientePassAccedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientePassAccedi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblClientePassAccedi.Location = new System.Drawing.Point(3, 100);
+            this.lblClientePassAccedi.Name = "lblClientePassAccedi";
+            this.lblClientePassAccedi.Size = new System.Drawing.Size(112, 25);
+            this.lblClientePassAccedi.TabIndex = 1;
+            this.lblClientePassAccedi.Text = "Password:";
+            // 
+            // lblClienteNomeAccedi
+            // 
+            this.lblClienteNomeAccedi.AutoSize = true;
+            this.lblClienteNomeAccedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClienteNomeAccedi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblClienteNomeAccedi.Location = new System.Drawing.Point(41, 38);
+            this.lblClienteNomeAccedi.Name = "lblClienteNomeAccedi";
+            this.lblClienteNomeAccedi.Size = new System.Drawing.Size(74, 25);
+            this.lblClienteNomeAccedi.TabIndex = 0;
+            this.lblClienteNomeAccedi.Text = "Nome:";
+            // 
+            // clientePassDimenticata
+            // 
+            this.clientePassDimenticata.AutoSize = true;
+            this.clientePassDimenticata.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientePassDimenticata.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.clientePassDimenticata.Location = new System.Drawing.Point(88, 150);
+            this.clientePassDimenticata.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.clientePassDimenticata.Name = "clientePassDimenticata";
+            this.clientePassDimenticata.Size = new System.Drawing.Size(267, 18);
+            this.clientePassDimenticata.TabIndex = 5;
+            this.clientePassDimenticata.TabStop = true;
+            this.clientePassDimenticata.Text = "Hai dimenticato la password o il nome?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.pnlClienteAccedi);
             this.Controls.Add(this.pnlClienteRegistra);
             this.Controls.Add(this.pnlPrincipale);
             this.Controls.Add(this.pnlPin);
@@ -2072,6 +2175,8 @@
             this.pnlCliente.ResumeLayout(false);
             this.pnlClienteRegistra.ResumeLayout(false);
             this.pnlClienteRegistra.PerformLayout();
+            this.pnlClienteAccedi.ResumeLayout(false);
+            this.pnlClienteAccedi.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2230,6 +2335,14 @@
         private System.Windows.Forms.TextBox textBoxClienteNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlClienteAccedi;
+        private System.Windows.Forms.Button btnShowHideClienteAccedi;
+        private System.Windows.Forms.Button btnClienteAccediProsegui;
+        private System.Windows.Forms.TextBox textBoxClientePassAccedi;
+        private System.Windows.Forms.TextBox textBoxClienteNomeAccedi;
+        private System.Windows.Forms.Label lblClientePassAccedi;
+        private System.Windows.Forms.Label lblClienteNomeAccedi;
+        private System.Windows.Forms.LinkLabel clientePassDimenticata;
     }
 }
 
