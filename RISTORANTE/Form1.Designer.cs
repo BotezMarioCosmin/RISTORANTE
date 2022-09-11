@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnProprietario = new System.Windows.Forms.Button();
             this.lblNomeRistorante = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.linkLabelForgotPassword = new System.Windows.Forms.LinkLabel();
             this.pnlEmailInviata = new System.Windows.Forms.Panel();
+            this.btnOK = new System.Windows.Forms.Button();
             this.lblSpam = new System.Windows.Forms.Label();
             this.lblEmailInviata = new System.Windows.Forms.Label();
             this.textBoxPINCheck = new System.Windows.Forms.TextBox();
@@ -149,6 +151,9 @@
             this.lblNomeRistoranteProp = new System.Windows.Forms.Label();
             this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
             this.pnlScegliOpzione = new System.Windows.Forms.Panel();
+            this.pnlProfiloeNome = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNomeProprietario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnOrdina = new System.Windows.Forms.Button();
             this.lblTotalePrezzo = new System.Windows.Forms.Label();
@@ -156,9 +161,6 @@
             this.btnEsci = new System.Windows.Forms.Button();
             this.btnVisualizzaMenu = new System.Windows.Forms.Button();
             this.btnGestisciMenu = new System.Windows.Forms.Button();
-            this.pnlProfiloeNome = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNomeProprietario = new System.Windows.Forms.Label();
             this.btnAggiungiPiatto = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
@@ -191,26 +193,64 @@
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.btnSendEmail = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.pnlEmailInviataCliente = new System.Windows.Forms.Panel();
+            this.btnEmailInviataCliente = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnlRispristinaCliente = new System.Windows.Forms.Panel();
+            this.comboBoxRipristinaCliente = new System.Windows.Forms.ComboBox();
+            this.btnOkNuovoXCliente = new System.Windows.Forms.Button();
+            this.textBoxNuovoXCliente = new System.Windows.Forms.TextBox();
+            this.lblRipristinaCliente = new System.Windows.Forms.Label();
+            this.btnPinCliente = new System.Windows.Forms.Button();
+            this.lblPinCliente = new System.Windows.Forms.Label();
+            this.textBoxPinCliente = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCerca = new System.Windows.Forms.TextBox();
+            this.btnCerca = new System.Windows.Forms.Button();
+            this.btnUltimoOrdine = new System.Windows.Forms.Button();
+            this.pnlUltimoOrdine = new System.Windows.Forms.Panel();
+            this.lblUltimoOrdinePanel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlPiatti = new System.Windows.Forms.Panel();
+            this.lblGestionePiatto1 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto2 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto3 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto4 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto5 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto6 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto7 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto8 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto11 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto9 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto10 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto12 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto13 = new System.Windows.Forms.Label();
+            this.lblGestionePiatto14 = new System.Windows.Forms.Label();
             this.pnlAccesso.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
             this.pnlPin.SuspendLayout();
             this.pnlPrincipale.SuspendLayout();
             this.pnlOrdine.SuspendLayout();
             this.pnlGestisciMenu.SuspendLayout();
+            this.pnlGestisciMenu2.SuspendLayout();
             this.pnlAggiungi.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
             this.pnlScegliOpzione.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.pnlProfiloeNome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.pnlCliente.SuspendLayout();
             this.pnlClienteRegistra.SuspendLayout();
             this.pnlClienteAccedi.SuspendLayout();
             this.pnlEmailNome.SuspendLayout();
             this.pnlForgotPassword.SuspendLayout();
+            this.pnlEmailInviataCliente.SuspendLayout();
+            this.pnlRispristinaCliente.SuspendLayout();
+            this.pnlUltimoOrdine.SuspendLayout();
+            this.pnlPiatti.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -247,7 +287,7 @@
             this.pnlAccesso.Controls.Add(this.lblPassword);
             this.pnlAccesso.Controls.Add(this.lblUsername);
             this.pnlAccesso.Controls.Add(this.linkLabelForgotPassword);
-            this.pnlAccesso.Location = new System.Drawing.Point(755, 53);
+            this.pnlAccesso.Location = new System.Drawing.Point(729, 53);
             this.pnlAccesso.Name = "pnlAccesso";
             this.pnlAccesso.Size = new System.Drawing.Size(404, 248);
             this.pnlAccesso.TabIndex = 3;
@@ -337,10 +377,24 @@
             this.pnlEmailInviata.Controls.Add(this.btnOK);
             this.pnlEmailInviata.Controls.Add(this.lblSpam);
             this.pnlEmailInviata.Controls.Add(this.lblEmailInviata);
-            this.pnlEmailInviata.Location = new System.Drawing.Point(804, 28);
+            this.pnlEmailInviata.Location = new System.Drawing.Point(792, 14);
             this.pnlEmailInviata.Name = "pnlEmailInviata";
             this.pnlEmailInviata.Size = new System.Drawing.Size(402, 246);
             this.pnlEmailInviata.TabIndex = 8;
+            // 
+            // btnOK
+            // 
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnOK.Location = new System.Drawing.Point(127, 144);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(150, 42);
+            this.btnOK.TabIndex = 4;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // lblSpam
             // 
@@ -379,19 +433,22 @@
             this.pnlPin.Controls.Add(this.lblOK2);
             this.pnlPin.Controls.Add(this.lblInserisciPin);
             this.pnlPin.Controls.Add(this.textBoxPinC);
-            this.pnlPin.Location = new System.Drawing.Point(831, 12);
+            this.pnlPin.Location = new System.Drawing.Point(801, 5);
             this.pnlPin.Name = "pnlPin";
             this.pnlPin.Size = new System.Drawing.Size(402, 246);
             this.pnlPin.TabIndex = 9;
             // 
             // btnOK3
             // 
-            this.btnOK3.Location = new System.Drawing.Point(329, 117);
+            this.btnOK3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnOK3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK3.Location = new System.Drawing.Point(334, 117);
             this.btnOK3.Name = "btnOK3";
-            this.btnOK3.Size = new System.Drawing.Size(47, 28);
+            this.btnOK3.Size = new System.Drawing.Size(49, 31);
             this.btnOK3.TabIndex = 5;
             this.btnOK3.Text = "OK";
-            this.btnOK3.UseVisualStyleBackColor = true;
+            this.btnOK3.UseVisualStyleBackColor = false;
             this.btnOK3.Click += new System.EventHandler(this.btnOK3_Click);
             // 
             // textBoxNuovaPass
@@ -415,12 +472,15 @@
             // 
             // lblOK2
             // 
+            this.lblOK2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblOK2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblOK2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOK2.Location = new System.Drawing.Point(283, 69);
             this.lblOK2.Name = "lblOK2";
-            this.lblOK2.Size = new System.Drawing.Size(47, 28);
+            this.lblOK2.Size = new System.Drawing.Size(49, 31);
             this.lblOK2.TabIndex = 2;
             this.lblOK2.Text = "OK";
-            this.lblOK2.UseVisualStyleBackColor = true;
+            this.lblOK2.UseVisualStyleBackColor = false;
             this.lblOK2.Click += new System.EventHandler(this.lblOK2_Click);
             // 
             // lblInserisciPin
@@ -445,10 +505,11 @@
             // pnlPrincipale
             // 
             this.pnlPrincipale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
+            this.pnlPrincipale.Controls.Add(this.pnlGestisciMenu);
+            this.pnlPrincipale.Controls.Add(this.pnlUltimoOrdine);
             this.pnlPrincipale.Controls.Add(this.pnlOrdine);
             this.pnlPrincipale.Controls.Add(this.lblPriceB);
             this.pnlPrincipale.Controls.Add(this.lblPriceA);
-            this.pnlPrincipale.Controls.Add(this.pnlGestisciMenu);
             this.pnlPrincipale.Controls.Add(this.pnlAggiungi);
             this.pnlPrincipale.Controls.Add(this.btnOrdinaDessert3);
             this.pnlPrincipale.Controls.Add(this.btnOrdinaDessert2);
@@ -513,7 +574,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(697, 416);
+            this.pnlPrincipale.Location = new System.Drawing.Point(12, 12);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -664,7 +725,7 @@
             // 
             this.pnlGestisciMenu.Controls.Add(this.pnlGestisciMenu2);
             this.pnlGestisciMenu.Controls.Add(this.lblGestisciMenu);
-            this.pnlGestisciMenu.Location = new System.Drawing.Point(248, 524);
+            this.pnlGestisciMenu.Location = new System.Drawing.Point(225, 68);
             this.pnlGestisciMenu.Name = "pnlGestisciMenu";
             this.pnlGestisciMenu.Size = new System.Drawing.Size(788, 562);
             this.pnlGestisciMenu.TabIndex = 23;
@@ -672,6 +733,9 @@
             // pnlGestisciMenu2
             // 
             this.pnlGestisciMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.pnlGestisciMenu2.Controls.Add(this.pnlPiatti);
+            this.pnlGestisciMenu2.Controls.Add(this.btnCerca);
+            this.pnlGestisciMenu2.Controls.Add(this.textBoxCerca);
             this.pnlGestisciMenu2.Location = new System.Drawing.Point(21, 73);
             this.pnlGestisciMenu2.Name = "pnlGestisciMenu2";
             this.pnlGestisciMenu2.Size = new System.Drawing.Size(747, 441);
@@ -1647,7 +1711,7 @@
             // 
             this.pictureBoxMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenu.BackgroundImage")));
             this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxMenu.Location = new System.Drawing.Point(201, 1);
+            this.pictureBoxMenu.Location = new System.Drawing.Point(201, 5);
             this.pictureBoxMenu.Name = "pictureBoxMenu";
             this.pictureBoxMenu.Size = new System.Drawing.Size(788, 562);
             this.pictureBoxMenu.TabIndex = 5;
@@ -1656,8 +1720,9 @@
             // pnlScegliOpzione
             // 
             this.pnlScegliOpzione.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.pnlScegliOpzione.Controls.Add(this.pnlProfiloeNome);
             this.pnlScegliOpzione.Controls.Add(this.panel3);
+            this.pnlScegliOpzione.Controls.Add(this.btnUltimoOrdine);
+            this.pnlScegliOpzione.Controls.Add(this.pnlProfiloeNome);
             this.pnlScegliOpzione.Controls.Add(this.btnEsci);
             this.pnlScegliOpzione.Controls.Add(this.btnVisualizzaMenu);
             this.pnlScegliOpzione.Controls.Add(this.btnGestisciMenu);
@@ -1668,12 +1733,43 @@
             this.pnlScegliOpzione.Size = new System.Drawing.Size(200, 574);
             this.pnlScegliOpzione.TabIndex = 0;
             // 
+            // pnlProfiloeNome
+            // 
+            this.pnlProfiloeNome.Controls.Add(this.pictureBox1);
+            this.pnlProfiloeNome.Controls.Add(this.lblNomeProprietario);
+            this.pnlProfiloeNome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlProfiloeNome.Location = new System.Drawing.Point(0, 0);
+            this.pnlProfiloeNome.Name = "pnlProfiloeNome";
+            this.pnlProfiloeNome.Size = new System.Drawing.Size(200, 143);
+            this.pnlProfiloeNome.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblNomeProprietario
+            // 
+            this.lblNomeProprietario.AutoSize = true;
+            this.lblNomeProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProprietario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblNomeProprietario.Location = new System.Drawing.Point(67, 104);
+            this.lblNomeProprietario.Name = "lblNomeProprietario";
+            this.lblNomeProprietario.Size = new System.Drawing.Size(66, 24);
+            this.lblNomeProprietario.TabIndex = 1;
+            this.lblNomeProprietario.Text = "Nome";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnOrdina);
             this.panel3.Controls.Add(this.lblTotalePrezzo);
             this.panel3.Controls.Add(this.textBoxTotale);
-            this.panel3.Location = new System.Drawing.Point(3, 203);
+            this.panel3.Location = new System.Drawing.Point(3, 359);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(195, 100);
             this.panel3.TabIndex = 70;
@@ -1748,7 +1844,7 @@
             this.btnGestisciMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestisciMenu.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestisciMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.btnGestisciMenu.Location = new System.Drawing.Point(0, 253);
+            this.btnGestisciMenu.Location = new System.Drawing.Point(3, 253);
             this.btnGestisciMenu.Name = "btnGestisciMenu";
             this.btnGestisciMenu.Size = new System.Drawing.Size(197, 61);
             this.btnGestisciMenu.TabIndex = 4;
@@ -1756,44 +1852,13 @@
             this.btnGestisciMenu.UseVisualStyleBackColor = true;
             this.btnGestisciMenu.Click += new System.EventHandler(this.btnbtnGestisciMenu_Click);
             // 
-            // pnlProfiloeNome
-            // 
-            this.pnlProfiloeNome.Controls.Add(this.pictureBox1);
-            this.pnlProfiloeNome.Controls.Add(this.lblNomeProprietario);
-            this.pnlProfiloeNome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProfiloeNome.Location = new System.Drawing.Point(0, 0);
-            this.pnlProfiloeNome.Name = "pnlProfiloeNome";
-            this.pnlProfiloeNome.Size = new System.Drawing.Size(200, 143);
-            this.pnlProfiloeNome.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblNomeProprietario
-            // 
-            this.lblNomeProprietario.AutoSize = true;
-            this.lblNomeProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProprietario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblNomeProprietario.Location = new System.Drawing.Point(67, 104);
-            this.lblNomeProprietario.Name = "lblNomeProprietario";
-            this.lblNomeProprietario.Size = new System.Drawing.Size(66, 24);
-            this.lblNomeProprietario.TabIndex = 1;
-            this.lblNomeProprietario.Text = "Nome";
-            // 
             // btnAggiungiPiatto
             // 
             this.btnAggiungiPiatto.FlatAppearance.BorderSize = 0;
             this.btnAggiungiPiatto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAggiungiPiatto.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAggiungiPiatto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.btnAggiungiPiatto.Location = new System.Drawing.Point(0, 201);
+            this.btnAggiungiPiatto.Location = new System.Drawing.Point(3, 201);
             this.btnAggiungiPiatto.Name = "btnAggiungiPiatto";
             this.btnAggiungiPiatto.Size = new System.Drawing.Size(197, 63);
             this.btnAggiungiPiatto.TabIndex = 2;
@@ -1836,7 +1901,7 @@
             this.pnlCliente.Controls.Add(this.btnClienteRegistrati);
             this.pnlCliente.Controls.Add(this.btnClienteOspite);
             this.pnlCliente.Controls.Add(this.btnClienteAccedi);
-            this.pnlCliente.Location = new System.Drawing.Point(132, 528);
+            this.pnlCliente.Location = new System.Drawing.Point(134, 523);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(404, 289);
             this.pnlCliente.TabIndex = 12;
@@ -1893,7 +1958,7 @@
             this.pnlClienteRegistra.Controls.Add(this.textBoxClienteNome);
             this.pnlClienteRegistra.Controls.Add(this.label1);
             this.pnlClienteRegistra.Controls.Add(this.label2);
-            this.pnlClienteRegistra.Location = new System.Drawing.Point(143, 503);
+            this.pnlClienteRegistra.Location = new System.Drawing.Point(162, 494);
             this.pnlClienteRegistra.Name = "pnlClienteRegistra";
             this.pnlClienteRegistra.Size = new System.Drawing.Size(404, 245);
             this.pnlClienteRegistra.TabIndex = 17;
@@ -1991,7 +2056,7 @@
             this.pnlClienteAccedi.Controls.Add(this.lblClientePassAccedi);
             this.pnlClienteAccedi.Controls.Add(this.lblClienteNomeAccedi);
             this.pnlClienteAccedi.Controls.Add(this.clientePassDimenticata);
-            this.pnlClienteAccedi.Location = new System.Drawing.Point(162, 468);
+            this.pnlClienteAccedi.Location = new System.Drawing.Point(183, 469);
             this.pnlClienteAccedi.Name = "pnlClienteAccedi";
             this.pnlClienteAccedi.Size = new System.Drawing.Size(404, 270);
             this.pnlClienteAccedi.TabIndex = 18;
@@ -2081,7 +2146,7 @@
             this.pnlEmailNome.Controls.Add(this.textBoxEmailNome);
             this.pnlEmailNome.Controls.Add(this.lblClientResert);
             this.pnlEmailNome.Controls.Add(this.btnEmailNome);
-            this.pnlEmailNome.Location = new System.Drawing.Point(189, 444);
+            this.pnlEmailNome.Location = new System.Drawing.Point(782, 23);
             this.pnlEmailNome.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEmailNome.Name = "pnlEmailNome";
             this.pnlEmailNome.Size = new System.Drawing.Size(402, 268);
@@ -2100,11 +2165,11 @@
             this.lblClientResert.AutoSize = true;
             this.lblClientResert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientResert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblClientResert.Location = new System.Drawing.Point(148, 49);
+            this.lblClientResert.Location = new System.Drawing.Point(185, 36);
             this.lblClientResert.Name = "lblClientResert";
-            this.lblClientResert.Size = new System.Drawing.Size(148, 25);
+            this.lblClientResert.Size = new System.Drawing.Size(71, 25);
             this.lblClientResert.TabIndex = 4;
-            this.lblClientResert.Text = "Email o nome:";
+            this.lblClientResert.Text = "Email:";
             // 
             // btnEmailNome
             // 
@@ -2118,13 +2183,14 @@
             this.btnEmailNome.TabIndex = 0;
             this.btnEmailNome.Text = "Invia";
             this.btnEmailNome.UseVisualStyleBackColor = false;
+            this.btnEmailNome.Click += new System.EventHandler(this.btnEmailNome_Click);
             // 
             // pnlForgotPassword
             // 
             this.pnlForgotPassword.Controls.Add(this.textBoxEmail);
             this.pnlForgotPassword.Controls.Add(this.lblEmail);
             this.pnlForgotPassword.Controls.Add(this.btnSendEmail);
-            this.pnlForgotPassword.Location = new System.Drawing.Point(779, 33);
+            this.pnlForgotPassword.Location = new System.Drawing.Point(763, 33);
             this.pnlForgotPassword.Margin = new System.Windows.Forms.Padding(2);
             this.pnlForgotPassword.Name = "pnlForgotPassword";
             this.pnlForgotPassword.Size = new System.Drawing.Size(402, 268);
@@ -2163,19 +2229,373 @@
             this.btnSendEmail.UseVisualStyleBackColor = false;
             this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
-            // btnOK
+            // pnlEmailInviataCliente
             // 
-            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnOK.Location = new System.Drawing.Point(127, 144);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(150, 42);
-            this.btnOK.TabIndex = 4;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.pnlEmailInviataCliente.Controls.Add(this.btnEmailInviataCliente);
+            this.pnlEmailInviataCliente.Controls.Add(this.label3);
+            this.pnlEmailInviataCliente.Controls.Add(this.label4);
+            this.pnlEmailInviataCliente.Location = new System.Drawing.Point(226, 431);
+            this.pnlEmailInviataCliente.Name = "pnlEmailInviataCliente";
+            this.pnlEmailInviataCliente.Size = new System.Drawing.Size(402, 280);
+            this.pnlEmailInviataCliente.TabIndex = 21;
+            // 
+            // btnEmailInviataCliente
+            // 
+            this.btnEmailInviataCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnEmailInviataCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmailInviataCliente.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnEmailInviataCliente.Location = new System.Drawing.Point(127, 144);
+            this.btnEmailInviataCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmailInviataCliente.Name = "btnEmailInviataCliente";
+            this.btnEmailInviataCliente.Size = new System.Drawing.Size(150, 42);
+            this.btnEmailInviataCliente.TabIndex = 4;
+            this.btnEmailInviataCliente.Text = "OK";
+            this.btnEmailInviataCliente.UseVisualStyleBackColor = false;
+            this.btnEmailInviataCliente.Click += new System.EventHandler(this.btnEmailInviataCliente_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.label3.Location = new System.Drawing.Point(111, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Controlla anche lo spam.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.label4.Location = new System.Drawing.Point(132, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(140, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Email inviata!";
+            // 
+            // pnlRispristinaCliente
+            // 
+            this.pnlRispristinaCliente.Controls.Add(this.comboBoxRipristinaCliente);
+            this.pnlRispristinaCliente.Controls.Add(this.btnOkNuovoXCliente);
+            this.pnlRispristinaCliente.Controls.Add(this.textBoxNuovoXCliente);
+            this.pnlRispristinaCliente.Controls.Add(this.lblRipristinaCliente);
+            this.pnlRispristinaCliente.Controls.Add(this.btnPinCliente);
+            this.pnlRispristinaCliente.Controls.Add(this.lblPinCliente);
+            this.pnlRispristinaCliente.Controls.Add(this.textBoxPinCliente);
+            this.pnlRispristinaCliente.Location = new System.Drawing.Point(254, 410);
+            this.pnlRispristinaCliente.Name = "pnlRispristinaCliente";
+            this.pnlRispristinaCliente.Size = new System.Drawing.Size(402, 297);
+            this.pnlRispristinaCliente.TabIndex = 10;
+            // 
+            // comboBoxRipristinaCliente
+            // 
+            this.comboBoxRipristinaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRipristinaCliente.FormattingEnabled = true;
+            this.comboBoxRipristinaCliente.Items.AddRange(new object[] {
+            "nome",
+            "password"});
+            this.comboBoxRipristinaCliente.Location = new System.Drawing.Point(152, 120);
+            this.comboBoxRipristinaCliente.Name = "comboBoxRipristinaCliente";
+            this.comboBoxRipristinaCliente.Size = new System.Drawing.Size(162, 32);
+            this.comboBoxRipristinaCliente.TabIndex = 22;
+            // 
+            // btnOkNuovoXCliente
+            // 
+            this.btnOkNuovoXCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnOkNuovoXCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOkNuovoXCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOkNuovoXCliente.Location = new System.Drawing.Point(283, 166);
+            this.btnOkNuovoXCliente.Name = "btnOkNuovoXCliente";
+            this.btnOkNuovoXCliente.Size = new System.Drawing.Size(49, 31);
+            this.btnOkNuovoXCliente.TabIndex = 5;
+            this.btnOkNuovoXCliente.Text = "OK";
+            this.btnOkNuovoXCliente.UseVisualStyleBackColor = false;
+            this.btnOkNuovoXCliente.Click += new System.EventHandler(this.btnOkNuovoXCliente_Click);
+            // 
+            // textBoxNuovoXCliente
+            // 
+            this.textBoxNuovoXCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNuovoXCliente.Location = new System.Drawing.Point(117, 166);
+            this.textBoxNuovoXCliente.Name = "textBoxNuovoXCliente";
+            this.textBoxNuovoXCliente.Size = new System.Drawing.Size(162, 31);
+            this.textBoxNuovoXCliente.TabIndex = 4;
+            // 
+            // lblRipristinaCliente
+            // 
+            this.lblRipristinaCliente.AutoSize = true;
+            this.lblRipristinaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRipristinaCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblRipristinaCliente.Location = new System.Drawing.Point(38, 122);
+            this.lblRipristinaCliente.Name = "lblRipristinaCliente";
+            this.lblRipristinaCliente.Size = new System.Drawing.Size(108, 25);
+            this.lblRipristinaCliente.TabIndex = 3;
+            this.lblRipristinaCliente.Text = "Ripristina:";
+            // 
+            // btnPinCliente
+            // 
+            this.btnPinCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnPinCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPinCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPinCliente.Location = new System.Drawing.Point(283, 69);
+            this.btnPinCliente.Name = "btnPinCliente";
+            this.btnPinCliente.Size = new System.Drawing.Size(49, 31);
+            this.btnPinCliente.TabIndex = 2;
+            this.btnPinCliente.Text = "OK";
+            this.btnPinCliente.UseVisualStyleBackColor = false;
+            this.btnPinCliente.Click += new System.EventHandler(this.btnPinCliente_Click);
+            // 
+            // lblPinCliente
+            // 
+            this.lblPinCliente.AutoSize = true;
+            this.lblPinCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPinCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblPinCliente.Location = new System.Drawing.Point(18, 72);
+            this.lblPinCliente.Name = "lblPinCliente";
+            this.lblPinCliente.Size = new System.Drawing.Size(132, 25);
+            this.lblPinCliente.TabIndex = 1;
+            this.lblPinCliente.Text = "Inserisci pin:";
+            // 
+            // textBoxPinCliente
+            // 
+            this.textBoxPinCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPinCliente.Location = new System.Drawing.Point(156, 69);
+            this.textBoxPinCliente.Name = "textBoxPinCliente";
+            this.textBoxPinCliente.Size = new System.Drawing.Size(123, 31);
+            this.textBoxPinCliente.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(119, 47);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 22;
+            // 
+            // textBoxCerca
+            // 
+            this.textBoxCerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.textBoxCerca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBoxCerca.Location = new System.Drawing.Point(8, 8);
+            this.textBoxCerca.Name = "textBoxCerca";
+            this.textBoxCerca.Size = new System.Drawing.Size(581, 29);
+            this.textBoxCerca.TabIndex = 0;
+            // 
+            // btnCerca
+            // 
+            this.btnCerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnCerca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnCerca.Location = new System.Drawing.Point(595, 8);
+            this.btnCerca.Name = "btnCerca";
+            this.btnCerca.Size = new System.Drawing.Size(144, 29);
+            this.btnCerca.TabIndex = 1;
+            this.btnCerca.Text = "Cerca";
+            this.btnCerca.UseVisualStyleBackColor = false;
+            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
+            // 
+            // btnUltimoOrdine
+            // 
+            this.btnUltimoOrdine.FlatAppearance.BorderSize = 0;
+            this.btnUltimoOrdine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUltimoOrdine.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUltimoOrdine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnUltimoOrdine.Location = new System.Drawing.Point(3, 306);
+            this.btnUltimoOrdine.Name = "btnUltimoOrdine";
+            this.btnUltimoOrdine.Size = new System.Drawing.Size(197, 61);
+            this.btnUltimoOrdine.TabIndex = 71;
+            this.btnUltimoOrdine.Text = "Ultimo ordine";
+            this.btnUltimoOrdine.UseVisualStyleBackColor = true;
+            this.btnUltimoOrdine.Click += new System.EventHandler(this.btnUltimoOrdine_Click);
+            // 
+            // pnlUltimoOrdine
+            // 
+            this.pnlUltimoOrdine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.pnlUltimoOrdine.Controls.Add(this.lblUltimoOrdinePanel);
+            this.pnlUltimoOrdine.Location = new System.Drawing.Point(341, 22);
+            this.pnlUltimoOrdine.Name = "pnlUltimoOrdine";
+            this.pnlUltimoOrdine.Size = new System.Drawing.Size(483, 490);
+            this.pnlUltimoOrdine.TabIndex = 3;
+            // 
+            // lblUltimoOrdinePanel
+            // 
+            this.lblUltimoOrdinePanel.AutoSize = true;
+            this.lblUltimoOrdinePanel.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoOrdinePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblUltimoOrdinePanel.Location = new System.Drawing.Point(132, 17);
+            this.lblUltimoOrdinePanel.Name = "lblUltimoOrdinePanel";
+            this.lblUltimoOrdinePanel.Size = new System.Drawing.Size(236, 33);
+            this.lblUltimoOrdinePanel.TabIndex = 3;
+            this.lblUltimoOrdinePanel.Text = "ULTIMO ORDINE";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pnlPiatti
+            // 
+            this.pnlPiatti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto14);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto13);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto12);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto10);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto9);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto11);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto8);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto7);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto6);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto5);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto4);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto3);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto2);
+            this.pnlPiatti.Controls.Add(this.lblGestionePiatto1);
+            this.pnlPiatti.Location = new System.Drawing.Point(8, 47);
+            this.pnlPiatti.Name = "pnlPiatti";
+            this.pnlPiatti.Size = new System.Drawing.Size(581, 373);
+            this.pnlPiatti.TabIndex = 2;
+            // 
+            // lblGestionePiatto1
+            // 
+            this.lblGestionePiatto1.AutoSize = true;
+            this.lblGestionePiatto1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto1.Location = new System.Drawing.Point(3, 11);
+            this.lblGestionePiatto1.Name = "lblGestionePiatto1";
+            this.lblGestionePiatto1.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto1.TabIndex = 0;
+            this.lblGestionePiatto1.Text = "Piatto1";
+            // 
+            // lblGestionePiatto2
+            // 
+            this.lblGestionePiatto2.AutoSize = true;
+            this.lblGestionePiatto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto2.Location = new System.Drawing.Point(3, 31);
+            this.lblGestionePiatto2.Name = "lblGestionePiatto2";
+            this.lblGestionePiatto2.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto2.TabIndex = 1;
+            this.lblGestionePiatto2.Text = "Piatto2";
+            // 
+            // lblGestionePiatto3
+            // 
+            this.lblGestionePiatto3.AutoSize = true;
+            this.lblGestionePiatto3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto3.Location = new System.Drawing.Point(3, 51);
+            this.lblGestionePiatto3.Name = "lblGestionePiatto3";
+            this.lblGestionePiatto3.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto3.TabIndex = 2;
+            this.lblGestionePiatto3.Text = "Piatto3";
+            // 
+            // lblGestionePiatto4
+            // 
+            this.lblGestionePiatto4.AutoSize = true;
+            this.lblGestionePiatto4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto4.Location = new System.Drawing.Point(3, 71);
+            this.lblGestionePiatto4.Name = "lblGestionePiatto4";
+            this.lblGestionePiatto4.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto4.TabIndex = 3;
+            this.lblGestionePiatto4.Text = "Piatto4";
+            // 
+            // lblGestionePiatto5
+            // 
+            this.lblGestionePiatto5.AutoSize = true;
+            this.lblGestionePiatto5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto5.Location = new System.Drawing.Point(3, 91);
+            this.lblGestionePiatto5.Name = "lblGestionePiatto5";
+            this.lblGestionePiatto5.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto5.TabIndex = 4;
+            this.lblGestionePiatto5.Text = "Piatto5";
+            // 
+            // lblGestionePiatto6
+            // 
+            this.lblGestionePiatto6.AutoSize = true;
+            this.lblGestionePiatto6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto6.Location = new System.Drawing.Point(3, 111);
+            this.lblGestionePiatto6.Name = "lblGestionePiatto6";
+            this.lblGestionePiatto6.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto6.TabIndex = 5;
+            this.lblGestionePiatto6.Text = "Piatto6";
+            // 
+            // lblGestionePiatto7
+            // 
+            this.lblGestionePiatto7.AutoSize = true;
+            this.lblGestionePiatto7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto7.Location = new System.Drawing.Point(3, 131);
+            this.lblGestionePiatto7.Name = "lblGestionePiatto7";
+            this.lblGestionePiatto7.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto7.TabIndex = 6;
+            this.lblGestionePiatto7.Text = "Piatto7";
+            // 
+            // lblGestionePiatto8
+            // 
+            this.lblGestionePiatto8.AutoSize = true;
+            this.lblGestionePiatto8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto8.Location = new System.Drawing.Point(3, 151);
+            this.lblGestionePiatto8.Name = "lblGestionePiatto8";
+            this.lblGestionePiatto8.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto8.TabIndex = 7;
+            this.lblGestionePiatto8.Text = "Piatto8";
+            // 
+            // lblGestionePiatto11
+            // 
+            this.lblGestionePiatto11.AutoSize = true;
+            this.lblGestionePiatto11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto11.Location = new System.Drawing.Point(3, 211);
+            this.lblGestionePiatto11.Name = "lblGestionePiatto11";
+            this.lblGestionePiatto11.Size = new System.Drawing.Size(68, 20);
+            this.lblGestionePiatto11.TabIndex = 8;
+            this.lblGestionePiatto11.Text = "Piatto11";
+            // 
+            // lblGestionePiatto9
+            // 
+            this.lblGestionePiatto9.AutoSize = true;
+            this.lblGestionePiatto9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto9.Location = new System.Drawing.Point(3, 171);
+            this.lblGestionePiatto9.Name = "lblGestionePiatto9";
+            this.lblGestionePiatto9.Size = new System.Drawing.Size(59, 20);
+            this.lblGestionePiatto9.TabIndex = 8;
+            this.lblGestionePiatto9.Text = "Piatto9";
+            // 
+            // lblGestionePiatto10
+            // 
+            this.lblGestionePiatto10.AutoSize = true;
+            this.lblGestionePiatto10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto10.Location = new System.Drawing.Point(3, 191);
+            this.lblGestionePiatto10.Name = "lblGestionePiatto10";
+            this.lblGestionePiatto10.Size = new System.Drawing.Size(68, 20);
+            this.lblGestionePiatto10.TabIndex = 9;
+            this.lblGestionePiatto10.Text = "Piatto10";
+            // 
+            // lblGestionePiatto12
+            // 
+            this.lblGestionePiatto12.AutoSize = true;
+            this.lblGestionePiatto12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto12.Location = new System.Drawing.Point(3, 231);
+            this.lblGestionePiatto12.Name = "lblGestionePiatto12";
+            this.lblGestionePiatto12.Size = new System.Drawing.Size(68, 20);
+            this.lblGestionePiatto12.TabIndex = 10;
+            this.lblGestionePiatto12.Text = "Piatto12";
+            // 
+            // lblGestionePiatto13
+            // 
+            this.lblGestionePiatto13.AutoSize = true;
+            this.lblGestionePiatto13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto13.Location = new System.Drawing.Point(3, 251);
+            this.lblGestionePiatto13.Name = "lblGestionePiatto13";
+            this.lblGestionePiatto13.Size = new System.Drawing.Size(68, 20);
+            this.lblGestionePiatto13.TabIndex = 11;
+            this.lblGestionePiatto13.Text = "Piatto13";
+            // 
+            // lblGestionePiatto14
+            // 
+            this.lblGestionePiatto14.AutoSize = true;
+            this.lblGestionePiatto14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionePiatto14.Location = new System.Drawing.Point(3, 274);
+            this.lblGestionePiatto14.Name = "lblGestionePiatto14";
+            this.lblGestionePiatto14.Size = new System.Drawing.Size(68, 20);
+            this.lblGestionePiatto14.TabIndex = 12;
+            this.lblGestionePiatto14.Text = "Piatto14";
             // 
             // Form1
             // 
@@ -2184,6 +2604,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.pnlPrincipale);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pnlRispristinaCliente);
+            this.Controls.Add(this.pnlEmailInviataCliente);
             this.Controls.Add(this.pnlPin);
             this.Controls.Add(this.pnlEmailInviata);
             this.Controls.Add(this.pnlForgotPassword);
@@ -2214,6 +2637,8 @@
             this.pnlOrdine.PerformLayout();
             this.pnlGestisciMenu.ResumeLayout(false);
             this.pnlGestisciMenu.PerformLayout();
+            this.pnlGestisciMenu2.ResumeLayout(false);
+            this.pnlGestisciMenu2.PerformLayout();
             this.pnlAggiungi.ResumeLayout(false);
             this.pnlAggiungi.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -2222,11 +2647,11 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
             this.pnlScegliOpzione.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.pnlProfiloeNome.ResumeLayout(false);
             this.pnlProfiloeNome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.pnlCliente.ResumeLayout(false);
             this.pnlClienteRegistra.ResumeLayout(false);
             this.pnlClienteRegistra.PerformLayout();
@@ -2236,6 +2661,14 @@
             this.pnlEmailNome.PerformLayout();
             this.pnlForgotPassword.ResumeLayout(false);
             this.pnlForgotPassword.PerformLayout();
+            this.pnlEmailInviataCliente.ResumeLayout(false);
+            this.pnlEmailInviataCliente.PerformLayout();
+            this.pnlRispristinaCliente.ResumeLayout(false);
+            this.pnlRispristinaCliente.PerformLayout();
+            this.pnlUltimoOrdine.ResumeLayout(false);
+            this.pnlUltimoOrdine.PerformLayout();
+            this.pnlPiatti.ResumeLayout(false);
+            this.pnlPiatti.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2406,6 +2839,40 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button btnSendEmail;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Panel pnlEmailInviataCliente;
+        private System.Windows.Forms.Button btnEmailInviataCliente;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnlRispristinaCliente;
+        private System.Windows.Forms.Button btnOkNuovoXCliente;
+        private System.Windows.Forms.TextBox textBoxNuovoXCliente;
+        private System.Windows.Forms.Label lblRipristinaCliente;
+        private System.Windows.Forms.Button btnPinCliente;
+        private System.Windows.Forms.Label lblPinCliente;
+        private System.Windows.Forms.TextBox textBoxPinCliente;
+        private System.Windows.Forms.ComboBox comboBoxRipristinaCliente;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCerca;
+        private System.Windows.Forms.TextBox textBoxCerca;
+        private System.Windows.Forms.Button btnUltimoOrdine;
+        private System.Windows.Forms.Panel pnlUltimoOrdine;
+        private System.Windows.Forms.Label lblUltimoOrdinePanel;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel pnlPiatti;
+        private System.Windows.Forms.Label lblGestionePiatto14;
+        private System.Windows.Forms.Label lblGestionePiatto13;
+        private System.Windows.Forms.Label lblGestionePiatto12;
+        private System.Windows.Forms.Label lblGestionePiatto10;
+        private System.Windows.Forms.Label lblGestionePiatto9;
+        private System.Windows.Forms.Label lblGestionePiatto11;
+        private System.Windows.Forms.Label lblGestionePiatto8;
+        private System.Windows.Forms.Label lblGestionePiatto7;
+        private System.Windows.Forms.Label lblGestionePiatto6;
+        private System.Windows.Forms.Label lblGestionePiatto5;
+        private System.Windows.Forms.Label lblGestionePiatto4;
+        private System.Windows.Forms.Label lblGestionePiatto3;
+        private System.Windows.Forms.Label lblGestionePiatto2;
+        private System.Windows.Forms.Label lblGestionePiatto1;
     }
 }
 

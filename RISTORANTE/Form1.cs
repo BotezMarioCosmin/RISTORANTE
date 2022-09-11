@@ -15,6 +15,11 @@ using System.IO;
 using System.Runtime.Remoting.Contexts;
 using System.Data.SqlClient;
 using System.Net.Http;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Runtime.CompilerServices;
+using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace RISTORANTE
 {
@@ -48,6 +53,8 @@ namespace RISTORANTE
         bool Des1 = false;
         bool Des2 = false;
         bool Des3 = false;
+
+        string emailClientePerModifica = "";
 
         public struct piatto
         {
@@ -100,7 +107,9 @@ namespace RISTORANTE
             pnlClienteRegistra.Location = new Point(271, 146);
             pnlForgotPassword.Location = new Point(270, 146);
             pnlEmailInviata.Location = new Point(295, 132);
+            pnlEmailInviataCliente.Location = new Point(295, 132);
             pnlPin.Location = new Point(295, 132);
+            pnlRispristinaCliente.Location = new Point(295, 132);
             pnlCliente.Location = new Point(295, 132);
             this.pnlAggiungi.Location = new Point(200,0);
             this.pnlGestisciMenu.Location = new Point(200, 0);
@@ -110,6 +119,36 @@ namespace RISTORANTE
             pnlAggiungi.Hide();
             pnlOrdine.Hide();
             pnlClienteRegistra.Hide();
+            pnlEmailInviataCliente.Hide();
+            pnlRispristinaCliente.Hide();
+            pnlUltimoOrdine.Hide();
+
+            if (!(File.Exists(@"./loginCliente.txt")))
+            {
+                File.CreateText(@"./loginCliente.txt");
+            }
+
+            if (!(File.Exists(@"./ultimoOrdine.txt")))
+            {
+                File.CreateText(@"./ultimoOrdine.txt");
+            }
+
+            if (!(File.Exists(fileNameP)))
+            {
+                File.CreateText(fileNameP);
+            }
+
+            if (!(File.Exists(filePiatti)))
+            {
+                File.CreateText(filePiatti);
+            }
+
+
+            if (!(File.Exists(@"./contaClienti.txt")))
+            {
+                File.CreateText(@"./contaClienti.txt");
+            }
+
 
             //scritta trasparente sopra il libro
             lblNomeRistoranteProp.Location = pictureBoxMenu.PointToClient(lblNomeRistoranteProp.Parent.PointToScreen(lblNomeRistoranteProp.Location));
@@ -259,6 +298,50 @@ namespace RISTORANTE
             lblPriceB.Location = pictureBoxMenu.PointToClient(lblPriceB.Parent.PointToScreen(lblPriceB.Location));
             lblPriceB.Parent = pictureBoxMenu;
             lblPriceB.BackColor = Color.Transparent;
+
+
+            int x = 45, add = 80;
+            for (int i = 0; i < quantitaRighe(); i++)//genera label
+            {
+                Label lbl = new Label();
+                lbl.Name = "lblUltimoOrdine" + i;
+                lbl.Text = piattoSplit(i, 0);
+                lbl.Location = new Point(x, add);
+                lbl.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                pnlUltimoOrdine.Controls.Add(lbl);
+                lbl.BringToFront();
+
+                add = add + 30;
+            }
+            x = 230;
+            add = 80;
+            for (int i = 0; i < quantitaRighe(); i++)//genera label
+            {
+                Label lbl = new Label();
+                lbl.Name = "lblUltimoOrdine" + i;
+                lbl.Text = piattoSplit(i, 2);
+                lbl.Location = new Point(x, add);
+                lbl.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                pnlUltimoOrdine.Controls.Add(lbl);
+                lbl.BringToFront();
+
+                add = add + 30;
+            }
+
+            x = 400;
+            add = 80;
+            for (int i = 0; i < quantitaRighe(); i++)//genera label
+            {
+                Label lbl = new Label();
+                lbl.Name = "lblUltimoOrdine" + i;
+                lbl.Text = piattoSplit(i, 1) + " €";
+                lbl.Location = new Point(x, add);
+                lbl.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                pnlUltimoOrdine.Controls.Add(lbl);
+                lbl.BringToFront();
+
+                add = add + 30;
+            }
         }
 
         private void btnProprietario_Click(object sender, EventArgs e)
@@ -460,6 +543,9 @@ namespace RISTORANTE
             btnOrdinaDessert1.Hide();
             btnOrdinaDessert2.Hide();
             btnOrdinaDessert3.Hide();
+            btnAggiungiPiatto.Show();
+            btnGestisciMenu.Show();
+            btnUltimoOrdine.Show();
 
             string checkName = textBoxNome.Text;
             string checkPassword = textBoxPassword.Text;
@@ -544,6 +630,7 @@ namespace RISTORANTE
             window = 0;
             pnlPrincipale.Hide();
             rimuoviOrdine();
+            pnlOrdine.Hide();
         }
 
         void rimuoviOrdine()//rimuove valori ordine in caso di logout
@@ -582,8 +669,11 @@ namespace RISTORANTE
 
         private void btnVisualizzaMenu_Click(object sender, EventArgs e)
         {
+            mostraPulsantiOrdine();
+            pnlGestisciMenu.Hide();
             pnlAggiungi.Hide();
             pictureBoxMenu.Show();
+            pnlUltimoOrdine.Hide();
 
             if (proprietario == true)
             {
@@ -944,6 +1034,9 @@ namespace RISTORANTE
         {
             pictureBoxMenu.Hide();
             pnlAggiungi.Show();
+            pnlGestisciMenu.Hide();
+            nascondiPulsantiOrdine();
+            pnlUltimoOrdine.Hide();
         }
 
         public static string leggiPiatto(string filename, int j)
@@ -1023,12 +1116,6 @@ namespace RISTORANTE
             sw.Close();
         }
 
-        private void btnCercaPiatto_Click(object sender, EventArgs e)
-        {
-            pictureBoxMenu.Hide();
-            pnlAggiungi.Hide();
-        }
-
         private void btnOrdinaAntipasto1_Click(object sender, EventArgs e)
         {
             if (lblAntipasto1.Text != "Antipasto1")
@@ -1098,11 +1185,46 @@ namespace RISTORANTE
             pictureBoxMenu.Show();
         }
 
+        public static int quantitaRighePiatti()
+        {
+            StreamReader sr = new StreamReader(@"./piatti.txt");
+            for (int i = 0; i < 14; i++)
+            {
+                if (sr.ReadLine() == null)
+                {
+                    sr.Close();
+                    return i;
+                }
+
+            }
+            sr.Close();
+            return 13;
+        }
+
         private void btnbtnGestisciMenu_Click(object sender, EventArgs e)
         {
             pictureBoxMenu.Hide();
             pnlAggiungi.Hide();
             pnlGestisciMenu.Show();
+            nascondiPulsantiOrdine();
+            pnlUltimoOrdine.Hide();
+
+            lblGestionePiatto1.Text = lblAntipasto1.Text;
+            lblGestionePiatto2.Text = lblAntipasto2.Text;
+            lblGestionePiatto3.Text = lblAntipasto3.Text;
+            lblGestionePiatto4.Text = lblPrimo1.Text;
+            lblGestionePiatto5.Text = lblPrimo2.Text;
+            lblGestionePiatto6.Text = lblPrimo3.Text;
+            lblGestionePiatto7.Text = lblPrimo4.Text;
+            lblGestionePiatto8.Text = lblSecondo1.Text;
+            lblGestionePiatto9.Text = lblSecondo2.Text;
+            lblGestionePiatto10.Text = lblSecondo3.Text;
+            lblGestionePiatto11.Text = lblSecondo4.Text;
+            lblGestionePiatto12.Text = lblDessert1.Text;
+            lblGestionePiatto13.Text = lblDessert2.Text;
+            lblGestionePiatto14.Text = lblDessert3.Text;
+
+            timer1.Start();
         }
 
         private void btnClienteOspite_Click(object sender, EventArgs e)
@@ -1113,6 +1235,7 @@ namespace RISTORANTE
             btnAggiungiPiatto.Hide();
             btnGestisciMenu.Hide();
             pictureBoxMenu.Hide();
+            btnUltimoOrdine.Hide();
             lblNomeProprietario.Text = "Ospite";
             nascondiPulsantiOrdine();
             panel3.Show();
@@ -1388,6 +1511,13 @@ namespace RISTORANTE
 
         private void btnOrdina_Click(object sender, EventArgs e)
         {
+            eliminaFile(@"./ultimoOrdine.txt");
+            /*
+            if (!(File.Exists(@"./ultimoOrdine.txt")))
+            {
+                File.CreateText(@"./ultimoOrdine.txt");
+            }
+            */
             if (textBoxTotale.Text != "0,00 €")
             {
                 if (btnOrdinaAntipasto1.Text == "X")
@@ -1955,11 +2085,41 @@ namespace RISTORANTE
             sw.Close();
         }
 
+        public static bool verificaEmail(string email)
+        {
+            string[] emailDivisa = email.Split(new char[] { '@' });
+
+            string[] array = new string[3];
+            int i = 0;
+
+            foreach (var sub in emailDivisa)
+            {
+                array[i] = ($"{sub}");
+                i++;
+            }
+
+            if (array[1] == "gmail.com" || array[1] == "yahoo.com")
+            {
+                return true;
+            }
+            return false;
+        }
+
         private void btnClienteRegistrato_Click(object sender, EventArgs e)
         {
             string clienteEmail = textBoxClienteEmail.Text;
             string clienteNome = textBoxClienteNome.Text;
             string clientePassword = textBoxClientePassword.Text;
+
+
+            if (verificaEmail(clienteEmail) == false)
+            {
+                MessageBox.Show("Inserire una email valida.");
+                textBoxClienteEmail.Text = "";
+                textBoxClienteNome.Text = "";
+                textBoxClientePassword.Text = "";
+                return;
+            }
 
             if (clienteEmail == "" || clienteNome == "" || clientePassword == "")
             {
@@ -1970,7 +2130,7 @@ namespace RISTORANTE
                 return;
             }
 
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < 15; j++)
             {
                 if (clienteEmail == infoCliente(j + 1, 0))
                 {
@@ -1982,7 +2142,7 @@ namespace RISTORANTE
                 }
             }
 
-            for (int l = 0; l < 10; l++)
+            for (int l = 0; l < 15; l++)
             {
                 if (clienteNome == infoCliente(l + 1, 1))
                 {
@@ -2002,6 +2162,27 @@ namespace RISTORANTE
             textBoxClienteEmail.Text = "";
             textBoxClienteNome.Text = "";
             textBoxClientePassword.Text = "";
+
+
+            int cont = leggiClientiNumero();
+            cont++;
+            svuotaFile(cont);
+        }
+
+        public static int leggiClientiNumero()
+        {
+            StreamReader sr = new StreamReader(@"./contaClienti.txt");
+            string s = sr.ReadLine();
+            sr.Close();
+            int a = Convert.ToInt32(s);
+            return a;
+        }
+
+        public static void svuotaFile(int c)
+        {
+            StreamWriter sw = new StreamWriter(@"./contaClienti.txt");
+            sw.WriteLine(c);
+            sw.Close();
         }
 
         private void btnShowHidePassClienteRegistra_Click(object sender, EventArgs e)
@@ -2056,7 +2237,7 @@ namespace RISTORANTE
                 return;
             }
 
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < 15; j++)
             {
                 if (clienteNome == infoCliente(j + 1, 1))
                 {
@@ -2099,6 +2280,199 @@ namespace RISTORANTE
             window = 21;
             pnlClienteAccedi.Hide();
             pnlEmailNome.Show();
+        }
+
+        private void btnEmailNome_Click(object sender, EventArgs e)
+        {
+            string userEmail = textBoxEmailNome.Text;
+
+            for (int i = 0; i < 15; i++)
+            {
+                if (userEmail == infoCliente(i+1,0))
+                {
+                    int pin = sendEmail(userEmail);
+                    textBoxPINCheck.Text = Convert.ToString(pin);
+                    textBoxEmailNome.Text = "";
+                    pnlEmailInviataCliente.Show();
+                    pnlEmailNome.Hide();
+                    /*
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    */
+                    textBoxPinCliente.Text = textBoxPINCheck.Text;
+                    emailClientePerModifica = userEmail;
+                    return;
+                }
+            }
+            MessageBox.Show("Email non registrata.");
+            textBoxEmailNome.Text = "";
+        }
+
+        private void btnEmailInviataCliente_Click(object sender, EventArgs e)
+        {
+            pnlEmailInviataCliente.Hide();
+            pnlRispristinaCliente.Show();
+            lblRipristinaCliente.Hide();
+            comboBoxRipristinaCliente.Hide();
+            textBoxNuovoXCliente.Hide();
+            btnOkNuovoXCliente.Hide();
+        }
+
+        private void btnPinCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int pincheck = Convert.ToInt32(textBoxPinCliente.Text);
+                int pinCorrect = Convert.ToInt32(textBoxPINCheck.Text);
+
+                if (pincheck == pinCorrect)
+                {
+                    lblPinCliente.Hide();
+                    textBoxPinCliente.Hide();
+                    btnPinCliente.Hide();
+                    lblRipristinaCliente.Show();
+                    comboBoxRipristinaCliente.Show();
+                    textBoxNuovoXCliente.Show();
+                    btnOkNuovoXCliente.Show();
+                }
+                else
+                {
+                    textBoxPinCliente.Text = "";
+                    MessageBox.Show("Pin errato!");
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Pin errato! Il pin contiene 6 cifre.");
+            }
+        }
+
+        private void btnOkNuovoXCliente_Click(object sender, EventArgs e)
+        {/*
+            int check = comboBoxRipristinaCliente.SelectedIndex;
+            
+            for (int i = 0; i < 15; i++)
+            {
+                if (infoCliente(i + 1, 0) == emailClientePerModifica)
+                {
+                    int clienteNumeroModifica = i + 1;
+
+                    bool verifica = false;
+
+                    for (int l = 0; l < leggiClientiNumero(); l++)
+                    {
+                        if (l == i)
+                        {
+                            verifica = true;
+                        }
+                        else
+                        {
+                            string s;
+                            s = scriviCliente();
+                            AggiungiSuFileTmp(s, @"./votiTMP.txt");
+                        }
+                    }
+
+                    eliminaFile(@"./voti.txt");
+                    rinominaFile(@"./votiTMP.txt", @"./voti.txt");
+                    if (verifica == true)
+                    {
+                        contClienti--;
+                        AggiungiSuFileCont(contstudenti, @"./contClienti.txt");//diminuisce e riscrive il valore del conta numero studenti
+                    }
+
+
+                }
+            }
+
+
+
+
+            if (check == 0) //nome
+            {
+  
+
+                textBoxNuovoXCliente
+                cercaCliente(emailClientePerModifica);
+            }
+            else if (check == 1) //password
+            { 
+                
+            }
+
+            string nuovaPassP = textBoxNuovaPass.Text;
+            scrivi(nomeProprietario, nuovaPassP, fileNameP);
+            textBoxNuovoXCliente.Text = "";
+            MessageBox.Show("Nuova password impostata");
+            pnlRispristinaCliente.Hide();
+            window = 0;*/
+        }
+
+        public static void eliminaFile(string filename)
+        {
+            if (File.Exists(filename))//elimina file originario
+            {
+                File.Delete(filename);
+            }
+        }
+
+        public static void rinominaFile(string filename, string filename2)
+        {
+            FileInfo fi = new FileInfo(filename);//rinomina file temporaneo
+            if (fi.Exists)
+            {
+                fi.MoveTo(filename2);
+            }
+        }
+
+        private void btnUltimoOrdine_Click(object sender, EventArgs e)
+        {
+            pictureBoxMenu.Hide();
+            pnlAggiungi.Hide();
+            pnlGestisciMenu.Hide();
+            pnlUltimoOrdine.Show();
+            nascondiPulsantiOrdine();
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string stringa = textBoxCerca.Text;
+            string[] arrayPiatti = new string[14];
+
+            for (int i = 0; i < 14; i++)
+            {
+                arrayPiatti[i] = leggiPiatto(filePiatti, i);
+            }
+
+            if (pnlGestisciMenu.Visible == false)
+            {
+                timer1.Stop();
+            }
+        }
+
+        private void btnCerca_Click(object sender, EventArgs e)
+        {
+            lblGestionePiatto1.Hide();
+            lblGestionePiatto2.Hide();
+            lblGestionePiatto3.Hide();
+            lblGestionePiatto4.Hide();
+            lblGestionePiatto5.Hide();
+            lblGestionePiatto6.Hide();
+            lblGestionePiatto7.Hide();
+            lblGestionePiatto8.Hide();
+            lblGestionePiatto9.Hide();
+            lblGestionePiatto10.Hide();
+            lblGestionePiatto11.Hide();
+            lblGestionePiatto12.Hide();
+            lblGestionePiatto13.Hide();
+            lblGestionePiatto14.Hide();
         }
     }
 }
