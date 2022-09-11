@@ -39,12 +39,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.linkLabelForgotPassword = new System.Windows.Forms.LinkLabel();
-            this.pnlForgotPassword = new System.Windows.Forms.Panel();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.btnSendEmail = new System.Windows.Forms.Button();
             this.pnlEmailInviata = new System.Windows.Forms.Panel();
-            this.btnOK = new System.Windows.Forms.Button();
             this.lblSpam = new System.Windows.Forms.Label();
             this.lblEmailInviata = new System.Windows.Forms.Label();
             this.textBoxPINCheck = new System.Windows.Forms.TextBox();
@@ -188,8 +183,16 @@
             this.lblClientePassAccedi = new System.Windows.Forms.Label();
             this.lblClienteNomeAccedi = new System.Windows.Forms.Label();
             this.clientePassDimenticata = new System.Windows.Forms.LinkLabel();
+            this.pnlEmailNome = new System.Windows.Forms.Panel();
+            this.textBoxEmailNome = new System.Windows.Forms.TextBox();
+            this.lblClientResert = new System.Windows.Forms.Label();
+            this.btnEmailNome = new System.Windows.Forms.Button();
+            this.pnlForgotPassword = new System.Windows.Forms.Panel();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.btnSendEmail = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.pnlAccesso.SuspendLayout();
-            this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
             this.pnlPin.SuspendLayout();
             this.pnlPrincipale.SuspendLayout();
@@ -206,6 +209,8 @@
             this.pnlCliente.SuspendLayout();
             this.pnlClienteRegistra.SuspendLayout();
             this.pnlClienteAccedi.SuspendLayout();
+            this.pnlEmailNome.SuspendLayout();
+            this.pnlForgotPassword.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -242,7 +247,7 @@
             this.pnlAccesso.Controls.Add(this.lblPassword);
             this.pnlAccesso.Controls.Add(this.lblUsername);
             this.pnlAccesso.Controls.Add(this.linkLabelForgotPassword);
-            this.pnlAccesso.Location = new System.Drawing.Point(768, 53);
+            this.pnlAccesso.Location = new System.Drawing.Point(755, 53);
             this.pnlAccesso.Name = "pnlAccesso";
             this.pnlAccesso.Size = new System.Drawing.Size(404, 248);
             this.pnlAccesso.TabIndex = 3;
@@ -327,67 +332,15 @@
             this.linkLabelForgotPassword.Text = "Hai dimenticato la password?";
             this.linkLabelForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelForgotPassword_LinkClicked);
             // 
-            // pnlForgotPassword
-            // 
-            this.pnlForgotPassword.Controls.Add(this.textBoxEmail);
-            this.pnlForgotPassword.Controls.Add(this.lblEmail);
-            this.pnlForgotPassword.Controls.Add(this.btnSendEmail);
-            this.pnlForgotPassword.Location = new System.Drawing.Point(785, 37);
-            this.pnlForgotPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlForgotPassword.Name = "pnlForgotPassword";
-            this.pnlForgotPassword.Size = new System.Drawing.Size(402, 246);
-            this.pnlForgotPassword.TabIndex = 6;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(120, 92);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(201, 29);
-            this.textBoxEmail.TabIndex = 6;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblEmail.Location = new System.Drawing.Point(44, 92);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(71, 25);
-            this.lblEmail.TabIndex = 4;
-            this.lblEmail.Text = "Email:";
-            // 
-            // btnSendEmail
-            // 
-            this.btnSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendEmail.Location = new System.Drawing.Point(176, 143);
-            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSendEmail.Name = "btnSendEmail";
-            this.btnSendEmail.Size = new System.Drawing.Size(68, 36);
-            this.btnSendEmail.TabIndex = 0;
-            this.btnSendEmail.Text = "Invia";
-            this.btnSendEmail.UseVisualStyleBackColor = true;
-            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
-            // 
             // pnlEmailInviata
             // 
             this.pnlEmailInviata.Controls.Add(this.btnOK);
             this.pnlEmailInviata.Controls.Add(this.lblSpam);
             this.pnlEmailInviata.Controls.Add(this.lblEmailInviata);
-            this.pnlEmailInviata.Location = new System.Drawing.Point(806, 18);
+            this.pnlEmailInviata.Location = new System.Drawing.Point(804, 28);
             this.pnlEmailInviata.Name = "pnlEmailInviata";
             this.pnlEmailInviata.Size = new System.Drawing.Size(402, 246);
             this.pnlEmailInviata.TabIndex = 8;
-            // 
-            // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(161, 148);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 3;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // lblSpam
             // 
@@ -560,7 +513,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(671, 232);
+            this.pnlPrincipale.Location = new System.Drawing.Point(697, 416);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -1694,7 +1647,7 @@
             // 
             this.pictureBoxMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenu.BackgroundImage")));
             this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxMenu.Location = new System.Drawing.Point(200, 0);
+            this.pictureBoxMenu.Location = new System.Drawing.Point(201, 1);
             this.pictureBoxMenu.Name = "pictureBoxMenu";
             this.pictureBoxMenu.Size = new System.Drawing.Size(788, 562);
             this.pictureBoxMenu.TabIndex = 5;
@@ -1703,11 +1656,11 @@
             // pnlScegliOpzione
             // 
             this.pnlScegliOpzione.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnlScegliOpzione.Controls.Add(this.pnlProfiloeNome);
             this.pnlScegliOpzione.Controls.Add(this.panel3);
             this.pnlScegliOpzione.Controls.Add(this.btnEsci);
             this.pnlScegliOpzione.Controls.Add(this.btnVisualizzaMenu);
             this.pnlScegliOpzione.Controls.Add(this.btnGestisciMenu);
-            this.pnlScegliOpzione.Controls.Add(this.pnlProfiloeNome);
             this.pnlScegliOpzione.Controls.Add(this.btnAggiungiPiatto);
             this.pnlScegliOpzione.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlScegliOpzione.Location = new System.Drawing.Point(0, 0);
@@ -1883,7 +1836,7 @@
             this.pnlCliente.Controls.Add(this.btnClienteRegistrati);
             this.pnlCliente.Controls.Add(this.btnClienteOspite);
             this.pnlCliente.Controls.Add(this.btnClienteAccedi);
-            this.pnlCliente.Location = new System.Drawing.Point(131, 528);
+            this.pnlCliente.Location = new System.Drawing.Point(132, 528);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(404, 289);
             this.pnlCliente.TabIndex = 12;
@@ -1940,7 +1893,7 @@
             this.pnlClienteRegistra.Controls.Add(this.textBoxClienteNome);
             this.pnlClienteRegistra.Controls.Add(this.label1);
             this.pnlClienteRegistra.Controls.Add(this.label2);
-            this.pnlClienteRegistra.Location = new System.Drawing.Point(162, 508);
+            this.pnlClienteRegistra.Location = new System.Drawing.Point(143, 503);
             this.pnlClienteRegistra.Name = "pnlClienteRegistra";
             this.pnlClienteRegistra.Size = new System.Drawing.Size(404, 245);
             this.pnlClienteRegistra.TabIndex = 17;
@@ -2038,7 +1991,7 @@
             this.pnlClienteAccedi.Controls.Add(this.lblClientePassAccedi);
             this.pnlClienteAccedi.Controls.Add(this.lblClienteNomeAccedi);
             this.pnlClienteAccedi.Controls.Add(this.clientePassDimenticata);
-            this.pnlClienteAccedi.Location = new System.Drawing.Point(261, 105);
+            this.pnlClienteAccedi.Location = new System.Drawing.Point(162, 468);
             this.pnlClienteAccedi.Name = "pnlClienteAccedi";
             this.pnlClienteAccedi.Size = new System.Drawing.Size(404, 270);
             this.pnlClienteAccedi.TabIndex = 18;
@@ -2077,6 +2030,7 @@
             this.textBoxClientePassAccedi.Size = new System.Drawing.Size(178, 29);
             this.textBoxClientePassAccedi.TabIndex = 3;
             this.textBoxClientePassAccedi.UseSystemPasswordChar = true;
+            this.textBoxClientePassAccedi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxClientePassAccedi_KeyDown);
             // 
             // textBoxClienteNomeAccedi
             // 
@@ -2120,6 +2074,108 @@
             this.clientePassDimenticata.TabIndex = 5;
             this.clientePassDimenticata.TabStop = true;
             this.clientePassDimenticata.Text = "Hai dimenticato la password o il nome?";
+            this.clientePassDimenticata.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.clientePassDimenticata_LinkClicked);
+            // 
+            // pnlEmailNome
+            // 
+            this.pnlEmailNome.Controls.Add(this.textBoxEmailNome);
+            this.pnlEmailNome.Controls.Add(this.lblClientResert);
+            this.pnlEmailNome.Controls.Add(this.btnEmailNome);
+            this.pnlEmailNome.Location = new System.Drawing.Point(189, 444);
+            this.pnlEmailNome.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlEmailNome.Name = "pnlEmailNome";
+            this.pnlEmailNome.Size = new System.Drawing.Size(402, 268);
+            this.pnlEmailNome.TabIndex = 19;
+            // 
+            // textBoxEmailNome
+            // 
+            this.textBoxEmailNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmailNome.Location = new System.Drawing.Point(91, 92);
+            this.textBoxEmailNome.Name = "textBoxEmailNome";
+            this.textBoxEmailNome.Size = new System.Drawing.Size(260, 29);
+            this.textBoxEmailNome.TabIndex = 6;
+            // 
+            // lblClientResert
+            // 
+            this.lblClientResert.AutoSize = true;
+            this.lblClientResert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientResert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblClientResert.Location = new System.Drawing.Point(148, 49);
+            this.lblClientResert.Name = "lblClientResert";
+            this.lblClientResert.Size = new System.Drawing.Size(148, 25);
+            this.lblClientResert.TabIndex = 4;
+            this.lblClientResert.Text = "Email o nome:";
+            // 
+            // btnEmailNome
+            // 
+            this.btnEmailNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnEmailNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmailNome.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnEmailNome.Location = new System.Drawing.Point(146, 155);
+            this.btnEmailNome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmailNome.Name = "btnEmailNome";
+            this.btnEmailNome.Size = new System.Drawing.Size(150, 46);
+            this.btnEmailNome.TabIndex = 0;
+            this.btnEmailNome.Text = "Invia";
+            this.btnEmailNome.UseVisualStyleBackColor = false;
+            // 
+            // pnlForgotPassword
+            // 
+            this.pnlForgotPassword.Controls.Add(this.textBoxEmail);
+            this.pnlForgotPassword.Controls.Add(this.lblEmail);
+            this.pnlForgotPassword.Controls.Add(this.btnSendEmail);
+            this.pnlForgotPassword.Location = new System.Drawing.Point(779, 33);
+            this.pnlForgotPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlForgotPassword.Name = "pnlForgotPassword";
+            this.pnlForgotPassword.Size = new System.Drawing.Size(402, 268);
+            this.pnlForgotPassword.TabIndex = 20;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(91, 92);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(260, 29);
+            this.textBoxEmail.TabIndex = 6;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblEmail.Location = new System.Drawing.Point(185, 52);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(71, 25);
+            this.lblEmail.TabIndex = 4;
+            this.lblEmail.Text = "Email:";
+            // 
+            // btnSendEmail
+            // 
+            this.btnSendEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnSendEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendEmail.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSendEmail.Location = new System.Drawing.Point(146, 155);
+            this.btnSendEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendEmail.Name = "btnSendEmail";
+            this.btnSendEmail.Size = new System.Drawing.Size(150, 46);
+            this.btnSendEmail.TabIndex = 0;
+            this.btnSendEmail.Text = "Invia";
+            this.btnSendEmail.UseVisualStyleBackColor = false;
+            this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
+            // 
+            // btnOK
+            // 
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnOK.Location = new System.Drawing.Point(127, 144);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(150, 42);
+            this.btnOK.TabIndex = 4;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // Form1
             // 
@@ -2127,12 +2183,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.pnlClienteAccedi);
-            this.Controls.Add(this.pnlClienteRegistra);
             this.Controls.Add(this.pnlPrincipale);
             this.Controls.Add(this.pnlPin);
             this.Controls.Add(this.pnlEmailInviata);
             this.Controls.Add(this.pnlForgotPassword);
+            this.Controls.Add(this.pnlEmailNome);
+            this.Controls.Add(this.pnlClienteAccedi);
+            this.Controls.Add(this.pnlClienteRegistra);
             this.Controls.Add(this.textBoxPINCheck);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlAccesso);
@@ -2147,8 +2204,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlAccesso.ResumeLayout(false);
             this.pnlAccesso.PerformLayout();
-            this.pnlForgotPassword.ResumeLayout(false);
-            this.pnlForgotPassword.PerformLayout();
             this.pnlEmailInviata.ResumeLayout(false);
             this.pnlEmailInviata.PerformLayout();
             this.pnlPin.ResumeLayout(false);
@@ -2177,6 +2232,10 @@
             this.pnlClienteRegistra.PerformLayout();
             this.pnlClienteAccedi.ResumeLayout(false);
             this.pnlClienteAccedi.PerformLayout();
+            this.pnlEmailNome.ResumeLayout(false);
+            this.pnlEmailNome.PerformLayout();
+            this.pnlForgotPassword.ResumeLayout(false);
+            this.pnlForgotPassword.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2194,14 +2253,9 @@
         private System.Windows.Forms.Button btnAccedi;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.LinkLabel linkLabelForgotPassword;
-        private System.Windows.Forms.Panel pnlForgotPassword;
-        private System.Windows.Forms.Button btnSendEmail;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Panel pnlEmailInviata;
         private System.Windows.Forms.Label lblSpam;
         private System.Windows.Forms.Label lblEmailInviata;
-        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.TextBox textBoxPINCheck;
         private System.Windows.Forms.Panel pnlPin;
         private System.Windows.Forms.TextBox textBoxPinC;
@@ -2343,6 +2397,15 @@
         private System.Windows.Forms.Label lblClientePassAccedi;
         private System.Windows.Forms.Label lblClienteNomeAccedi;
         private System.Windows.Forms.LinkLabel clientePassDimenticata;
+        private System.Windows.Forms.Panel pnlEmailNome;
+        private System.Windows.Forms.TextBox textBoxEmailNome;
+        private System.Windows.Forms.Label lblClientResert;
+        private System.Windows.Forms.Button btnEmailNome;
+        private System.Windows.Forms.Panel pnlForgotPassword;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Button btnSendEmail;
+        private System.Windows.Forms.Button btnOK;
     }
 }
 
