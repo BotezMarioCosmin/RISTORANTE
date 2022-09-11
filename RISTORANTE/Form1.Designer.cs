@@ -57,6 +57,9 @@
             this.textBoxPinC = new System.Windows.Forms.TextBox();
             this.pnlPrincipale = new System.Windows.Forms.Panel();
             this.pnlOrdine = new System.Windows.Forms.Panel();
+            this.lblArrivederci = new System.Windows.Forms.Label();
+            this.lblScontrinoPrezzo = new System.Windows.Forms.Label();
+            this.lblScontrinoIva = new System.Windows.Forms.Label();
             this.lblDescrizione = new System.Windows.Forms.Label();
             this.lblDocumentoCommerciale = new System.Windows.Forms.Label();
             this.lblSep2 = new System.Windows.Forms.Label();
@@ -168,9 +171,15 @@
             this.btnClienteRegistrati = new System.Windows.Forms.Button();
             this.btnClienteOspite = new System.Windows.Forms.Button();
             this.btnClienteAccedi = new System.Windows.Forms.Button();
-            this.lblScontrinoIva = new System.Windows.Forms.Label();
-            this.lblScontrinoPrezzo = new System.Windows.Forms.Label();
-            this.lblArrivederci = new System.Windows.Forms.Label();
+            this.pnlClienteRegistra = new System.Windows.Forms.Panel();
+            this.textBoxClienteEmail = new System.Windows.Forms.TextBox();
+            this.lblEmailCliente = new System.Windows.Forms.Label();
+            this.btnShowHidePassClienteRegistra = new System.Windows.Forms.Button();
+            this.btnClienteRegistrato = new System.Windows.Forms.Button();
+            this.textBoxClientePassword = new System.Windows.Forms.TextBox();
+            this.textBoxClienteNome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlAccesso.SuspendLayout();
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
@@ -187,6 +196,7 @@
             this.pnlProfiloeNome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCliente.SuspendLayout();
+            this.pnlClienteRegistra.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -223,7 +233,7 @@
             this.pnlAccesso.Controls.Add(this.lblPassword);
             this.pnlAccesso.Controls.Add(this.lblUsername);
             this.pnlAccesso.Controls.Add(this.linkLabelForgotPassword);
-            this.pnlAccesso.Location = new System.Drawing.Point(734, 70);
+            this.pnlAccesso.Location = new System.Drawing.Point(376, 76);
             this.pnlAccesso.Name = "pnlAccesso";
             this.pnlAccesso.Size = new System.Drawing.Size(404, 248);
             this.pnlAccesso.TabIndex = 3;
@@ -541,7 +551,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(8, 14);
+            this.pnlPrincipale.Location = new System.Drawing.Point(671, 232);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -563,6 +573,36 @@
             this.pnlOrdine.Name = "pnlOrdine";
             this.pnlOrdine.Size = new System.Drawing.Size(341, 528);
             this.pnlOrdine.TabIndex = 70;
+            // 
+            // lblArrivederci
+            // 
+            this.lblArrivederci.AutoSize = true;
+            this.lblArrivederci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrivederci.Location = new System.Drawing.Point(88, 497);
+            this.lblArrivederci.Name = "lblArrivederci";
+            this.lblArrivederci.Size = new System.Drawing.Size(167, 20);
+            this.lblArrivederci.TabIndex = 11;
+            this.lblArrivederci.Text = "Arrivederci e Grazie";
+            // 
+            // lblScontrinoPrezzo
+            // 
+            this.lblScontrinoPrezzo.AutoSize = true;
+            this.lblScontrinoPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoPrezzo.Location = new System.Drawing.Point(231, 135);
+            this.lblScontrinoPrezzo.Name = "lblScontrinoPrezzo";
+            this.lblScontrinoPrezzo.Size = new System.Drawing.Size(107, 20);
+            this.lblScontrinoPrezzo.TabIndex = 10;
+            this.lblScontrinoPrezzo.Text = "PREZZO (€)";
+            // 
+            // lblScontrinoIva
+            // 
+            this.lblScontrinoIva.AutoSize = true;
+            this.lblScontrinoIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoIva.Location = new System.Drawing.Point(171, 135);
+            this.lblScontrinoIva.Name = "lblScontrinoIva";
+            this.lblScontrinoIva.Size = new System.Drawing.Size(39, 20);
+            this.lblScontrinoIva.TabIndex = 9;
+            this.lblScontrinoIva.Text = "IVA";
             // 
             // lblDescrizione
             // 
@@ -608,7 +648,7 @@
             // 
             this.lblScontrinoTel.AutoSize = true;
             this.lblScontrinoTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoTel.Location = new System.Drawing.Point(92, 60);
+            this.lblScontrinoTel.Location = new System.Drawing.Point(101, 58);
             this.lblScontrinoTel.Name = "lblScontrinoTel";
             this.lblScontrinoTel.Size = new System.Drawing.Size(144, 20);
             this.lblScontrinoTel.TabIndex = 4;
@@ -1834,7 +1874,7 @@
             this.pnlCliente.Controls.Add(this.btnClienteRegistrati);
             this.pnlCliente.Controls.Add(this.btnClienteOspite);
             this.pnlCliente.Controls.Add(this.btnClienteAccedi);
-            this.pnlCliente.Location = new System.Drawing.Point(12, 480);
+            this.pnlCliente.Location = new System.Drawing.Point(12, 196);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(404, 289);
             this.pnlCliente.TabIndex = 12;
@@ -1851,6 +1891,7 @@
             this.btnClienteRegistrati.TabIndex = 16;
             this.btnClienteRegistrati.Text = "Registrati";
             this.btnClienteRegistrati.UseVisualStyleBackColor = false;
+            this.btnClienteRegistrati.Click += new System.EventHandler(this.btnClienteRegistrati_Click);
             // 
             // btnClienteOspite
             // 
@@ -1879,35 +1920,104 @@
             this.btnClienteAccedi.Text = "Accedi";
             this.btnClienteAccedi.UseVisualStyleBackColor = false;
             // 
-            // lblScontrinoIva
+            // pnlClienteRegistra
             // 
-            this.lblScontrinoIva.AutoSize = true;
-            this.lblScontrinoIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoIva.Location = new System.Drawing.Point(171, 135);
-            this.lblScontrinoIva.Name = "lblScontrinoIva";
-            this.lblScontrinoIva.Size = new System.Drawing.Size(39, 20);
-            this.lblScontrinoIva.TabIndex = 9;
-            this.lblScontrinoIva.Text = "IVA";
+            this.pnlClienteRegistra.Controls.Add(this.textBoxClienteEmail);
+            this.pnlClienteRegistra.Controls.Add(this.lblEmailCliente);
+            this.pnlClienteRegistra.Controls.Add(this.btnShowHidePassClienteRegistra);
+            this.pnlClienteRegistra.Controls.Add(this.btnClienteRegistrato);
+            this.pnlClienteRegistra.Controls.Add(this.textBoxClientePassword);
+            this.pnlClienteRegistra.Controls.Add(this.textBoxClienteNome);
+            this.pnlClienteRegistra.Controls.Add(this.label1);
+            this.pnlClienteRegistra.Controls.Add(this.label2);
+            this.pnlClienteRegistra.Location = new System.Drawing.Point(162, 132);
+            this.pnlClienteRegistra.Name = "pnlClienteRegistra";
+            this.pnlClienteRegistra.Size = new System.Drawing.Size(404, 245);
+            this.pnlClienteRegistra.TabIndex = 17;
             // 
-            // lblScontrinoPrezzo
+            // textBoxClienteEmail
             // 
-            this.lblScontrinoPrezzo.AutoSize = true;
-            this.lblScontrinoPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoPrezzo.Location = new System.Drawing.Point(231, 135);
-            this.lblScontrinoPrezzo.Name = "lblScontrinoPrezzo";
-            this.lblScontrinoPrezzo.Size = new System.Drawing.Size(107, 20);
-            this.lblScontrinoPrezzo.TabIndex = 10;
-            this.lblScontrinoPrezzo.Text = "PREZZO (€)";
+            this.textBoxClienteEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClienteEmail.Location = new System.Drawing.Point(133, 83);
+            this.textBoxClienteEmail.Name = "textBoxClienteEmail";
+            this.textBoxClienteEmail.Size = new System.Drawing.Size(178, 29);
+            this.textBoxClienteEmail.TabIndex = 8;
             // 
-            // lblArrivederci
+            // lblEmailCliente
             // 
-            this.lblArrivederci.AutoSize = true;
-            this.lblArrivederci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArrivederci.Location = new System.Drawing.Point(88, 497);
-            this.lblArrivederci.Name = "lblArrivederci";
-            this.lblArrivederci.Size = new System.Drawing.Size(167, 20);
-            this.lblArrivederci.TabIndex = 11;
-            this.lblArrivederci.Text = "Arrivederci e Grazie";
+            this.lblEmailCliente.AutoSize = true;
+            this.lblEmailCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblEmailCliente.Location = new System.Drawing.Point(41, 87);
+            this.lblEmailCliente.Name = "lblEmailCliente";
+            this.lblEmailCliente.Size = new System.Drawing.Size(71, 25);
+            this.lblEmailCliente.TabIndex = 7;
+            this.lblEmailCliente.Text = "Email:";
+            // 
+            // btnShowHidePassClienteRegistra
+            // 
+            this.btnShowHidePassClienteRegistra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHidePassClienteRegistra.BackgroundImage")));
+            this.btnShowHidePassClienteRegistra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowHidePassClienteRegistra.Location = new System.Drawing.Point(316, 132);
+            this.btnShowHidePassClienteRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowHidePassClienteRegistra.Name = "btnShowHidePassClienteRegistra";
+            this.btnShowHidePassClienteRegistra.Size = new System.Drawing.Size(39, 30);
+            this.btnShowHidePassClienteRegistra.TabIndex = 6;
+            this.btnShowHidePassClienteRegistra.UseVisualStyleBackColor = true;
+            this.btnShowHidePassClienteRegistra.Click += new System.EventHandler(this.btnShowHidePassClienteRegistra_Click);
+            // 
+            // btnClienteRegistrato
+            // 
+            this.btnClienteRegistrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnClienteRegistrato.FlatAppearance.BorderSize = 2;
+            this.btnClienteRegistrato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClienteRegistrato.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClienteRegistrato.Location = new System.Drawing.Point(146, 192);
+            this.btnClienteRegistrato.Name = "btnClienteRegistrato";
+            this.btnClienteRegistrato.Size = new System.Drawing.Size(150, 46);
+            this.btnClienteRegistrato.TabIndex = 4;
+            this.btnClienteRegistrato.Text = "Prosegui";
+            this.btnClienteRegistrato.UseVisualStyleBackColor = false;
+            this.btnClienteRegistrato.Click += new System.EventHandler(this.btnClienteRegistrato_Click);
+            // 
+            // textBoxClientePassword
+            // 
+            this.textBoxClientePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClientePassword.Location = new System.Drawing.Point(133, 132);
+            this.textBoxClientePassword.Name = "textBoxClientePassword";
+            this.textBoxClientePassword.Size = new System.Drawing.Size(178, 29);
+            this.textBoxClientePassword.TabIndex = 3;
+            this.textBoxClientePassword.UseSystemPasswordChar = true;
+            // 
+            // textBoxClienteNome
+            // 
+            this.textBoxClienteNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClienteNome.Location = new System.Drawing.Point(133, 36);
+            this.textBoxClienteNome.Name = "textBoxClienteNome";
+            this.textBoxClienteNome.Size = new System.Drawing.Size(178, 29);
+            this.textBoxClienteNome.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.label1.Location = new System.Drawing.Point(3, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Password:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.label2.Location = new System.Drawing.Point(41, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nome:";
             // 
             // Form1
             // 
@@ -1915,6 +2025,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.pnlClienteRegistra);
             this.Controls.Add(this.pnlPrincipale);
             this.Controls.Add(this.pnlPin);
             this.Controls.Add(this.pnlEmailInviata);
@@ -1959,6 +2070,8 @@
             this.pnlProfiloeNome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCliente.ResumeLayout(false);
+            this.pnlClienteRegistra.ResumeLayout(false);
+            this.pnlClienteRegistra.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2108,6 +2221,15 @@
         private System.Windows.Forms.Label lblScontrinoIva;
         private System.Windows.Forms.Label lblScontrinoPrezzo;
         private System.Windows.Forms.Label lblArrivederci;
+        private System.Windows.Forms.Panel pnlClienteRegistra;
+        private System.Windows.Forms.TextBox textBoxClienteEmail;
+        private System.Windows.Forms.Label lblEmailCliente;
+        private System.Windows.Forms.Button btnShowHidePassClienteRegistra;
+        private System.Windows.Forms.Button btnClienteRegistrato;
+        private System.Windows.Forms.TextBox textBoxClientePassword;
+        private System.Windows.Forms.TextBox textBoxClienteNome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

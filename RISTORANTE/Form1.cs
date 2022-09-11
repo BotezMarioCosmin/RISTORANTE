@@ -14,12 +14,14 @@ using System.IO;
 //using System.Reflection.Emit;
 using System.Runtime.Remoting.Contexts;
 using System.Data.SqlClient;
+using System.Net.Http;
 
 namespace RISTORANTE
 {
     public partial class Form1 : Form
     {
         const string fileNameP = @"./loginProprietario.txt";
+        const string fileNameC = @"./loginCliente.txt";
         const string filePiatti = @"./piatti.txt";
         int window = 0;
         bool proprietario = true;
@@ -29,6 +31,7 @@ namespace RISTORANTE
         string passwordProprietario = "Mario2005";
         string emailProprietario = "botezmariocosmin@gmail.com";
         bool showPassP = false;
+        bool showPassCr = false;
 
         bool Ant1 = false;
         bool Ant2 = false;
@@ -56,6 +59,12 @@ namespace RISTORANTE
             public string ingrediente4;
         }
 
+        public struct cliente
+        {
+            public string nome;
+            public string email;
+            public string password;
+        }
 
         public Form1()
         {
@@ -84,6 +93,7 @@ namespace RISTORANTE
         {
             textBoxPINCheck.Hide();
             pnlAccesso.Location = new Point(271, 146);
+            pnlClienteRegistra.Location = new Point(271, 146);
             pnlForgotPassword.Location = new Point(295, 132);
             pnlEmailInviata.Location = new Point(295, 132);
             pnlPin.Location = new Point(295, 132);
@@ -94,6 +104,7 @@ namespace RISTORANTE
             pictureBoxMenu.Hide();
             pnlAggiungi.Hide();
             pnlOrdine.Hide();
+            pnlClienteRegistra.Hide();
 
             //scritta trasparente sopra il libro
             lblNomeRistoranteProp.Location = pictureBoxMenu.PointToClient(lblNomeRistoranteProp.Parent.PointToScreen(lblNomeRistoranteProp.Location));
@@ -258,6 +269,7 @@ namespace RISTORANTE
         {
             window = 10;
             pnlCliente.Show();
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -304,6 +316,12 @@ namespace RISTORANTE
             {
                 pnlCliente.Hide();
                 window = 0;
+            }
+            else if (window == 11)
+            {
+                pnlCliente.Show();
+                pnlClienteRegistra.Hide();
+                window = 10;
             }
             
         }
@@ -827,7 +845,7 @@ namespace RISTORANTE
                 btnOrdinaSecondo2.Hide();
             }
 
-            if (lblSecondo1.Text != "Secondo3")
+            if (lblSecondo3.Text != "Secondo3")
             {
                 lblSecondo3.Show();
                 lblSecondo3Ingr.Show();
@@ -1852,5 +1870,165 @@ namespace RISTORANTE
             return array[0];
         }
 
+        private void btnClienteRegistrati_Click(object sender, EventArgs e)
+        {
+            pnlCliente.Hide();
+            pnlClienteRegistra.Show();
+            window = 11;
+        }
+
+        public static string infoCliente(int q, int p)
+        {
+            if (leggiCliente(q) != null)
+            {
+                string stringa = leggiCliente(q);
+                string[] infoCliente = stringa.Split(new char[] { ';' });
+
+                string[] array = new string[4];
+                int i = 0;
+
+                foreach (var sub in infoCliente)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+                return array[p];
+            }
+            else
+                return null;
+
+
+        }
+
+        public static string leggiCliente(int j)
+        {
+            StreamReader sr = new StreamReader(fileNameC);
+            for (int i = 0; i < j; i++)
+            {
+                string cliente = sr.ReadLine();
+                if (j == i+1)
+                {
+                    sr.Close();
+                    return cliente;
+                }
+            }
+            return "////";
+
+        }
+
+        public static cliente Cliente(string nome, string email, string password)
+        {
+            cliente c;
+            c.nome = nome;
+            c.email = email;
+            c.password = password;
+            return c;
+        }
+
+        public static void scriviCliente(cliente c)
+        {
+            string s = ";";
+            StreamWriter sw = new StreamWriter(fileNameC, append: true);
+            sw.WriteLine(c.nome + s + c.email + s + c.password + s);
+            sw.Close();
+        }
+
+        private void btnClienteRegistrato_Click(object sender, EventArgs e)
+        {
+            string clienteEmail = textBoxClienteEmail.Text;
+            string clienteNome = textBoxClienteNome.Text;
+            string clientePassword = textBoxClientePassword.Text;
+
+            for (int i = 0; i < 10; i++)
+            {
+
+                if (clientePassword != "")
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (clienteEmail != "")
+                        {
+                            if (clienteEmail == infoCliente(j + 1, 0))
+                            {
+                                MessageBox.Show("Utente già registrato con questa email.");
+                                textBoxClienteEmail.Text = "";
+                                textBoxClienteNome.Text = "";
+                                textBoxClientePassword.Text = "";
+                                return;
+                            }
+                            else
+                            {
+                                if (clienteNome != "")
+                                {
+                                    if (clienteNome == infoCliente(i + 1, 1))
+                                    {
+                                        MessageBox.Show("Utente già registrato con questo nome.");
+                                        textBoxClienteEmail.Text = "";
+                                        textBoxClienteNome.Text = "";
+                                        textBoxClientePassword.Text = "";
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        scriviCliente(Cliente(textBoxClienteEmail.Text, textBoxClienteNome.Text,textBoxClientePassword.Text));
+                                        pnlClienteRegistra.Hide();
+                                        pnlCliente.Show();
+                                        window = 10;
+
+                                        textBoxClienteEmail.Text = "";
+                                        textBoxClienteNome.Text = "";
+                                        textBoxClientePassword.Text = "";
+                                        return;
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Compilare tutti i campi.");
+                                    textBoxClienteEmail.Text = "";
+                                    textBoxClienteNome.Text = "";
+                                    textBoxClientePassword.Text = "";
+                                    return;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Compilare tutti i campi.");
+                            textBoxClienteEmail.Text = "";
+                            textBoxClienteNome.Text = "";
+                            textBoxClientePassword.Text = "";
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Compilare tutti i campi.");
+                    textBoxClienteEmail.Text = "";
+                    textBoxClienteNome.Text = "";
+                    textBoxClientePassword.Text = "";
+                    return;
+                }
+            }
+
+
+        }
+
+        private void btnShowHidePassClienteRegistra_Click(object sender, EventArgs e)
+        {
+            if (showPassCr == false)
+            {
+                textBoxClientePassword.UseSystemPasswordChar = false;
+                btnShowHidePassClienteRegistra.BackgroundImage = Properties.Resources.HidePass;
+                showPassCr = true;
+                return;
+            }
+            else if (showPassCr == true)
+            {
+                textBoxClientePassword.UseSystemPasswordChar = true;
+                btnShowHidePassClienteRegistra.BackgroundImage = Properties.Resources.ShowPass;
+                showPassCr = false;
+            }
+        }
     }
 }
