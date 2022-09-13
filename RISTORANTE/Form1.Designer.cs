@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnProprietario = new System.Windows.Forms.Button();
             this.lblNomeRistorante = new System.Windows.Forms.Label();
@@ -53,6 +52,14 @@
             this.lblInserisciPin = new System.Windows.Forms.Label();
             this.textBoxPinC = new System.Windows.Forms.TextBox();
             this.pnlPrincipale = new System.Windows.Forms.Panel();
+            this.pnlGestisciMenu = new System.Windows.Forms.Panel();
+            this.pnlGestisciMenu2 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnCerca = new System.Windows.Forms.Button();
+            this.textBoxCerca = new System.Windows.Forms.TextBox();
+            this.lblGestisciMenu = new System.Windows.Forms.Label();
+            this.pnlUltimoOrdine = new System.Windows.Forms.Panel();
+            this.lblUltimoOrdinePanel = new System.Windows.Forms.Label();
             this.pnlOrdine = new System.Windows.Forms.Panel();
             this.lblArrivederci = new System.Windows.Forms.Label();
             this.lblScontrinoPrezzo = new System.Windows.Forms.Label();
@@ -66,9 +73,6 @@
             this.lblScontrinoNome = new System.Windows.Forms.Label();
             this.lblPriceB = new System.Windows.Forms.Label();
             this.lblPriceA = new System.Windows.Forms.Label();
-            this.pnlGestisciMenu = new System.Windows.Forms.Panel();
-            this.pnlGestisciMenu2 = new System.Windows.Forms.Panel();
-            this.lblGestisciMenu = new System.Windows.Forms.Label();
             this.pnlAggiungi = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblAggiungiPiattoNome = new System.Windows.Forms.Label();
@@ -151,13 +155,14 @@
             this.lblNomeRistoranteProp = new System.Windows.Forms.Label();
             this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
             this.pnlScegliOpzione = new System.Windows.Forms.Panel();
-            this.pnlProfiloeNome = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNomeProprietario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnOrdina = new System.Windows.Forms.Button();
             this.lblTotalePrezzo = new System.Windows.Forms.Label();
             this.textBoxTotale = new System.Windows.Forms.TextBox();
+            this.btnUltimoOrdine = new System.Windows.Forms.Button();
+            this.pnlProfiloeNome = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNomeProprietario = new System.Windows.Forms.Label();
             this.btnEsci = new System.Windows.Forms.Button();
             this.btnVisualizzaMenu = new System.Windows.Forms.Button();
             this.btnGestisciMenu = new System.Windows.Forms.Button();
@@ -206,42 +211,34 @@
             this.lblPinCliente = new System.Windows.Forms.Label();
             this.textBoxPinCliente = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBoxCerca = new System.Windows.Forms.TextBox();
-            this.btnCerca = new System.Windows.Forms.Button();
-            this.btnUltimoOrdine = new System.Windows.Forms.Button();
-            this.pnlUltimoOrdine = new System.Windows.Forms.Panel();
-            this.lblUltimoOrdinePanel = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlPiatti = new System.Windows.Forms.Panel();
-            this.lblGestionePiatto1 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto2 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto3 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto4 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto5 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto6 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto7 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto8 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto11 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto9 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto10 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto12 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto13 = new System.Windows.Forms.Label();
-            this.lblGestionePiatto14 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.btnGpPiatto = new System.Windows.Forms.Button();
+            this.btnGpPortata = new System.Windows.Forms.Button();
+            this.btnGpPrezzo = new System.Windows.Forms.Button();
+            this.btnGpIngredienti = new System.Windows.Forms.Button();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblPiattoOpzioni = new System.Windows.Forms.Label();
+            this.btnPiattoModifica = new System.Windows.Forms.Button();
+            this.btnPiattoElimina = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlAccesso.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
             this.pnlPin.SuspendLayout();
             this.pnlPrincipale.SuspendLayout();
-            this.pnlOrdine.SuspendLayout();
             this.pnlGestisciMenu.SuspendLayout();
             this.pnlGestisciMenu2.SuspendLayout();
+            this.pnlUltimoOrdine.SuspendLayout();
+            this.pnlOrdine.SuspendLayout();
             this.pnlAggiungi.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
             this.pnlScegliOpzione.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnlProfiloeNome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.pnlCliente.SuspendLayout();
             this.pnlClienteRegistra.SuspendLayout();
             this.pnlClienteAccedi.SuspendLayout();
@@ -249,8 +246,7 @@
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviataCliente.SuspendLayout();
             this.pnlRispristinaCliente.SuspendLayout();
-            this.pnlUltimoOrdine.SuspendLayout();
-            this.pnlPiatti.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -574,10 +570,109 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(12, 12);
+            this.pnlPrincipale.Location = new System.Drawing.Point(30, 29);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
+            // 
+            // pnlGestisciMenu
+            // 
+            this.pnlGestisciMenu.Controls.Add(this.pnlGestisciMenu2);
+            this.pnlGestisciMenu.Controls.Add(this.lblGestisciMenu);
+            this.pnlGestisciMenu.Location = new System.Drawing.Point(211, 16);
+            this.pnlGestisciMenu.Name = "pnlGestisciMenu";
+            this.pnlGestisciMenu.Size = new System.Drawing.Size(788, 562);
+            this.pnlGestisciMenu.TabIndex = 23;
+            // 
+            // pnlGestisciMenu2
+            // 
+            this.pnlGestisciMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.pnlGestisciMenu2.Controls.Add(this.panel4);
+            this.pnlGestisciMenu2.Controls.Add(this.listBox4);
+            this.pnlGestisciMenu2.Controls.Add(this.btnGpIngredienti);
+            this.pnlGestisciMenu2.Controls.Add(this.btnGpPrezzo);
+            this.pnlGestisciMenu2.Controls.Add(this.btnGpPortata);
+            this.pnlGestisciMenu2.Controls.Add(this.btnGpPiatto);
+            this.pnlGestisciMenu2.Controls.Add(this.listBox3);
+            this.pnlGestisciMenu2.Controls.Add(this.listBox2);
+            this.pnlGestisciMenu2.Controls.Add(this.listBox1);
+            this.pnlGestisciMenu2.Controls.Add(this.btnCerca);
+            this.pnlGestisciMenu2.Controls.Add(this.textBoxCerca);
+            this.pnlGestisciMenu2.Location = new System.Drawing.Point(21, 73);
+            this.pnlGestisciMenu2.Name = "pnlGestisciMenu2";
+            this.pnlGestisciMenu2.Size = new System.Drawing.Size(747, 441);
+            this.pnlGestisciMenu2.TabIndex = 2;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(8, 85);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(178, 340);
+            this.listBox1.TabIndex = 13;
+            this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
+            // 
+            // btnCerca
+            // 
+            this.btnCerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnCerca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnCerca.Location = new System.Drawing.Point(595, 8);
+            this.btnCerca.Name = "btnCerca";
+            this.btnCerca.Size = new System.Drawing.Size(144, 29);
+            this.btnCerca.TabIndex = 1;
+            this.btnCerca.Text = "Cerca";
+            this.btnCerca.UseVisualStyleBackColor = false;
+            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
+            // 
+            // textBoxCerca
+            // 
+            this.textBoxCerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.textBoxCerca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBoxCerca.Location = new System.Drawing.Point(8, 8);
+            this.textBoxCerca.Name = "textBoxCerca";
+            this.textBoxCerca.Size = new System.Drawing.Size(581, 29);
+            this.textBoxCerca.TabIndex = 0;
+            this.textBoxCerca.Text = ".";
+            this.textBoxCerca.TextChanged += new System.EventHandler(this.textBoxCerca_TextChanged);
+            // 
+            // lblGestisciMenu
+            // 
+            this.lblGestisciMenu.AutoSize = true;
+            this.lblGestisciMenu.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestisciMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblGestisciMenu.Location = new System.Drawing.Point(258, 16);
+            this.lblGestisciMenu.Name = "lblGestisciMenu";
+            this.lblGestisciMenu.Size = new System.Drawing.Size(270, 33);
+            this.lblGestisciMenu.TabIndex = 1;
+            this.lblGestisciMenu.Text = "GESTISCI PIATTI";
+            // 
+            // pnlUltimoOrdine
+            // 
+            this.pnlUltimoOrdine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.pnlUltimoOrdine.Controls.Add(this.lblUltimoOrdinePanel);
+            this.pnlUltimoOrdine.Location = new System.Drawing.Point(271, 31);
+            this.pnlUltimoOrdine.Name = "pnlUltimoOrdine";
+            this.pnlUltimoOrdine.Size = new System.Drawing.Size(483, 490);
+            this.pnlUltimoOrdine.TabIndex = 3;
+            // 
+            // lblUltimoOrdinePanel
+            // 
+            this.lblUltimoOrdinePanel.AutoSize = true;
+            this.lblUltimoOrdinePanel.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoOrdinePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblUltimoOrdinePanel.Location = new System.Drawing.Point(132, 17);
+            this.lblUltimoOrdinePanel.Name = "lblUltimoOrdinePanel";
+            this.lblUltimoOrdinePanel.Size = new System.Drawing.Size(236, 33);
+            this.lblUltimoOrdinePanel.TabIndex = 3;
+            this.lblUltimoOrdinePanel.Text = "ULTIMO ORDINE";
             // 
             // pnlOrdine
             // 
@@ -721,44 +816,13 @@
             this.lblPriceA.TabIndex = 68;
             this.lblPriceA.Text = "€";
             // 
-            // pnlGestisciMenu
-            // 
-            this.pnlGestisciMenu.Controls.Add(this.pnlGestisciMenu2);
-            this.pnlGestisciMenu.Controls.Add(this.lblGestisciMenu);
-            this.pnlGestisciMenu.Location = new System.Drawing.Point(225, 68);
-            this.pnlGestisciMenu.Name = "pnlGestisciMenu";
-            this.pnlGestisciMenu.Size = new System.Drawing.Size(788, 562);
-            this.pnlGestisciMenu.TabIndex = 23;
-            // 
-            // pnlGestisciMenu2
-            // 
-            this.pnlGestisciMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
-            this.pnlGestisciMenu2.Controls.Add(this.pnlPiatti);
-            this.pnlGestisciMenu2.Controls.Add(this.btnCerca);
-            this.pnlGestisciMenu2.Controls.Add(this.textBoxCerca);
-            this.pnlGestisciMenu2.Location = new System.Drawing.Point(21, 73);
-            this.pnlGestisciMenu2.Name = "pnlGestisciMenu2";
-            this.pnlGestisciMenu2.Size = new System.Drawing.Size(747, 441);
-            this.pnlGestisciMenu2.TabIndex = 2;
-            // 
-            // lblGestisciMenu
-            // 
-            this.lblGestisciMenu.AutoSize = true;
-            this.lblGestisciMenu.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestisciMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblGestisciMenu.Location = new System.Drawing.Point(258, 16);
-            this.lblGestisciMenu.Name = "lblGestisciMenu";
-            this.lblGestisciMenu.Size = new System.Drawing.Size(270, 33);
-            this.lblGestisciMenu.TabIndex = 1;
-            this.lblGestisciMenu.Text = "GESTISCI PIATTI";
-            // 
             // pnlAggiungi
             // 
             this.pnlAggiungi.Controls.Add(this.panel2);
             this.pnlAggiungi.Controls.Add(this.btnAggiungiPiattoInvia);
             this.pnlAggiungi.Controls.Add(this.panel1);
             this.pnlAggiungi.Controls.Add(this.lblCreaPiatto);
-            this.pnlAggiungi.Location = new System.Drawing.Point(335, 506);
+            this.pnlAggiungi.Location = new System.Drawing.Point(246, 12);
             this.pnlAggiungi.Name = "pnlAggiungi";
             this.pnlAggiungi.Size = new System.Drawing.Size(788, 562);
             this.pnlAggiungi.TabIndex = 12;
@@ -1733,37 +1797,6 @@
             this.pnlScegliOpzione.Size = new System.Drawing.Size(200, 574);
             this.pnlScegliOpzione.TabIndex = 0;
             // 
-            // pnlProfiloeNome
-            // 
-            this.pnlProfiloeNome.Controls.Add(this.pictureBox1);
-            this.pnlProfiloeNome.Controls.Add(this.lblNomeProprietario);
-            this.pnlProfiloeNome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProfiloeNome.Location = new System.Drawing.Point(0, 0);
-            this.pnlProfiloeNome.Name = "pnlProfiloeNome";
-            this.pnlProfiloeNome.Size = new System.Drawing.Size(200, 143);
-            this.pnlProfiloeNome.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblNomeProprietario
-            // 
-            this.lblNomeProprietario.AutoSize = true;
-            this.lblNomeProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProprietario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblNomeProprietario.Location = new System.Drawing.Point(67, 104);
-            this.lblNomeProprietario.Name = "lblNomeProprietario";
-            this.lblNomeProprietario.Size = new System.Drawing.Size(66, 24);
-            this.lblNomeProprietario.TabIndex = 1;
-            this.lblNomeProprietario.Text = "Nome";
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnOrdina);
@@ -1809,6 +1842,51 @@
             this.textBoxTotale.TabIndex = 69;
             this.textBoxTotale.Text = "0,00 €";
             this.textBoxTotale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnUltimoOrdine
+            // 
+            this.btnUltimoOrdine.FlatAppearance.BorderSize = 0;
+            this.btnUltimoOrdine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUltimoOrdine.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUltimoOrdine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnUltimoOrdine.Location = new System.Drawing.Point(3, 306);
+            this.btnUltimoOrdine.Name = "btnUltimoOrdine";
+            this.btnUltimoOrdine.Size = new System.Drawing.Size(197, 61);
+            this.btnUltimoOrdine.TabIndex = 71;
+            this.btnUltimoOrdine.Text = "Ultimo ordine";
+            this.btnUltimoOrdine.UseVisualStyleBackColor = true;
+            this.btnUltimoOrdine.Click += new System.EventHandler(this.btnUltimoOrdine_Click);
+            // 
+            // pnlProfiloeNome
+            // 
+            this.pnlProfiloeNome.Controls.Add(this.pictureBox1);
+            this.pnlProfiloeNome.Controls.Add(this.lblNomeProprietario);
+            this.pnlProfiloeNome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlProfiloeNome.Location = new System.Drawing.Point(0, 0);
+            this.pnlProfiloeNome.Name = "pnlProfiloeNome";
+            this.pnlProfiloeNome.Size = new System.Drawing.Size(200, 143);
+            this.pnlProfiloeNome.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblNomeProprietario
+            // 
+            this.lblNomeProprietario.AutoSize = true;
+            this.lblNomeProprietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeProprietario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.lblNomeProprietario.Location = new System.Drawing.Point(67, 104);
+            this.lblNomeProprietario.Name = "lblNomeProprietario";
+            this.lblNomeProprietario.Size = new System.Drawing.Size(66, 24);
+            this.lblNomeProprietario.TabIndex = 1;
+            this.lblNomeProprietario.Text = "Nome";
             // 
             // btnEsci
             // 
@@ -2367,235 +2445,163 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 47);
+            this.textBox1.Location = new System.Drawing.Point(119, 52);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 22;
             // 
-            // textBoxCerca
+            // listBox2
             // 
-            this.textBoxCerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.textBoxCerca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxCerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBoxCerca.Location = new System.Drawing.Point(8, 8);
-            this.textBoxCerca.Name = "textBoxCerca";
-            this.textBoxCerca.Size = new System.Drawing.Size(581, 29);
-            this.textBoxCerca.TabIndex = 0;
+            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(192, 85);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(99, 340);
+            this.listBox2.TabIndex = 14;
             // 
-            // btnCerca
+            // listBox3
             // 
-            this.btnCerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnCerca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.btnCerca.Location = new System.Drawing.Point(595, 8);
-            this.btnCerca.Name = "btnCerca";
-            this.btnCerca.Size = new System.Drawing.Size(144, 29);
-            this.btnCerca.TabIndex = 1;
-            this.btnCerca.Text = "Cerca";
-            this.btnCerca.UseVisualStyleBackColor = false;
-            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
+            this.listBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(297, 85);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(81, 340);
+            this.listBox3.TabIndex = 15;
             // 
-            // btnUltimoOrdine
+            // btnGpPiatto
             // 
-            this.btnUltimoOrdine.FlatAppearance.BorderSize = 0;
-            this.btnUltimoOrdine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUltimoOrdine.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUltimoOrdine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.btnUltimoOrdine.Location = new System.Drawing.Point(3, 306);
-            this.btnUltimoOrdine.Name = "btnUltimoOrdine";
-            this.btnUltimoOrdine.Size = new System.Drawing.Size(197, 61);
-            this.btnUltimoOrdine.TabIndex = 71;
-            this.btnUltimoOrdine.Text = "Ultimo ordine";
-            this.btnUltimoOrdine.UseVisualStyleBackColor = true;
-            this.btnUltimoOrdine.Click += new System.EventHandler(this.btnUltimoOrdine_Click);
+            this.btnGpPiatto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpPiatto.FlatAppearance.BorderSize = 0;
+            this.btnGpPiatto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpPiatto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpPiatto.Location = new System.Drawing.Point(8, 52);
+            this.btnGpPiatto.Name = "btnGpPiatto";
+            this.btnGpPiatto.Size = new System.Drawing.Size(178, 31);
+            this.btnGpPiatto.TabIndex = 16;
+            this.btnGpPiatto.Text = "Piatti";
+            this.btnGpPiatto.UseVisualStyleBackColor = false;
             // 
-            // pnlUltimoOrdine
+            // btnGpPortata
             // 
-            this.pnlUltimoOrdine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
-            this.pnlUltimoOrdine.Controls.Add(this.lblUltimoOrdinePanel);
-            this.pnlUltimoOrdine.Location = new System.Drawing.Point(341, 22);
-            this.pnlUltimoOrdine.Name = "pnlUltimoOrdine";
-            this.pnlUltimoOrdine.Size = new System.Drawing.Size(483, 490);
-            this.pnlUltimoOrdine.TabIndex = 3;
+            this.btnGpPortata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpPortata.FlatAppearance.BorderSize = 0;
+            this.btnGpPortata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpPortata.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpPortata.Location = new System.Drawing.Point(192, 52);
+            this.btnGpPortata.Name = "btnGpPortata";
+            this.btnGpPortata.Size = new System.Drawing.Size(99, 31);
+            this.btnGpPortata.TabIndex = 17;
+            this.btnGpPortata.Text = "Portata";
+            this.btnGpPortata.UseVisualStyleBackColor = false;
             // 
-            // lblUltimoOrdinePanel
+            // btnGpPrezzo
             // 
-            this.lblUltimoOrdinePanel.AutoSize = true;
-            this.lblUltimoOrdinePanel.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltimoOrdinePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.lblUltimoOrdinePanel.Location = new System.Drawing.Point(132, 17);
-            this.lblUltimoOrdinePanel.Name = "lblUltimoOrdinePanel";
-            this.lblUltimoOrdinePanel.Size = new System.Drawing.Size(236, 33);
-            this.lblUltimoOrdinePanel.TabIndex = 3;
-            this.lblUltimoOrdinePanel.Text = "ULTIMO ORDINE";
+            this.btnGpPrezzo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpPrezzo.FlatAppearance.BorderSize = 0;
+            this.btnGpPrezzo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpPrezzo.Location = new System.Drawing.Point(297, 52);
+            this.btnGpPrezzo.Name = "btnGpPrezzo";
+            this.btnGpPrezzo.Size = new System.Drawing.Size(81, 31);
+            this.btnGpPrezzo.TabIndex = 18;
+            this.btnGpPrezzo.Text = "Prezzo";
+            this.btnGpPrezzo.UseVisualStyleBackColor = false;
             // 
-            // timer1
+            // btnGpIngredienti
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btnGpIngredienti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpIngredienti.FlatAppearance.BorderSize = 0;
+            this.btnGpIngredienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpIngredienti.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpIngredienti.Location = new System.Drawing.Point(384, 52);
+            this.btnGpIngredienti.Name = "btnGpIngredienti";
+            this.btnGpIngredienti.Size = new System.Drawing.Size(348, 31);
+            this.btnGpIngredienti.TabIndex = 19;
+            this.btnGpIngredienti.Text = "Portata";
+            this.btnGpIngredienti.UseVisualStyleBackColor = false;
             // 
-            // pnlPiatti
+            // listBox4
             // 
-            this.pnlPiatti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto14);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto13);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto12);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto10);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto9);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto11);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto8);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto7);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto6);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto5);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto4);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto3);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto2);
-            this.pnlPiatti.Controls.Add(this.lblGestionePiatto1);
-            this.pnlPiatti.Location = new System.Drawing.Point(8, 47);
-            this.pnlPiatti.Name = "pnlPiatti";
-            this.pnlPiatti.Size = new System.Drawing.Size(581, 373);
-            this.pnlPiatti.TabIndex = 2;
+            this.listBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 20;
+            this.listBox4.Location = new System.Drawing.Point(384, 85);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(348, 340);
+            this.listBox4.TabIndex = 20;
             // 
-            // lblGestionePiatto1
+            // panel4
             // 
-            this.lblGestionePiatto1.AutoSize = true;
-            this.lblGestionePiatto1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto1.Location = new System.Drawing.Point(3, 11);
-            this.lblGestionePiatto1.Name = "lblGestionePiatto1";
-            this.lblGestionePiatto1.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto1.TabIndex = 0;
-            this.lblGestionePiatto1.Text = "Piatto1";
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnPiattoElimina);
+            this.panel4.Controls.Add(this.btnPiattoModifica);
+            this.panel4.Controls.Add(this.lblPiattoOpzioni);
+            this.panel4.Location = new System.Drawing.Point(228, 71);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(265, 134);
+            this.panel4.TabIndex = 21;
             // 
-            // lblGestionePiatto2
+            // lblPiattoOpzioni
             // 
-            this.lblGestionePiatto2.AutoSize = true;
-            this.lblGestionePiatto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto2.Location = new System.Drawing.Point(3, 31);
-            this.lblGestionePiatto2.Name = "lblGestionePiatto2";
-            this.lblGestionePiatto2.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto2.TabIndex = 1;
-            this.lblGestionePiatto2.Text = "Piatto2";
+            this.lblPiattoOpzioni.AutoSize = true;
+            this.lblPiattoOpzioni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPiattoOpzioni.Location = new System.Drawing.Point(26, 29);
+            this.lblPiattoOpzioni.Name = "lblPiattoOpzioni";
+            this.lblPiattoOpzioni.Size = new System.Drawing.Size(55, 24);
+            this.lblPiattoOpzioni.TabIndex = 0;
+            this.lblPiattoOpzioni.Text = "Piatto";
             // 
-            // lblGestionePiatto3
+            // btnPiattoModifica
             // 
-            this.lblGestionePiatto3.AutoSize = true;
-            this.lblGestionePiatto3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto3.Location = new System.Drawing.Point(3, 51);
-            this.lblGestionePiatto3.Name = "lblGestionePiatto3";
-            this.lblGestionePiatto3.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto3.TabIndex = 2;
-            this.lblGestionePiatto3.Text = "Piatto3";
+            this.btnPiattoModifica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnPiattoModifica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiattoModifica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPiattoModifica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnPiattoModifica.Location = new System.Drawing.Point(22, 81);
+            this.btnPiattoModifica.Name = "btnPiattoModifica";
+            this.btnPiattoModifica.Size = new System.Drawing.Size(106, 39);
+            this.btnPiattoModifica.TabIndex = 1;
+            this.btnPiattoModifica.Text = "Modifica";
+            this.btnPiattoModifica.UseVisualStyleBackColor = false;
+            this.btnPiattoModifica.Click += new System.EventHandler(this.btnPiattoModifica_Click);
             // 
-            // lblGestionePiatto4
+            // btnPiattoElimina
             // 
-            this.lblGestionePiatto4.AutoSize = true;
-            this.lblGestionePiatto4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto4.Location = new System.Drawing.Point(3, 71);
-            this.lblGestionePiatto4.Name = "lblGestionePiatto4";
-            this.lblGestionePiatto4.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto4.TabIndex = 3;
-            this.lblGestionePiatto4.Text = "Piatto4";
+            this.btnPiattoElimina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnPiattoElimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiattoElimina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPiattoElimina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnPiattoElimina.Location = new System.Drawing.Point(140, 81);
+            this.btnPiattoElimina.Name = "btnPiattoElimina";
+            this.btnPiattoElimina.Size = new System.Drawing.Size(106, 39);
+            this.btnPiattoElimina.TabIndex = 2;
+            this.btnPiattoElimina.Text = "Elimina";
+            this.btnPiattoElimina.UseVisualStyleBackColor = false;
+            this.btnPiattoElimina.Click += new System.EventHandler(this.btnPiattoElimina_Click);
             // 
-            // lblGestionePiatto5
+            // button1
             // 
-            this.lblGestionePiatto5.AutoSize = true;
-            this.lblGestionePiatto5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto5.Location = new System.Drawing.Point(3, 91);
-            this.lblGestionePiatto5.Name = "lblGestionePiatto5";
-            this.lblGestionePiatto5.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto5.TabIndex = 4;
-            this.lblGestionePiatto5.Text = "Piatto5";
-            // 
-            // lblGestionePiatto6
-            // 
-            this.lblGestionePiatto6.AutoSize = true;
-            this.lblGestionePiatto6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto6.Location = new System.Drawing.Point(3, 111);
-            this.lblGestionePiatto6.Name = "lblGestionePiatto6";
-            this.lblGestionePiatto6.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto6.TabIndex = 5;
-            this.lblGestionePiatto6.Text = "Piatto6";
-            // 
-            // lblGestionePiatto7
-            // 
-            this.lblGestionePiatto7.AutoSize = true;
-            this.lblGestionePiatto7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto7.Location = new System.Drawing.Point(3, 131);
-            this.lblGestionePiatto7.Name = "lblGestionePiatto7";
-            this.lblGestionePiatto7.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto7.TabIndex = 6;
-            this.lblGestionePiatto7.Text = "Piatto7";
-            // 
-            // lblGestionePiatto8
-            // 
-            this.lblGestionePiatto8.AutoSize = true;
-            this.lblGestionePiatto8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto8.Location = new System.Drawing.Point(3, 151);
-            this.lblGestionePiatto8.Name = "lblGestionePiatto8";
-            this.lblGestionePiatto8.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto8.TabIndex = 7;
-            this.lblGestionePiatto8.Text = "Piatto8";
-            // 
-            // lblGestionePiatto11
-            // 
-            this.lblGestionePiatto11.AutoSize = true;
-            this.lblGestionePiatto11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto11.Location = new System.Drawing.Point(3, 211);
-            this.lblGestionePiatto11.Name = "lblGestionePiatto11";
-            this.lblGestionePiatto11.Size = new System.Drawing.Size(68, 20);
-            this.lblGestionePiatto11.TabIndex = 8;
-            this.lblGestionePiatto11.Text = "Piatto11";
-            // 
-            // lblGestionePiatto9
-            // 
-            this.lblGestionePiatto9.AutoSize = true;
-            this.lblGestionePiatto9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto9.Location = new System.Drawing.Point(3, 171);
-            this.lblGestionePiatto9.Name = "lblGestionePiatto9";
-            this.lblGestionePiatto9.Size = new System.Drawing.Size(59, 20);
-            this.lblGestionePiatto9.TabIndex = 8;
-            this.lblGestionePiatto9.Text = "Piatto9";
-            // 
-            // lblGestionePiatto10
-            // 
-            this.lblGestionePiatto10.AutoSize = true;
-            this.lblGestionePiatto10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto10.Location = new System.Drawing.Point(3, 191);
-            this.lblGestionePiatto10.Name = "lblGestionePiatto10";
-            this.lblGestionePiatto10.Size = new System.Drawing.Size(68, 20);
-            this.lblGestionePiatto10.TabIndex = 9;
-            this.lblGestionePiatto10.Text = "Piatto10";
-            // 
-            // lblGestionePiatto12
-            // 
-            this.lblGestionePiatto12.AutoSize = true;
-            this.lblGestionePiatto12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto12.Location = new System.Drawing.Point(3, 231);
-            this.lblGestionePiatto12.Name = "lblGestionePiatto12";
-            this.lblGestionePiatto12.Size = new System.Drawing.Size(68, 20);
-            this.lblGestionePiatto12.TabIndex = 10;
-            this.lblGestionePiatto12.Text = "Piatto12";
-            // 
-            // lblGestionePiatto13
-            // 
-            this.lblGestionePiatto13.AutoSize = true;
-            this.lblGestionePiatto13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto13.Location = new System.Drawing.Point(3, 251);
-            this.lblGestionePiatto13.Name = "lblGestionePiatto13";
-            this.lblGestionePiatto13.Size = new System.Drawing.Size(68, 20);
-            this.lblGestionePiatto13.TabIndex = 11;
-            this.lblGestionePiatto13.Text = "Piatto13";
-            // 
-            // lblGestionePiatto14
-            // 
-            this.lblGestionePiatto14.AutoSize = true;
-            this.lblGestionePiatto14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionePiatto14.Location = new System.Drawing.Point(3, 274);
-            this.lblGestionePiatto14.Name = "lblGestionePiatto14";
-            this.lblGestionePiatto14.Size = new System.Drawing.Size(68, 20);
-            this.lblGestionePiatto14.TabIndex = 12;
-            this.lblGestionePiatto14.Text = "Piatto14";
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(231, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 28);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -2633,12 +2639,14 @@
             this.pnlPin.PerformLayout();
             this.pnlPrincipale.ResumeLayout(false);
             this.pnlPrincipale.PerformLayout();
-            this.pnlOrdine.ResumeLayout(false);
-            this.pnlOrdine.PerformLayout();
             this.pnlGestisciMenu.ResumeLayout(false);
             this.pnlGestisciMenu.PerformLayout();
             this.pnlGestisciMenu2.ResumeLayout(false);
             this.pnlGestisciMenu2.PerformLayout();
+            this.pnlUltimoOrdine.ResumeLayout(false);
+            this.pnlUltimoOrdine.PerformLayout();
+            this.pnlOrdine.ResumeLayout(false);
+            this.pnlOrdine.PerformLayout();
             this.pnlAggiungi.ResumeLayout(false);
             this.pnlAggiungi.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -2647,11 +2655,11 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
             this.pnlScegliOpzione.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.pnlProfiloeNome.ResumeLayout(false);
             this.pnlProfiloeNome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.pnlCliente.ResumeLayout(false);
             this.pnlClienteRegistra.ResumeLayout(false);
             this.pnlClienteRegistra.PerformLayout();
@@ -2665,10 +2673,8 @@
             this.pnlEmailInviataCliente.PerformLayout();
             this.pnlRispristinaCliente.ResumeLayout(false);
             this.pnlRispristinaCliente.PerformLayout();
-            this.pnlUltimoOrdine.ResumeLayout(false);
-            this.pnlUltimoOrdine.PerformLayout();
-            this.pnlPiatti.ResumeLayout(false);
-            this.pnlPiatti.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2857,22 +2863,19 @@
         private System.Windows.Forms.Button btnUltimoOrdine;
         private System.Windows.Forms.Panel pnlUltimoOrdine;
         private System.Windows.Forms.Label lblUltimoOrdinePanel;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Panel pnlPiatti;
-        private System.Windows.Forms.Label lblGestionePiatto14;
-        private System.Windows.Forms.Label lblGestionePiatto13;
-        private System.Windows.Forms.Label lblGestionePiatto12;
-        private System.Windows.Forms.Label lblGestionePiatto10;
-        private System.Windows.Forms.Label lblGestionePiatto9;
-        private System.Windows.Forms.Label lblGestionePiatto11;
-        private System.Windows.Forms.Label lblGestionePiatto8;
-        private System.Windows.Forms.Label lblGestionePiatto7;
-        private System.Windows.Forms.Label lblGestionePiatto6;
-        private System.Windows.Forms.Label lblGestionePiatto5;
-        private System.Windows.Forms.Label lblGestionePiatto4;
-        private System.Windows.Forms.Label lblGestionePiatto3;
-        private System.Windows.Forms.Label lblGestionePiatto2;
-        private System.Windows.Forms.Label lblGestionePiatto1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button btnGpPiatto;
+        private System.Windows.Forms.Button btnGpPrezzo;
+        private System.Windows.Forms.Button btnGpPortata;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.Button btnGpIngredienti;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPiattoElimina;
+        private System.Windows.Forms.Button btnPiattoModifica;
+        private System.Windows.Forms.Label lblPiattoOpzioni;
     }
 }
 

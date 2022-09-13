@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
-//using System.Reflection.Emit;
 using System.Runtime.Remoting.Contexts;
 using System.Data.SqlClient;
 using System.Net.Http;
@@ -20,6 +19,7 @@ using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+using System.Text.RegularExpressions;
 
 namespace RISTORANTE
 {
@@ -31,6 +31,7 @@ namespace RISTORANTE
         int window = 0;
         bool proprietario = true;
         float totale = 0;
+        int contapiatti = 0;
 
         string nomeProprietario = "Mario";
         string passwordProprietario = "Mario2005";
@@ -56,6 +57,8 @@ namespace RISTORANTE
 
         string emailClientePerModifica = "";
 
+        bool ricerca = false;
+
         public struct piatto
         {
             public string nome;
@@ -79,10 +82,10 @@ namespace RISTORANTE
             InitializeComponent();
             btnBack.BackgroundImageLayout = ImageLayout.Stretch;
             btnShowPass.BackgroundImageLayout = ImageLayout.Stretch;
-            pnlPrincipale.Location = new Point(0,0);
+            pnlPrincipale.Location = new Point(0, 0);
 
             //proprietario
-            pnlAccesso.Hide();            
+            pnlAccesso.Hide();
             pnlForgotPassword.Hide();
             pnlEmailInviata.Hide();
             pnlPin.Hide();
@@ -98,9 +101,11 @@ namespace RISTORANTE
             scrivi(nomeProprietario, passwordProprietario, fileNameP);
 
         }
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            contapiatti = contaPiatti(filePiatti);
+
             textBoxPINCheck.Hide();
             pnlAccesso.Location = new Point(271, 146);
             pnlClienteAccedi.Location = new Point(271, 146);
@@ -111,7 +116,7 @@ namespace RISTORANTE
             pnlPin.Location = new Point(295, 132);
             pnlRispristinaCliente.Location = new Point(295, 132);
             pnlCliente.Location = new Point(295, 132);
-            this.pnlAggiungi.Location = new Point(200,0);
+            this.pnlAggiungi.Location = new Point(200, 0);
             this.pnlGestisciMenu.Location = new Point(200, 0);
             pnlEmailNome.Location = new Point(271, 146);
 
@@ -122,6 +127,7 @@ namespace RISTORANTE
             pnlEmailInviataCliente.Hide();
             pnlRispristinaCliente.Hide();
             pnlUltimoOrdine.Hide();
+            panel4.Hide();
 
             if (!(File.Exists(@"./loginCliente.txt")))
             {
@@ -236,7 +242,7 @@ namespace RISTORANTE
             lblSecondo2.Parent = pictureBoxMenu;
             lblSecondo2.BackColor = Color.Transparent;
             lblSecondo3.Location = pictureBoxMenu.PointToClient(lblSecondo3.Parent.PointToScreen(lblSecondo3.Location));
-            lblSecondo3.Parent = pictureBoxMenu; 
+            lblSecondo3.Parent = pictureBoxMenu;
             lblSecondo3.BackColor = Color.Transparent;
             lblSecondo4.Location = pictureBoxMenu.PointToClient(lblSecondo4.Parent.PointToScreen(lblSecondo4.Location));
             lblSecondo4.Parent = pictureBoxMenu;
@@ -425,7 +431,7 @@ namespace RISTORANTE
                 pnlEmailNome.Hide();
                 window = 20;
             }
-            
+
         }
 
         private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -453,7 +459,7 @@ namespace RISTORANTE
             pnlAccesso.Hide();
             pnlForgotPassword.Hide();
             pnlPin.Hide();
-            window = 3; 
+            window = 3;
         }
 
         public static int sendEmail(string userEmail)
@@ -701,114 +707,168 @@ namespace RISTORANTE
                     i++;
                 }
 
-                if (array[2] == "antipasto" && ant < 3)
+                if (array[2] == "antipasto" || array[3] == "antipasto"  && ant < 3)
                 {
                     if (ant == 0)
                     {
-                        lblAntipasto1.Text = array[0];
-                        lblAntipasto1Prezzo.Text = array[1];
-                        lblAntipasto1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        ant = 1;
+                        if (array[0] != "*")
+                        {
+                            lblAntipasto1.Text = array[0];
+                            lblAntipasto1Prezzo.Text = array[1];
+                            lblAntipasto1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            ant = 1;
+                        }
+
                     }
                     else if (ant == 1)
                     {
-                        lblAntipasto2.Text = array[0];
-                        lblAntipasto2Prezzo.Text = array[1];
-                        lblAntipasto2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        ant = 2;
+                        if (array[0] != "*")
+                        {
+                            lblAntipasto2.Text = array[0];
+                            lblAntipasto2Prezzo.Text = array[1];
+                            lblAntipasto2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            ant = 2;
+                        }
+
                     }
                     else if (ant == 2)
                     {
-                        lblAntipasto3.Text = array[0];
-                        lblAntipasto3Prezzo.Text = array[1];
-                        lblAntipasto3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        ant = 3;
+                        if (array[0] != "*")
+                        {
+                            lblAntipasto3.Text = array[0];
+                            lblAntipasto3Prezzo.Text = array[1];
+                            lblAntipasto3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            ant = 3;
+                        }
+
                     }
                 }
-                else if (array[2] == "primo" && prim < 4)
+                else if (array[2] == "primo" || array[3] == "primo" && prim < 4)
                 {
                     if (prim == 0)
                     {
-                        lblPrimo1.Text = array[0];
-                        lblPrimo1Prezzo.Text = array[1];
-                        lblPrimo1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        prim = 1;
+                        if (array[0] != "*")
+                        {
+                            lblPrimo1.Text = array[0];
+                            lblPrimo1Prezzo.Text = array[1];
+                            lblPrimo1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            prim = 1;
+                        }
                     }
                     else if (prim == 1)
                     {
-                        lblPrimo2.Text = array[0];
-                        lblPrimo2Prezzo.Text = array[1];
-                        lblPrimo2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        prim = 2;
+                        if (array[0] != "*")
+                        {
+                            lblPrimo2.Text = array[0];
+                            lblPrimo2Prezzo.Text = array[1];
+                            lblPrimo2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            prim = 2;
+                        }
                     }
                     else if (prim == 2)
                     {
-                        lblPrimo3.Text = array[0];
-                        lblPrimo3Prezzo.Text = array[1];
-                        lblPrimo3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        prim = 3;
+                        if (array[0] != "*")
+                        {
+                            lblPrimo3.Text = array[0];
+                            lblPrimo3Prezzo.Text = array[1];
+                            lblPrimo3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            prim = 3;
+                        }
+
                     }
                     else if (prim == 3)
                     {
-                        lblPrimo4.Text = array[0];
-                        lblPrimo4Prezzo.Text = array[1];
-                        lblPrimo4Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        prim = 4;
+                        if (array[0] != "*")
+                        {
+                            lblPrimo4.Text = array[0];
+                            lblPrimo4Prezzo.Text = array[1];
+                            lblPrimo4Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            prim = 4;
+                        }
+
                     }
                 }
-                else if (array[2] == "secondo" && seco < 4)
+                else if (array[2] == "secondo" || array[3] == "secondo" && seco < 4)
                 {
                     if (seco == 0)
                     {
-                        lblSecondo1.Text = array[0];
-                        lblSecondo1Prezzo.Text = array[1];
-                        lblSecondo1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        seco = 1;
+                        if (array[0] != "*")
+                        {
+                            lblSecondo1.Text = array[0];
+                            lblSecondo1Prezzo.Text = array[1];
+                            lblSecondo1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            seco = 1;
+                        }
+
                     }
                     else if (seco == 1)
                     {
-                        lblSecondo2.Text = array[0];
-                        lblSecondo2Prezzo.Text = array[1];
-                        lblSecondo2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        seco = 2;
+                        if (array[0] != "*")
+                        {
+                            lblSecondo2.Text = array[0];
+                            lblSecondo2Prezzo.Text = array[1];
+                            lblSecondo2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            seco = 2;
+                        }
+
                     }
                     else if (seco == 2)
                     {
-                        lblSecondo3.Text = array[0];
-                        lblSecondo3Prezzo.Text = array[1];
-                        lblSecondo3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        seco = 3;
+                        if (array[0] != "*")
+                        {
+                            lblSecondo3.Text = array[0];
+                            lblSecondo3Prezzo.Text = array[1];
+                            lblSecondo3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            seco = 3;
+                        }
+
                     }
                     else if (seco == 3)
                     {
-                        lblSecondo4.Text = array[0];
-                        lblSecondo4Prezzo.Text = array[1];
-                        lblSecondo4Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        seco = 4;
+                        if (array[0] != "*")
+                        {
+                            lblSecondo4.Text = array[0];
+                            lblSecondo4Prezzo.Text = array[1];
+                            lblSecondo4Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            seco = 4;
+                        }
+
                     }
                 }
-                else if (array[2] == "dessert" && des < 3)
+                else if (array[2] == "dessert" || array[3] == "dessert" && des < 3)
                 {
                     if (des == 0)
                     {
-                        lblDessert1.Text = array[0];
-                        lblDessert1Prezzo.Text = array[1];
-                        lblDessert1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        des = 1;
+                        if (array[0] != "*")
+                        {
+                            lblDessert1.Text = array[0];
+                            lblDessert1Prezzo.Text = array[1];
+                            lblDessert1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            des = 1;
+                        }
+
                     }
                     else if (des == 1)
                     {
-                        lblDessert2.Text = array[0];
-                        lblDessert2Prezzo.Text = array[1];
-                        lblDessert2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        des = 2;
+                        if (array[0] != "*")
+                        {
+                            lblDessert2.Text = array[0];
+                            lblDessert2Prezzo.Text = array[1];
+                            lblDessert2Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            des = 2;
+                        }
+
                     }
                     else if (des == 2)
                     {
-                        lblDessert3.Text = array[0];
-                        lblDessert3Prezzo.Text = array[1];
-                        lblDessert3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
-                        des = 3;
+                        if (array[0] != "*")
+                        {
+                            lblDessert3.Text = array[0];
+                            lblDessert3Prezzo.Text = array[1];
+                            lblDessert3Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
+                            des = 3;
+                        }
+
                     }
                 }
                 else
@@ -944,7 +1004,7 @@ namespace RISTORANTE
                 lblSecondo2.Show();
                 lblSecondo2Ingr.Show();
                 lblSecondo2Prezzo.Show();
-                btnOrdinaSecondo1.Show();
+                btnOrdinaSecondo2.Show();
             }
             else
             {
@@ -1094,6 +1154,8 @@ namespace RISTORANTE
                 p.ingrediente4 = textBoxAggiungiIng4.Text;
 
                 scriviPiatto(p, filePiatti);
+
+                contapiatti++;
             }
             catch
             {
@@ -1112,7 +1174,7 @@ namespace RISTORANTE
         {
             string s = ";";
             StreamWriter sw = new StreamWriter(filename, append: true);
-            sw.WriteLine(p.nome + s + p.prezzo + s + p.portata + s + p.ingrediente1 + s + p.ingrediente2 + s + p.ingrediente3 + s + p.ingrediente4 + s );
+            sw.WriteLine(p.nome + s + p.prezzo + s + p.portata + s + p.ingrediente1 + s + p.ingrediente2 + s + p.ingrediente3 + s + p.ingrediente4 + s);
             sw.Close();
         }
 
@@ -1134,7 +1196,7 @@ namespace RISTORANTE
                     textBoxTotale.Text = Convert.ToString(totale) + " €"; ;
                     Ant1 = false;
                 }
-            }    
+            }
         }
 
         private void btnOrdinaAntipasto2_Click(object sender, EventArgs e)
@@ -1209,23 +1271,48 @@ namespace RISTORANTE
             nascondiPulsantiOrdine();
             pnlUltimoOrdine.Hide();
 
-            lblGestionePiatto1.Text = lblAntipasto1.Text;
-            lblGestionePiatto2.Text = lblAntipasto2.Text;
-            lblGestionePiatto3.Text = lblAntipasto3.Text;
-            lblGestionePiatto4.Text = lblPrimo1.Text;
-            lblGestionePiatto5.Text = lblPrimo2.Text;
-            lblGestionePiatto6.Text = lblPrimo3.Text;
-            lblGestionePiatto7.Text = lblPrimo4.Text;
-            lblGestionePiatto8.Text = lblSecondo1.Text;
-            lblGestionePiatto9.Text = lblSecondo2.Text;
-            lblGestionePiatto10.Text = lblSecondo3.Text;
-            lblGestionePiatto11.Text = lblSecondo4.Text;
-            lblGestionePiatto12.Text = lblDessert1.Text;
-            lblGestionePiatto13.Text = lblDessert2.Text;
-            lblGestionePiatto14.Text = lblDessert3.Text;
+            string line;
 
-            timer1.Start();
+            using (StreamReader Sr = new StreamReader(@"./piatti.txt"))
+            {
+                line = Sr.ReadLine();
+
+                listBox1.Items.Clear();
+                listBox2.Items.Clear();
+                listBox3.Items.Clear();
+                listBox4.Items.Clear();
+
+                for (int i = 0; line != null; i++)
+                {
+                    if (textBoxCerca.Text != string.Empty)
+                    {
+                        Regex rx = new Regex(textBoxCerca.Text.ToUpper());
+
+                        if (line.Split(';')[0] != "*")
+                        {
+                            if (rx.IsMatch(line.Split(';')[0].ToUpper()))
+                            {
+                                listBox1.Items.Add(line.Split(';')[0]);
+                                listBox2.Items.Add(line.Split(';')[2]);
+                                listBox3.Items.Add(line.Split(';')[1] + " €");
+                                listBox4.Items.Add(line.Split(';')[3] + ", " + line.Split(';')[4] + ", " + line.Split(';')[5] + ", " + line.Split(';')[6]);
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        if (line.Split(';')[0] != "*")
+                        {
+                            listBox1.Items.Add(line.Split(';')[0]);
+                        }
+                    }
+                    line = Sr.ReadLine();
+                }
+            }
+
         }
+
 
         private void btnClienteOspite_Click(object sender, EventArgs e)
         {
@@ -1387,7 +1474,7 @@ namespace RISTORANTE
         {
             if (lblSecondo2.Text != "Secondo2")
             {
-                if (Sec2== false)
+                if (Sec2 == false)
                 {
                     btnOrdinaSecondo2.Text = "X";
                     totale = totale + float.Parse(lblSecondo2Prezzo.Text);
@@ -1969,11 +2056,11 @@ namespace RISTORANTE
             }
             else
                 return;
-            
+
 
         }
 
-        public static string piattoSplit(int  q, int p)
+        public static string piattoSplit(int q, int p)
         {
             string stringa = leggiPiatto(@"./ultimoOrdine.txt", q);
             string[] piattoDiviso = stringa.Split(new char[] { ';' });
@@ -2057,7 +2144,7 @@ namespace RISTORANTE
             for (int i = 0; i < j; i++)
             {
                 string cliente = sr.ReadLine();
-                if (j == i+1)
+                if (j == i + 1)
                 {
                     sr.Close();
                     return cliente;
@@ -2253,7 +2340,7 @@ namespace RISTORANTE
                         btnGestisciMenu.Hide();
                         pictureBoxMenu.Hide();
                         pnlClienteAccedi.Hide();
-                        lblNomeProprietario.Text = infoCliente(j+1,1);
+                        lblNomeProprietario.Text = infoCliente(j + 1, 1);
                         nascondiPulsantiOrdine();
                         panel3.Show();
                         pnlPrincipale.Show();
@@ -2288,7 +2375,7 @@ namespace RISTORANTE
 
             for (int i = 0; i < 15; i++)
             {
-                if (userEmail == infoCliente(i+1,0))
+                if (userEmail == infoCliente(i + 1, 0))
                 {
                     int pin = sendEmail(userEmail);
                     textBoxPINCheck.Text = Convert.ToString(pin);
@@ -2441,38 +2528,104 @@ namespace RISTORANTE
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void btnCerca_Click(object sender, EventArgs e)
         {
-            string stringa = textBoxCerca.Text;
-            string[] arrayPiatti = new string[14];
+
+        }
+
+        private void textBoxCerca_TextChanged(object sender, EventArgs e)
+        {
+            ricerca = true;
+
+            btnbtnGestisciMenu_Click(sender, e);
+        }
+
+        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                lblPiattoOpzioni.Text = listBox1.SelectedItem.ToString();
+                panel4.Show();
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel4.Hide();
+        }
+
+        private void btnPiattoModifica_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPiattoElimina_Click(object sender, EventArgs e)
+        {
+            string piattoEliminare = lblPiattoOpzioni.Text;
+
+            eliminaPiatto(filePiatti, piattoEliminare, ref contapiatti);
+        }
+
+        public static int contaPiatti(string filename)
+        {
+            StreamReader sr = new StreamReader(filename);
+            string[] tuttiPiatti = new string[14];
+            int pos = 14;
 
             for (int i = 0; i < 14; i++)
             {
-                arrayPiatti[i] = leggiPiatto(filePiatti, i);
-            }
+                tuttiPiatti[i] = sr.ReadLine();
 
-            if (pnlGestisciMenu.Visible == false)
-            {
-                timer1.Stop();
+                if (tuttiPiatti[i] == null || tuttiPiatti[i] == "")
+                {
+                    pos--;
+                }
             }
+            return pos;
         }
 
-        private void btnCerca_Click(object sender, EventArgs e)
+        public static void eliminaPiatto(string filename, string piatto, ref int contapiatti)
         {
-            lblGestionePiatto1.Hide();
-            lblGestionePiatto2.Hide();
-            lblGestionePiatto3.Hide();
-            lblGestionePiatto4.Hide();
-            lblGestionePiatto5.Hide();
-            lblGestionePiatto6.Hide();
-            lblGestionePiatto7.Hide();
-            lblGestionePiatto8.Hide();
-            lblGestionePiatto9.Hide();
-            lblGestionePiatto10.Hide();
-            lblGestionePiatto11.Hide();
-            lblGestionePiatto12.Hide();
-            lblGestionePiatto13.Hide();
-            lblGestionePiatto14.Hide();
+            StreamReader sr = new StreamReader(filename);
+            string[] tuttiPiatti = new string[14];
+
+            for (int i = 0; i < contapiatti; i++)
+            {
+                tuttiPiatti[i] = sr.ReadLine();
+
+                if (tuttiPiatti[i].Split(';')[0] == piatto)
+                {
+                    tuttiPiatti[i] = "*;" + tuttiPiatti[i];
+                }
+            }
+            sr.Close();
+
+            StreamWriter sw = new StreamWriter(filename, append: true);
+            for (int i = 0; i < contapiatti; i++)
+            {
+                AggiungiSuFileTmp(tuttiPiatti[i], @"./tmp.txt");
+            }
+            sw.Close();
+
+            eliminaFile(@"./piatti.txt");
+            rinominaFile(@"./tmp.txt", @"./piatti.txt");
         }
+
+        public static void scriviAppend(string content, string filename)
+        {
+            var oStream = new FileStream(filename, FileMode.Append, FileAccess.Write, FileShare.Read);
+            StreamWriter sw = new StreamWriter(oStream);
+            sw.WriteLine(content);
+            sw.Close();
+        }
+
+        public static void AggiungiSuFileTmp(string tmp, string filename)
+        {
+
+            scriviAppend(tmp, filename);
+
+        }
+
     }
 }
