@@ -571,7 +571,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(30, 29);
+            this.pnlPrincipale.Location = new System.Drawing.Point(8, 12);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -581,7 +581,7 @@
             this.pnlGestisciMenu.Controls.Add(this.btnPiattiEliminati);
             this.pnlGestisciMenu.Controls.Add(this.pnlGestisciMenu2);
             this.pnlGestisciMenu.Controls.Add(this.lblGestisciMenu);
-            this.pnlGestisciMenu.Location = new System.Drawing.Point(207, 15);
+            this.pnlGestisciMenu.Location = new System.Drawing.Point(217, 14);
             this.pnlGestisciMenu.Name = "pnlGestisciMenu";
             this.pnlGestisciMenu.Size = new System.Drawing.Size(788, 562);
             this.pnlGestisciMenu.TabIndex = 23;
@@ -632,7 +632,7 @@
             this.pnlCestino.Controls.Add(this.lblEliminato2);
             this.pnlCestino.Controls.Add(this.button2);
             this.pnlCestino.Controls.Add(this.lblEliminato);
-            this.pnlCestino.Location = new System.Drawing.Point(359, 193);
+            this.pnlCestino.Location = new System.Drawing.Point(220, 59);
             this.pnlCestino.Name = "pnlCestino";
             this.pnlCestino.Size = new System.Drawing.Size(233, 143);
             this.pnlCestino.TabIndex = 22;
@@ -890,7 +890,7 @@
             // 
             this.pnlUltimoOrdine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
             this.pnlUltimoOrdine.Controls.Add(this.lblUltimoOrdinePanel);
-            this.pnlUltimoOrdine.Location = new System.Drawing.Point(230, 421);
+            this.pnlUltimoOrdine.Location = new System.Drawing.Point(354, 23);
             this.pnlUltimoOrdine.Name = "pnlUltimoOrdine";
             this.pnlUltimoOrdine.Size = new System.Drawing.Size(483, 490);
             this.pnlUltimoOrdine.TabIndex = 3;
@@ -2175,7 +2175,7 @@
             this.pnlCliente.Controls.Add(this.btnClienteRegistrati);
             this.pnlCliente.Controls.Add(this.btnClienteOspite);
             this.pnlCliente.Controls.Add(this.btnClienteAccedi);
-            this.pnlCliente.Location = new System.Drawing.Point(134, 523);
+            this.pnlCliente.Location = new System.Drawing.Point(134, 510);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(404, 289);
             this.pnlCliente.TabIndex = 12;
@@ -2318,7 +2318,7 @@
             this.pnlClienteAccedi.Controls.Add(this.lblClientePassAccedi);
             this.pnlClienteAccedi.Controls.Add(this.lblClienteNomeAccedi);
             this.pnlClienteAccedi.Controls.Add(this.clientePassDimenticata);
-            this.pnlClienteAccedi.Location = new System.Drawing.Point(183, 469);
+            this.pnlClienteAccedi.Location = new System.Drawing.Point(195, 453);
             this.pnlClienteAccedi.Name = "pnlClienteAccedi";
             this.pnlClienteAccedi.Size = new System.Drawing.Size(404, 270);
             this.pnlClienteAccedi.TabIndex = 18;

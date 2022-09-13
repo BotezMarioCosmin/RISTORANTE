@@ -134,12 +134,12 @@ namespace RISTORANTE
             {
                 File.CreateText(@"./loginCliente.txt");
             }
-
+            
             if (!(File.Exists(@"./ultimoOrdine.txt")))
             {
                 File.CreateText(@"./ultimoOrdine.txt");
             }
-
+            
             if (!(File.Exists(fileNameP)))
             {
                 File.CreateText(fileNameP);
@@ -1330,6 +1330,7 @@ namespace RISTORANTE
             nascondiPulsantiOrdine();
             panel3.Show();
             pnlPrincipale.Show();
+            pnlUltimoOrdine.Hide();
         }
 
         public void nascondiPulsantiOrdine()
@@ -1602,12 +1603,7 @@ namespace RISTORANTE
         private void btnOrdina_Click(object sender, EventArgs e)
         {
             eliminaFile(@"./ultimoOrdine.txt");
-            /*
-            if (!(File.Exists(@"./ultimoOrdine.txt")))
-            {
-                File.CreateText(@"./ultimoOrdine.txt");
-            }
-            */
+
             if (textBoxTotale.Text != "0,00 €")
             {
                 if (btnOrdinaAntipasto1.Text == "X")
@@ -2355,6 +2351,7 @@ namespace RISTORANTE
             MessageBox.Show("Credenziali errate.");
             textBoxClienteNomeAccedi.Text = "";
             textBoxClientePassAccedi.Text = "";
+            pnlUltimoOrdine.Hide();
         }
 
         private void textBoxClientePassAccedi_KeyDown(object sender, KeyEventArgs e)
@@ -2526,9 +2523,10 @@ namespace RISTORANTE
             pictureBoxMenu.Hide();
             pnlAggiungi.Hide();
             pnlGestisciMenu.Hide();
-            pnlUltimoOrdine.Show();
-            nascondiPulsantiOrdine();
 
+            nascondiPulsantiOrdine();
+            Form1_Load(sender, e);
+            pnlUltimoOrdine.Show();
         }
 
         private void btnCerca_Click(object sender, EventArgs e)
