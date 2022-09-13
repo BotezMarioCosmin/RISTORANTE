@@ -32,7 +32,6 @@
             this.btnProprietario = new System.Windows.Forms.Button();
             this.lblNomeRistorante = new System.Windows.Forms.Label();
             this.pnlAccesso = new System.Windows.Forms.Panel();
-            this.btnShowPass = new System.Windows.Forms.Button();
             this.btnAccedi = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
@@ -53,7 +52,25 @@
             this.textBoxPinC = new System.Windows.Forms.TextBox();
             this.pnlPrincipale = new System.Windows.Forms.Panel();
             this.pnlGestisciMenu = new System.Windows.Forms.Panel();
+            this.btnPiattiEliminati = new System.Windows.Forms.Button();
             this.pnlGestisciMenu2 = new System.Windows.Forms.Panel();
+            this.pnlCestino = new System.Windows.Forms.Panel();
+            this.lblEliminato3 = new System.Windows.Forms.Label();
+            this.lblEliminato2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblEliminato = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnPiattoElimina = new System.Windows.Forms.Button();
+            this.btnPiattoModifica = new System.Windows.Forms.Button();
+            this.lblPiattoOpzioni = new System.Windows.Forms.Label();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.btnGpIngredienti = new System.Windows.Forms.Button();
+            this.btnGpPrezzo = new System.Windows.Forms.Button();
+            this.btnGpPortata = new System.Windows.Forms.Button();
+            this.btnGpPiatto = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnCerca = new System.Windows.Forms.Button();
             this.textBoxCerca = new System.Windows.Forms.TextBox();
@@ -153,7 +170,6 @@
             this.lblAntipasto1 = new System.Windows.Forms.Label();
             this.lblAntipasti = new System.Windows.Forms.Label();
             this.lblNomeRistoranteProp = new System.Windows.Forms.Label();
-            this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
             this.pnlScegliOpzione = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnOrdina = new System.Windows.Forms.Button();
@@ -161,13 +177,11 @@
             this.textBoxTotale = new System.Windows.Forms.TextBox();
             this.btnUltimoOrdine = new System.Windows.Forms.Button();
             this.pnlProfiloeNome = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNomeProprietario = new System.Windows.Forms.Label();
             this.btnEsci = new System.Windows.Forms.Button();
             this.btnVisualizzaMenu = new System.Windows.Forms.Button();
             this.btnGestisciMenu = new System.Windows.Forms.Button();
             this.btnAggiungiPiatto = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.pnlCliente = new System.Windows.Forms.Panel();
             this.btnClienteRegistrati = new System.Windows.Forms.Button();
@@ -176,14 +190,12 @@
             this.pnlClienteRegistra = new System.Windows.Forms.Panel();
             this.textBoxClienteEmail = new System.Windows.Forms.TextBox();
             this.lblEmailCliente = new System.Windows.Forms.Label();
-            this.btnShowHidePassClienteRegistra = new System.Windows.Forms.Button();
             this.btnClienteRegistrato = new System.Windows.Forms.Button();
             this.textBoxClientePassword = new System.Windows.Forms.TextBox();
             this.textBoxClienteNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlClienteAccedi = new System.Windows.Forms.Panel();
-            this.btnShowHideClienteAccedi = new System.Windows.Forms.Button();
             this.btnClienteAccediProsegui = new System.Windows.Forms.Button();
             this.textBoxClientePassAccedi = new System.Windows.Forms.TextBox();
             this.textBoxClienteNomeAccedi = new System.Windows.Forms.TextBox();
@@ -211,34 +223,34 @@
             this.lblPinCliente = new System.Windows.Forms.Label();
             this.textBoxPinCliente = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.btnGpPiatto = new System.Windows.Forms.Button();
-            this.btnGpPortata = new System.Windows.Forms.Button();
-            this.btnGpPrezzo = new System.Windows.Forms.Button();
-            this.btnGpIngredienti = new System.Windows.Forms.Button();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblPiattoOpzioni = new System.Windows.Forms.Label();
-            this.btnPiattoModifica = new System.Windows.Forms.Button();
-            this.btnPiattoElimina = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPiatto1Elimina = new System.Windows.Forms.Button();
+            this.btnPiatto3Ripristina = new System.Windows.Forms.Button();
+            this.btnPiatto2Ripristina = new System.Windows.Forms.Button();
+            this.btnPiatto1Ripristina = new System.Windows.Forms.Button();
+            this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnShowHideClienteAccedi = new System.Windows.Forms.Button();
+            this.btnShowHidePassClienteRegistra = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnShowPass = new System.Windows.Forms.Button();
+            this.btnPiatto2Elimina = new System.Windows.Forms.Button();
+            this.btnPiatto3Elimina = new System.Windows.Forms.Button();
             this.pnlAccesso.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
             this.pnlPin.SuspendLayout();
             this.pnlPrincipale.SuspendLayout();
             this.pnlGestisciMenu.SuspendLayout();
             this.pnlGestisciMenu2.SuspendLayout();
+            this.pnlCestino.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.pnlUltimoOrdine.SuspendLayout();
             this.pnlOrdine.SuspendLayout();
             this.pnlAggiungi.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
             this.pnlScegliOpzione.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlProfiloeNome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCliente.SuspendLayout();
             this.pnlClienteRegistra.SuspendLayout();
             this.pnlClienteAccedi.SuspendLayout();
@@ -246,7 +258,8 @@
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviataCliente.SuspendLayout();
             this.pnlRispristinaCliente.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -287,18 +300,6 @@
             this.pnlAccesso.Name = "pnlAccesso";
             this.pnlAccesso.Size = new System.Drawing.Size(404, 248);
             this.pnlAccesso.TabIndex = 3;
-            // 
-            // btnShowPass
-            // 
-            this.btnShowPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowPass.BackgroundImage")));
-            this.btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowPass.Location = new System.Drawing.Point(316, 97);
-            this.btnShowPass.Margin = new System.Windows.Forms.Padding(2);
-            this.btnShowPass.Name = "btnShowPass";
-            this.btnShowPass.Size = new System.Drawing.Size(39, 30);
-            this.btnShowPass.TabIndex = 6;
-            this.btnShowPass.UseVisualStyleBackColor = true;
-            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
             // 
             // btnAccedi
             // 
@@ -503,10 +504,10 @@
             this.pnlPrincipale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
             this.pnlPrincipale.Controls.Add(this.pnlGestisciMenu);
             this.pnlPrincipale.Controls.Add(this.pnlUltimoOrdine);
+            this.pnlPrincipale.Controls.Add(this.pnlAggiungi);
             this.pnlPrincipale.Controls.Add(this.pnlOrdine);
             this.pnlPrincipale.Controls.Add(this.lblPriceB);
             this.pnlPrincipale.Controls.Add(this.lblPriceA);
-            this.pnlPrincipale.Controls.Add(this.pnlAggiungi);
             this.pnlPrincipale.Controls.Add(this.btnOrdinaDessert3);
             this.pnlPrincipale.Controls.Add(this.btnOrdinaDessert2);
             this.pnlPrincipale.Controls.Add(this.btnOrdinaDessert1);
@@ -577,16 +578,32 @@
             // 
             // pnlGestisciMenu
             // 
+            this.pnlGestisciMenu.Controls.Add(this.btnPiattiEliminati);
             this.pnlGestisciMenu.Controls.Add(this.pnlGestisciMenu2);
             this.pnlGestisciMenu.Controls.Add(this.lblGestisciMenu);
-            this.pnlGestisciMenu.Location = new System.Drawing.Point(211, 16);
+            this.pnlGestisciMenu.Location = new System.Drawing.Point(207, 15);
             this.pnlGestisciMenu.Name = "pnlGestisciMenu";
             this.pnlGestisciMenu.Size = new System.Drawing.Size(788, 562);
             this.pnlGestisciMenu.TabIndex = 23;
             // 
+            // btnPiattiEliminati
+            // 
+            this.btnPiattiEliminati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnPiattiEliminati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiattiEliminati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPiattiEliminati.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnPiattiEliminati.Location = new System.Drawing.Point(616, 40);
+            this.btnPiattiEliminati.Name = "btnPiattiEliminati";
+            this.btnPiattiEliminati.Size = new System.Drawing.Size(144, 29);
+            this.btnPiattiEliminati.TabIndex = 4;
+            this.btnPiattiEliminati.Text = "Cestino";
+            this.btnPiattiEliminati.UseVisualStyleBackColor = false;
+            this.btnPiattiEliminati.Click += new System.EventHandler(this.btnPiattiEliminati_Click);
+            // 
             // pnlGestisciMenu2
             // 
             this.pnlGestisciMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.pnlGestisciMenu2.Controls.Add(this.pnlCestino);
             this.pnlGestisciMenu2.Controls.Add(this.panel4);
             this.pnlGestisciMenu2.Controls.Add(this.listBox4);
             this.pnlGestisciMenu2.Controls.Add(this.btnGpIngredienti);
@@ -602,6 +619,221 @@
             this.pnlGestisciMenu2.Name = "pnlGestisciMenu2";
             this.pnlGestisciMenu2.Size = new System.Drawing.Size(747, 441);
             this.pnlGestisciMenu2.TabIndex = 2;
+            // 
+            // pnlCestino
+            // 
+            this.pnlCestino.Controls.Add(this.btnPiatto3Elimina);
+            this.pnlCestino.Controls.Add(this.btnPiatto2Elimina);
+            this.pnlCestino.Controls.Add(this.btnPiatto1Elimina);
+            this.pnlCestino.Controls.Add(this.btnPiatto3Ripristina);
+            this.pnlCestino.Controls.Add(this.btnPiatto2Ripristina);
+            this.pnlCestino.Controls.Add(this.btnPiatto1Ripristina);
+            this.pnlCestino.Controls.Add(this.lblEliminato3);
+            this.pnlCestino.Controls.Add(this.lblEliminato2);
+            this.pnlCestino.Controls.Add(this.button2);
+            this.pnlCestino.Controls.Add(this.lblEliminato);
+            this.pnlCestino.Location = new System.Drawing.Point(359, 193);
+            this.pnlCestino.Name = "pnlCestino";
+            this.pnlCestino.Size = new System.Drawing.Size(233, 143);
+            this.pnlCestino.TabIndex = 22;
+            // 
+            // lblEliminato3
+            // 
+            this.lblEliminato3.AutoSize = true;
+            this.lblEliminato3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminato3.Location = new System.Drawing.Point(23, 97);
+            this.lblEliminato3.Name = "lblEliminato3";
+            this.lblEliminato3.Size = new System.Drawing.Size(55, 24);
+            this.lblEliminato3.TabIndex = 6;
+            this.lblEliminato3.Text = "Piatto";
+            // 
+            // lblEliminato2
+            // 
+            this.lblEliminato2.AutoSize = true;
+            this.lblEliminato2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminato2.Location = new System.Drawing.Point(23, 70);
+            this.lblEliminato2.Name = "lblEliminato2";
+            this.lblEliminato2.Size = new System.Drawing.Size(55, 24);
+            this.lblEliminato2.TabIndex = 5;
+            this.lblEliminato2.Text = "Piatto";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(196, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 28);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblEliminato
+            // 
+            this.lblEliminato.AutoSize = true;
+            this.lblEliminato.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminato.Location = new System.Drawing.Point(23, 41);
+            this.lblEliminato.Name = "lblEliminato";
+            this.lblEliminato.Size = new System.Drawing.Size(55, 24);
+            this.lblEliminato.TabIndex = 4;
+            this.lblEliminato.Text = "Piatto";
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnPiattoElimina);
+            this.panel4.Controls.Add(this.btnPiattoModifica);
+            this.panel4.Controls.Add(this.lblPiattoOpzioni);
+            this.panel4.Location = new System.Drawing.Point(225, 38);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(265, 134);
+            this.panel4.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(226, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 28);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnPiattoElimina
+            // 
+            this.btnPiattoElimina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnPiattoElimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiattoElimina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPiattoElimina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnPiattoElimina.Location = new System.Drawing.Point(140, 81);
+            this.btnPiattoElimina.Name = "btnPiattoElimina";
+            this.btnPiattoElimina.Size = new System.Drawing.Size(106, 39);
+            this.btnPiattoElimina.TabIndex = 2;
+            this.btnPiattoElimina.Text = "Elimina";
+            this.btnPiattoElimina.UseVisualStyleBackColor = false;
+            this.btnPiattoElimina.Click += new System.EventHandler(this.btnPiattoElimina_Click);
+            // 
+            // btnPiattoModifica
+            // 
+            this.btnPiattoModifica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnPiattoModifica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiattoModifica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPiattoModifica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
+            this.btnPiattoModifica.Location = new System.Drawing.Point(22, 81);
+            this.btnPiattoModifica.Name = "btnPiattoModifica";
+            this.btnPiattoModifica.Size = new System.Drawing.Size(106, 39);
+            this.btnPiattoModifica.TabIndex = 1;
+            this.btnPiattoModifica.Text = "Modifica";
+            this.btnPiattoModifica.UseVisualStyleBackColor = false;
+            this.btnPiattoModifica.Click += new System.EventHandler(this.btnPiattoModifica_Click);
+            // 
+            // lblPiattoOpzioni
+            // 
+            this.lblPiattoOpzioni.AutoSize = true;
+            this.lblPiattoOpzioni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPiattoOpzioni.Location = new System.Drawing.Point(26, 29);
+            this.lblPiattoOpzioni.Name = "lblPiattoOpzioni";
+            this.lblPiattoOpzioni.Size = new System.Drawing.Size(55, 24);
+            this.lblPiattoOpzioni.TabIndex = 0;
+            this.lblPiattoOpzioni.Text = "Piatto";
+            // 
+            // listBox4
+            // 
+            this.listBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 20;
+            this.listBox4.Location = new System.Drawing.Point(384, 85);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(348, 340);
+            this.listBox4.TabIndex = 20;
+            // 
+            // btnGpIngredienti
+            // 
+            this.btnGpIngredienti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpIngredienti.FlatAppearance.BorderSize = 0;
+            this.btnGpIngredienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpIngredienti.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpIngredienti.Location = new System.Drawing.Point(384, 52);
+            this.btnGpIngredienti.Name = "btnGpIngredienti";
+            this.btnGpIngredienti.Size = new System.Drawing.Size(348, 31);
+            this.btnGpIngredienti.TabIndex = 19;
+            this.btnGpIngredienti.Text = "Portata";
+            this.btnGpIngredienti.UseVisualStyleBackColor = false;
+            // 
+            // btnGpPrezzo
+            // 
+            this.btnGpPrezzo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpPrezzo.FlatAppearance.BorderSize = 0;
+            this.btnGpPrezzo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpPrezzo.Location = new System.Drawing.Point(297, 52);
+            this.btnGpPrezzo.Name = "btnGpPrezzo";
+            this.btnGpPrezzo.Size = new System.Drawing.Size(81, 31);
+            this.btnGpPrezzo.TabIndex = 18;
+            this.btnGpPrezzo.Text = "Prezzo";
+            this.btnGpPrezzo.UseVisualStyleBackColor = false;
+            // 
+            // btnGpPortata
+            // 
+            this.btnGpPortata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpPortata.FlatAppearance.BorderSize = 0;
+            this.btnGpPortata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpPortata.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpPortata.Location = new System.Drawing.Point(192, 52);
+            this.btnGpPortata.Name = "btnGpPortata";
+            this.btnGpPortata.Size = new System.Drawing.Size(99, 31);
+            this.btnGpPortata.TabIndex = 17;
+            this.btnGpPortata.Text = "Portata";
+            this.btnGpPortata.UseVisualStyleBackColor = false;
+            // 
+            // btnGpPiatto
+            // 
+            this.btnGpPiatto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.btnGpPiatto.FlatAppearance.BorderSize = 0;
+            this.btnGpPiatto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGpPiatto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGpPiatto.Location = new System.Drawing.Point(8, 52);
+            this.btnGpPiatto.Name = "btnGpPiatto";
+            this.btnGpPiatto.Size = new System.Drawing.Size(178, 31);
+            this.btnGpPiatto.TabIndex = 16;
+            this.btnGpPiatto.Text = "Piatti";
+            this.btnGpPiatto.UseVisualStyleBackColor = false;
+            // 
+            // listBox3
+            // 
+            this.listBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(297, 85);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(81, 340);
+            this.listBox3.TabIndex = 15;
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(192, 85);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(99, 340);
+            this.listBox2.TabIndex = 14;
             // 
             // listBox1
             // 
@@ -658,7 +890,7 @@
             // 
             this.pnlUltimoOrdine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
             this.pnlUltimoOrdine.Controls.Add(this.lblUltimoOrdinePanel);
-            this.pnlUltimoOrdine.Location = new System.Drawing.Point(271, 31);
+            this.pnlUltimoOrdine.Location = new System.Drawing.Point(230, 421);
             this.pnlUltimoOrdine.Name = "pnlUltimoOrdine";
             this.pnlUltimoOrdine.Size = new System.Drawing.Size(483, 490);
             this.pnlUltimoOrdine.TabIndex = 3;
@@ -687,7 +919,7 @@
             this.pnlOrdine.Controls.Add(this.lblScontrinoTel);
             this.pnlOrdine.Controls.Add(this.lblOrdineLuogo);
             this.pnlOrdine.Controls.Add(this.lblScontrinoNome);
-            this.pnlOrdine.Location = new System.Drawing.Point(393, 9);
+            this.pnlOrdine.Location = new System.Drawing.Point(406, 7);
             this.pnlOrdine.Name = "pnlOrdine";
             this.pnlOrdine.Size = new System.Drawing.Size(341, 528);
             this.pnlOrdine.TabIndex = 70;
@@ -822,7 +1054,7 @@
             this.pnlAggiungi.Controls.Add(this.btnAggiungiPiattoInvia);
             this.pnlAggiungi.Controls.Add(this.panel1);
             this.pnlAggiungi.Controls.Add(this.lblCreaPiatto);
-            this.pnlAggiungi.Location = new System.Drawing.Point(246, 12);
+            this.pnlAggiungi.Location = new System.Drawing.Point(233, 42);
             this.pnlAggiungi.Name = "pnlAggiungi";
             this.pnlAggiungi.Size = new System.Drawing.Size(788, 562);
             this.pnlAggiungi.TabIndex = 12;
@@ -1771,16 +2003,6 @@
             this.lblNomeRistoranteProp.TabIndex = 3;
             this.lblNomeRistoranteProp.Text = "BOTEZ\'S RESTAURANT";
             // 
-            // pictureBoxMenu
-            // 
-            this.pictureBoxMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenu.BackgroundImage")));
-            this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxMenu.Location = new System.Drawing.Point(201, 5);
-            this.pictureBoxMenu.Name = "pictureBoxMenu";
-            this.pictureBoxMenu.Size = new System.Drawing.Size(788, 562);
-            this.pictureBoxMenu.TabIndex = 5;
-            this.pictureBoxMenu.TabStop = false;
-            // 
             // pnlScegliOpzione
             // 
             this.pnlScegliOpzione.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -1867,16 +2089,6 @@
             this.pnlProfiloeNome.Size = new System.Drawing.Size(200, 143);
             this.pnlProfiloeNome.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblNomeProprietario
             // 
             this.lblNomeProprietario.AutoSize = true;
@@ -1943,22 +2155,6 @@
             this.btnAggiungiPiatto.Text = "Aggiungi";
             this.btnAggiungiPiatto.UseVisualStyleBackColor = true;
             this.btnAggiungiPiatto.Click += new System.EventHandler(this.btnAggiungiPiatto_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBack.Location = new System.Drawing.Point(8, 8);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 60);
-            this.btnBack.TabIndex = 5;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnCliente
             // 
@@ -2060,18 +2256,6 @@
             this.lblEmailCliente.TabIndex = 7;
             this.lblEmailCliente.Text = "Email:";
             // 
-            // btnShowHidePassClienteRegistra
-            // 
-            this.btnShowHidePassClienteRegistra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHidePassClienteRegistra.BackgroundImage")));
-            this.btnShowHidePassClienteRegistra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowHidePassClienteRegistra.Location = new System.Drawing.Point(316, 132);
-            this.btnShowHidePassClienteRegistra.Margin = new System.Windows.Forms.Padding(2);
-            this.btnShowHidePassClienteRegistra.Name = "btnShowHidePassClienteRegistra";
-            this.btnShowHidePassClienteRegistra.Size = new System.Drawing.Size(39, 30);
-            this.btnShowHidePassClienteRegistra.TabIndex = 6;
-            this.btnShowHidePassClienteRegistra.UseVisualStyleBackColor = true;
-            this.btnShowHidePassClienteRegistra.Click += new System.EventHandler(this.btnShowHidePassClienteRegistra_Click);
-            // 
             // btnClienteRegistrato
             // 
             this.btnClienteRegistrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
@@ -2138,18 +2322,6 @@
             this.pnlClienteAccedi.Name = "pnlClienteAccedi";
             this.pnlClienteAccedi.Size = new System.Drawing.Size(404, 270);
             this.pnlClienteAccedi.TabIndex = 18;
-            // 
-            // btnShowHideClienteAccedi
-            // 
-            this.btnShowHideClienteAccedi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHideClienteAccedi.BackgroundImage")));
-            this.btnShowHideClienteAccedi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowHideClienteAccedi.Location = new System.Drawing.Point(316, 97);
-            this.btnShowHideClienteAccedi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnShowHideClienteAccedi.Name = "btnShowHideClienteAccedi";
-            this.btnShowHideClienteAccedi.Size = new System.Drawing.Size(39, 30);
-            this.btnShowHideClienteAccedi.TabIndex = 6;
-            this.btnShowHideClienteAccedi.UseVisualStyleBackColor = true;
-            this.btnShowHideClienteAccedi.Click += new System.EventHandler(this.btnShowHideClienteAccedi_Click);
             // 
             // btnClienteAccediProsegui
             // 
@@ -2450,158 +2622,146 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 22;
             // 
-            // listBox2
+            // btnPiatto1Elimina
             // 
-            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(192, 85);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(99, 340);
-            this.listBox2.TabIndex = 14;
+            this.btnPiatto1Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
+            this.btnPiatto1Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto1Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto1Elimina.Location = new System.Drawing.Point(190, 35);
+            this.btnPiatto1Elimina.Name = "btnPiatto1Elimina";
+            this.btnPiatto1Elimina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto1Elimina.TabIndex = 10;
+            this.btnPiatto1Elimina.UseVisualStyleBackColor = true;
             // 
-            // listBox3
+            // btnPiatto3Ripristina
             // 
-            this.listBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 20;
-            this.listBox3.Location = new System.Drawing.Point(297, 85);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(81, 340);
-            this.listBox3.TabIndex = 15;
+            this.btnPiatto3Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina4;
+            this.btnPiatto3Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto3Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto3Ripristina.Image = global::RISTORANTE.Properties.Resources.ripristina;
+            this.btnPiatto3Ripristina.Location = new System.Drawing.Point(151, 95);
+            this.btnPiatto3Ripristina.Name = "btnPiatto3Ripristina";
+            this.btnPiatto3Ripristina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto3Ripristina.TabIndex = 9;
+            this.btnPiatto3Ripristina.UseVisualStyleBackColor = true;
             // 
-            // btnGpPiatto
+            // btnPiatto2Ripristina
             // 
-            this.btnGpPiatto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.btnGpPiatto.FlatAppearance.BorderSize = 0;
-            this.btnGpPiatto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGpPiatto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGpPiatto.Location = new System.Drawing.Point(8, 52);
-            this.btnGpPiatto.Name = "btnGpPiatto";
-            this.btnGpPiatto.Size = new System.Drawing.Size(178, 31);
-            this.btnGpPiatto.TabIndex = 16;
-            this.btnGpPiatto.Text = "Piatti";
-            this.btnGpPiatto.UseVisualStyleBackColor = false;
+            this.btnPiatto2Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina3;
+            this.btnPiatto2Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto2Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto2Ripristina.Image = global::RISTORANTE.Properties.Resources.ripristina;
+            this.btnPiatto2Ripristina.Location = new System.Drawing.Point(151, 65);
+            this.btnPiatto2Ripristina.Name = "btnPiatto2Ripristina";
+            this.btnPiatto2Ripristina.Size = new System.Drawing.Size(40, 31);
+            this.btnPiatto2Ripristina.TabIndex = 8;
+            this.btnPiatto2Ripristina.UseVisualStyleBackColor = true;
             // 
-            // btnGpPortata
+            // btnPiatto1Ripristina
             // 
-            this.btnGpPortata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.btnGpPortata.FlatAppearance.BorderSize = 0;
-            this.btnGpPortata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGpPortata.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGpPortata.Location = new System.Drawing.Point(192, 52);
-            this.btnGpPortata.Name = "btnGpPortata";
-            this.btnGpPortata.Size = new System.Drawing.Size(99, 31);
-            this.btnGpPortata.TabIndex = 17;
-            this.btnGpPortata.Text = "Portata";
-            this.btnGpPortata.UseVisualStyleBackColor = false;
+            this.btnPiatto1Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina2;
+            this.btnPiatto1Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto1Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto1Ripristina.Location = new System.Drawing.Point(151, 35);
+            this.btnPiatto1Ripristina.Name = "btnPiatto1Ripristina";
+            this.btnPiatto1Ripristina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto1Ripristina.TabIndex = 7;
+            this.btnPiatto1Ripristina.UseVisualStyleBackColor = true;
+            this.btnPiatto1Ripristina.Click += new System.EventHandler(this.btnPiatto1Ripristina_Click);
             // 
-            // btnGpPrezzo
+            // pictureBoxMenu
             // 
-            this.btnGpPrezzo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.btnGpPrezzo.FlatAppearance.BorderSize = 0;
-            this.btnGpPrezzo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGpPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGpPrezzo.Location = new System.Drawing.Point(297, 52);
-            this.btnGpPrezzo.Name = "btnGpPrezzo";
-            this.btnGpPrezzo.Size = new System.Drawing.Size(81, 31);
-            this.btnGpPrezzo.TabIndex = 18;
-            this.btnGpPrezzo.Text = "Prezzo";
-            this.btnGpPrezzo.UseVisualStyleBackColor = false;
+            this.pictureBoxMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenu.BackgroundImage")));
+            this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxMenu.Location = new System.Drawing.Point(201, 5);
+            this.pictureBoxMenu.Name = "pictureBoxMenu";
+            this.pictureBoxMenu.Size = new System.Drawing.Size(788, 562);
+            this.pictureBoxMenu.TabIndex = 5;
+            this.pictureBoxMenu.TabStop = false;
             // 
-            // btnGpIngredienti
+            // pictureBox1
             // 
-            this.btnGpIngredienti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.btnGpIngredienti.FlatAppearance.BorderSize = 0;
-            this.btnGpIngredienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGpIngredienti.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGpIngredienti.Location = new System.Drawing.Point(384, 52);
-            this.btnGpIngredienti.Name = "btnGpIngredienti";
-            this.btnGpIngredienti.Size = new System.Drawing.Size(348, 31);
-            this.btnGpIngredienti.TabIndex = 19;
-            this.btnGpIngredienti.Text = "Portata";
-            this.btnGpIngredienti.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // listBox4
+            // btnShowHideClienteAccedi
             // 
-            this.listBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(130)))));
-            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 20;
-            this.listBox4.Location = new System.Drawing.Point(384, 85);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(348, 340);
-            this.listBox4.TabIndex = 20;
+            this.btnShowHideClienteAccedi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHideClienteAccedi.BackgroundImage")));
+            this.btnShowHideClienteAccedi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowHideClienteAccedi.Location = new System.Drawing.Point(316, 97);
+            this.btnShowHideClienteAccedi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowHideClienteAccedi.Name = "btnShowHideClienteAccedi";
+            this.btnShowHideClienteAccedi.Size = new System.Drawing.Size(39, 30);
+            this.btnShowHideClienteAccedi.TabIndex = 6;
+            this.btnShowHideClienteAccedi.UseVisualStyleBackColor = true;
+            this.btnShowHideClienteAccedi.Click += new System.EventHandler(this.btnShowHideClienteAccedi_Click);
             // 
-            // panel4
+            // btnShowHidePassClienteRegistra
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.btnPiattoElimina);
-            this.panel4.Controls.Add(this.btnPiattoModifica);
-            this.panel4.Controls.Add(this.lblPiattoOpzioni);
-            this.panel4.Location = new System.Drawing.Point(228, 71);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(265, 134);
-            this.panel4.TabIndex = 21;
+            this.btnShowHidePassClienteRegistra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHidePassClienteRegistra.BackgroundImage")));
+            this.btnShowHidePassClienteRegistra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowHidePassClienteRegistra.Location = new System.Drawing.Point(316, 132);
+            this.btnShowHidePassClienteRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowHidePassClienteRegistra.Name = "btnShowHidePassClienteRegistra";
+            this.btnShowHidePassClienteRegistra.Size = new System.Drawing.Size(39, 30);
+            this.btnShowHidePassClienteRegistra.TabIndex = 6;
+            this.btnShowHidePassClienteRegistra.UseVisualStyleBackColor = true;
+            this.btnShowHidePassClienteRegistra.Click += new System.EventHandler(this.btnShowHidePassClienteRegistra_Click);
             // 
-            // lblPiattoOpzioni
+            // btnBack
             // 
-            this.lblPiattoOpzioni.AutoSize = true;
-            this.lblPiattoOpzioni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPiattoOpzioni.Location = new System.Drawing.Point(26, 29);
-            this.lblPiattoOpzioni.Name = "lblPiattoOpzioni";
-            this.lblPiattoOpzioni.Size = new System.Drawing.Size(55, 24);
-            this.lblPiattoOpzioni.TabIndex = 0;
-            this.lblPiattoOpzioni.Text = "Piatto";
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBack.Location = new System.Drawing.Point(8, 8);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 60);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnPiattoModifica
+            // btnShowPass
             // 
-            this.btnPiattoModifica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnPiattoModifica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiattoModifica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPiattoModifica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.btnPiattoModifica.Location = new System.Drawing.Point(22, 81);
-            this.btnPiattoModifica.Name = "btnPiattoModifica";
-            this.btnPiattoModifica.Size = new System.Drawing.Size(106, 39);
-            this.btnPiattoModifica.TabIndex = 1;
-            this.btnPiattoModifica.Text = "Modifica";
-            this.btnPiattoModifica.UseVisualStyleBackColor = false;
-            this.btnPiattoModifica.Click += new System.EventHandler(this.btnPiattoModifica_Click);
+            this.btnShowPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowPass.BackgroundImage")));
+            this.btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowPass.Location = new System.Drawing.Point(316, 97);
+            this.btnShowPass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowPass.Name = "btnShowPass";
+            this.btnShowPass.Size = new System.Drawing.Size(39, 30);
+            this.btnShowPass.TabIndex = 6;
+            this.btnShowPass.UseVisualStyleBackColor = true;
+            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
             // 
-            // btnPiattoElimina
+            // btnPiatto2Elimina
             // 
-            this.btnPiattoElimina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnPiattoElimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiattoElimina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPiattoElimina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(125)))), ((int)(((byte)(195)))));
-            this.btnPiattoElimina.Location = new System.Drawing.Point(140, 81);
-            this.btnPiattoElimina.Name = "btnPiattoElimina";
-            this.btnPiattoElimina.Size = new System.Drawing.Size(106, 39);
-            this.btnPiattoElimina.TabIndex = 2;
-            this.btnPiattoElimina.Text = "Elimina";
-            this.btnPiattoElimina.UseVisualStyleBackColor = false;
-            this.btnPiattoElimina.Click += new System.EventHandler(this.btnPiattoElimina_Click);
+            this.btnPiatto2Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
+            this.btnPiatto2Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto2Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto2Elimina.Location = new System.Drawing.Point(190, 65);
+            this.btnPiatto2Elimina.Name = "btnPiatto2Elimina";
+            this.btnPiatto2Elimina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto2Elimina.TabIndex = 11;
+            this.btnPiatto2Elimina.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnPiatto3Elimina
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(231, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 28);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPiatto3Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
+            this.btnPiatto3Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto3Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto3Elimina.Location = new System.Drawing.Point(190, 95);
+            this.btnPiatto3Elimina.Name = "btnPiatto3Elimina";
+            this.btnPiatto3Elimina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto3Elimina.TabIndex = 12;
+            this.btnPiatto3Elimina.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -2643,6 +2803,10 @@
             this.pnlGestisciMenu.PerformLayout();
             this.pnlGestisciMenu2.ResumeLayout(false);
             this.pnlGestisciMenu2.PerformLayout();
+            this.pnlCestino.ResumeLayout(false);
+            this.pnlCestino.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.pnlUltimoOrdine.ResumeLayout(false);
             this.pnlUltimoOrdine.PerformLayout();
             this.pnlOrdine.ResumeLayout(false);
@@ -2653,13 +2817,11 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
             this.pnlScegliOpzione.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlProfiloeNome.ResumeLayout(false);
             this.pnlProfiloeNome.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCliente.ResumeLayout(false);
             this.pnlClienteRegistra.ResumeLayout(false);
             this.pnlClienteRegistra.PerformLayout();
@@ -2673,8 +2835,8 @@
             this.pnlEmailInviataCliente.PerformLayout();
             this.pnlRispristinaCliente.ResumeLayout(false);
             this.pnlRispristinaCliente.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2876,6 +3038,18 @@
         private System.Windows.Forms.Button btnPiattoElimina;
         private System.Windows.Forms.Button btnPiattoModifica;
         private System.Windows.Forms.Label lblPiattoOpzioni;
+        private System.Windows.Forms.Button btnPiattiEliminati;
+        private System.Windows.Forms.Panel pnlCestino;
+        private System.Windows.Forms.Label lblEliminato;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblEliminato3;
+        private System.Windows.Forms.Label lblEliminato2;
+        private System.Windows.Forms.Button btnPiatto1Ripristina;
+        private System.Windows.Forms.Button btnPiatto3Ripristina;
+        private System.Windows.Forms.Button btnPiatto2Ripristina;
+        private System.Windows.Forms.Button btnPiatto1Elimina;
+        private System.Windows.Forms.Button btnPiatto3Elimina;
+        private System.Windows.Forms.Button btnPiatto2Elimina;
     }
 }
 

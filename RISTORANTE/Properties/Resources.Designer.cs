@@ -83,6 +83,16 @@ namespace RISTORANTE.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap elimina {
+            get {
+                object obj = ResourceManager.GetObject("elimina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HidePass {
             get {
                 object obj = ResourceManager.GetObject("HidePass", resourceCulture);
@@ -136,6 +146,56 @@ namespace RISTORANTE.Properties {
         internal static System.Drawing.Bitmap profile2 {
             get {
                 object obj = ResourceManager.GetObject("profile2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ripristina {
+            get {
+                object obj = ResourceManager.GetObject("ripristina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ripristina1 {
+            get {
+                object obj = ResourceManager.GetObject("ripristina1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ripristina2 {
+            get {
+                object obj = ResourceManager.GetObject("ripristina2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ripristina3 {
+            get {
+                object obj = ResourceManager.GetObject("ripristina3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ripristina4 {
+            get {
+                object obj = ResourceManager.GetObject("ripristina4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

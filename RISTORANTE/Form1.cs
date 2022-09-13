@@ -58,7 +58,6 @@ namespace RISTORANTE
         string emailClientePerModifica = "";
 
         bool ricerca = false;
-
         public struct piatto
         {
             public string nome;
@@ -82,6 +81,7 @@ namespace RISTORANTE
             InitializeComponent();
             btnBack.BackgroundImageLayout = ImageLayout.Stretch;
             btnShowPass.BackgroundImageLayout = ImageLayout.Stretch;
+
             pnlPrincipale.Location = new Point(0, 0);
 
             //proprietario
@@ -128,6 +128,7 @@ namespace RISTORANTE
             pnlRispristinaCliente.Hide();
             pnlUltimoOrdine.Hide();
             panel4.Hide();
+            pnlCestino.Hide();
 
             if (!(File.Exists(@"./loginCliente.txt")))
             {
@@ -717,7 +718,9 @@ namespace RISTORANTE
                             lblAntipasto1Prezzo.Text = array[1];
                             lblAntipasto1Ingr.Text = array[3] + ", " + array[4] + ", " + array[5] + ", " + array[6];
                             ant = 1;
+
                         }
+
 
                     }
                     else if (ant == 1)
@@ -2557,14 +2560,108 @@ namespace RISTORANTE
 
         private void btnPiattoModifica_Click(object sender, EventArgs e)
         {
+            string line = cercaPiatto(lblPiattoOpzioni.Text, contapiatti);
+            eliminaPiattoDef(filePiatti, lblPiattoOpzioni.Text, ref contapiatti);
+            pnlAggiungi.Show();
+            pnlGestisciMenu.Hide();
+            panel4.Hide();
+            textBoxAggiungiNome.Text = lblPiattoOpzioni.Text;
+            textBoxAggiungiPrezzo.Text = line.Split(';')[1];
+            textBoxAggiungiIng1.Text = line.Split(';')[3];
+            textBoxAggiungiIng2.Text = line.Split(';')[4];
+            textBoxAggiungiIng3.Text = line.Split(';')[5];
+            textBoxAggiungiIng4.Text = line.Split(';')[6];
+        }
+
+        public static int eliminaPiattoInt(string filename, string piatto, ref int contapiatti)
+        {
+            StreamReader sr = new StreamReader(filename);
+            string[] tuttiPiatti = new string[14];
+            int evita;
+
+            for (int i = 0; i < contapiatti; i++)
+            {
+                tuttiPiatti[i] = sr.ReadLine();
+
+                if (tuttiPiatti[i].Split(';')[0] == piatto)
+                {
+                    sr.Close();
+                    evita = i;
+                    return evita;
+                }
+            }
+            return 99;
 
         }
+        public static void eliminaPiattoDef(string filename, string piatto,ref int contapiatti)
+        {
+            StreamReader sr = new StreamReader(filename);
+            string[] tuttiPiatti = new string[14];
+            int evita;
+
+            for (int i = 0; i < contapiatti; i++)
+            {
+                tuttiPiatti[i] = sr.ReadLine();
+
+                if (tuttiPiatti[i].Split(';')[0] == piatto)
+                {
+                    evita = i;
+                }
+
+                if (i == contapiatti - 1)
+                {
+                    sr.Close();
+                }
+            }
+
+            evita = eliminaPiattoInt(filename,piatto, ref contapiatti);
+
+            StreamWriter sw = new StreamWriter(filename, append: true);
+            for (int i = 0; i < contapiatti; i++)
+            {
+                if (i != evita)
+                {
+                    AggiungiSuFileTmp(tuttiPiatti[i], @"./tmp.txt");
+                }
+
+            }
+            sw.Close();
+
+            eliminaFile(@"./piatti.txt");
+            rinominaFile(@"./tmp.txt", @"./piatti.txt");
+            contapiatti--;
+        }
+
+        public static string cercaPiatto(string p, int c)
+        {
+            StreamReader sr = new StreamReader(filePiatti);
+            string[] tuttiPiatti = new string[14];
+
+            for (int i = 0; i < c; i++)
+            {
+                tuttiPiatti[i] = sr.ReadLine();
+
+                if (tuttiPiatti[i].Split(';')[0] == p)
+                {
+                    sr.Close();
+                    return tuttiPiatti[i];
+                }
+            }
+            return "//";
+            
+
+        }
+
 
         private void btnPiattoElimina_Click(object sender, EventArgs e)
         {
             string piattoEliminare = lblPiattoOpzioni.Text;
 
             eliminaPiatto(filePiatti, piattoEliminare, ref contapiatti);
+            panel4.Hide();
+            MessageBox.Show(piattoEliminare + " è stato eliminato.");
+
+            
         }
 
         public static int contaPiatti(string filename)
@@ -2625,6 +2722,143 @@ namespace RISTORANTE
 
             scriviAppend(tmp, filename);
 
+        }
+
+        private void btnPiattiEliminati_Click(object sender, EventArgs e)
+        {
+            pnlCestino.Show();
+            lblEliminato.Text = visualizzaPiattoEliminato(contapiatti);
+            lblEliminato2.Text = visualizzaPiattoEliminatoA(contapiatti, lblEliminato.Text);
+            lblEliminato3.Text = visualizzaPiattoEliminatoB(contapiatti, lblEliminato.Text, lblEliminato2.Text);
+        }
+
+        public static string visualizzaPiattoEliminato(int c)
+        {
+            for (int j = 0; j < c; j++)
+            {
+                string stringa = leggiPiatto(filePiatti, j);
+                string[] piattoDiviso = stringa.Split(new char[] { ';' });
+
+                string[] array = new string[9];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                if (array[0] == "*")
+                {
+                    return array[1];
+                }
+                
+            }
+            return "/";
+        }
+
+        public static string visualizzaPiattoEliminatoA(int c, string evita)
+        {
+            for (int j = 0; j < c; j++)
+            {
+                string stringa = leggiPiatto(filePiatti, j);
+                string[] piattoDiviso = stringa.Split(new char[] { ';' });
+
+                string[] array = new string[9];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                if (array[0] == "*" && array[1] != evita)
+                {
+                    return array[1];
+                }
+
+            }
+            return "/";
+        }
+
+        public static string visualizzaPiattoEliminatoB(int c, string evita1, string evita2)
+        {
+            for (int j = 0; j < c; j++)
+            {
+                string stringa = leggiPiatto(filePiatti, j);
+                string[] piattoDiviso = stringa.Split(new char[] { ';' });
+
+                string[] array = new string[9];
+                int i = 0;
+
+                foreach (var sub in piattoDiviso)
+                {
+                    array[i] = ($"{sub}");
+                    i++;
+                }
+
+                if (array[0] == "*" && array[1] != evita1 && array[1] != evita2)
+                {
+                    return array[1];
+                }
+
+            }
+            return "/";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pnlCestino.Hide();
+        }
+
+        private void btnPiatto1Ripristina_Click(object sender, EventArgs e)
+        {
+            string ripristina = lblEliminato.Text;
+            ripristinaPiatto(ripristina, contapiatti);
+            pnlCestino.Hide();
+        }
+
+        public static void ripristinaPiatto(string r, int c)
+        {
+            StreamReader sr = new StreamReader(filePiatti);
+            string[] tuttiPiatti = new string[14];
+
+            for (int i = 0; i < c; i++)
+            {
+                tuttiPiatti[i] = sr.ReadLine();
+
+                if (tuttiPiatti[i].Split(';')[0] == "*" && tuttiPiatti[i].Split(';')[1] == r)
+                {
+                    splitAsterisco(tuttiPiatti[i]);
+                }
+            }
+            sr.Close();
+
+            StreamWriter sw = new StreamWriter(filePiatti, append: true);
+            for (int i = 0; i < c; i++)
+            {
+                AggiungiSuFileTmp(tuttiPiatti[i], @"./tmp.txt");
+            }
+            sw.Close();
+
+            eliminaFile(@"./piatti.txt");
+            rinominaFile(@"./tmp.txt", @"./piatti.txt");
+        }
+
+        public static string splitAsterisco(string s)
+        {
+            string[] piattoDiviso = s.Split(new char[] { ';' });
+
+            string[] array = new string[9];
+            int i = 0;
+
+            foreach (var sub in piattoDiviso)
+            {
+                array[i] = ($"{sub}");
+                i++;
+            }
+            return array[1] + ";" + array[2] + ";" + array[3] + ";" + array[4] + ";" + array[5] + ";" + array[6] + ";" + array[7] + ";";
         }
 
     }
