@@ -32,6 +32,7 @@
             this.btnProprietario = new System.Windows.Forms.Button();
             this.lblNomeRistorante = new System.Windows.Forms.Label();
             this.pnlAccesso = new System.Windows.Forms.Panel();
+            this.btnShowPass = new System.Windows.Forms.Button();
             this.btnAccedi = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxNome = new System.Windows.Forms.TextBox();
@@ -55,6 +56,12 @@
             this.btnPiattiEliminati = new System.Windows.Forms.Button();
             this.pnlGestisciMenu2 = new System.Windows.Forms.Panel();
             this.pnlCestino = new System.Windows.Forms.Panel();
+            this.btnPiatto3Elimina = new System.Windows.Forms.Button();
+            this.btnPiatto2Elimina = new System.Windows.Forms.Button();
+            this.btnPiatto1Elimina = new System.Windows.Forms.Button();
+            this.btnPiatto3Ripristina = new System.Windows.Forms.Button();
+            this.btnPiatto2Ripristina = new System.Windows.Forms.Button();
+            this.btnPiatto1Ripristina = new System.Windows.Forms.Button();
             this.lblEliminato3 = new System.Windows.Forms.Label();
             this.lblEliminato2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -77,19 +84,6 @@
             this.lblGestisciMenu = new System.Windows.Forms.Label();
             this.pnlUltimoOrdine = new System.Windows.Forms.Panel();
             this.lblUltimoOrdinePanel = new System.Windows.Forms.Label();
-            this.pnlOrdine = new System.Windows.Forms.Panel();
-            this.lblArrivederci = new System.Windows.Forms.Label();
-            this.lblScontrinoPrezzo = new System.Windows.Forms.Label();
-            this.lblScontrinoIva = new System.Windows.Forms.Label();
-            this.lblDescrizione = new System.Windows.Forms.Label();
-            this.lblDocumentoCommerciale = new System.Windows.Forms.Label();
-            this.lblSep2 = new System.Windows.Forms.Label();
-            this.lblSep1 = new System.Windows.Forms.Label();
-            this.lblScontrinoTel = new System.Windows.Forms.Label();
-            this.lblOrdineLuogo = new System.Windows.Forms.Label();
-            this.lblScontrinoNome = new System.Windows.Forms.Label();
-            this.lblPriceB = new System.Windows.Forms.Label();
-            this.lblPriceA = new System.Windows.Forms.Label();
             this.pnlAggiungi = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblAggiungiPiattoNome = new System.Windows.Forms.Label();
@@ -109,6 +103,19 @@
             this.textBoxAggiungiPrezzo = new System.Windows.Forms.TextBox();
             this.textBoxAggiungiNome = new System.Windows.Forms.TextBox();
             this.lblCreaPiatto = new System.Windows.Forms.Label();
+            this.pnlOrdine = new System.Windows.Forms.Panel();
+            this.lblArrivederci = new System.Windows.Forms.Label();
+            this.lblScontrinoPrezzo = new System.Windows.Forms.Label();
+            this.lblScontrinoIva = new System.Windows.Forms.Label();
+            this.lblDescrizione = new System.Windows.Forms.Label();
+            this.lblDocumentoCommerciale = new System.Windows.Forms.Label();
+            this.lblSep2 = new System.Windows.Forms.Label();
+            this.lblSep1 = new System.Windows.Forms.Label();
+            this.lblScontrinoTel = new System.Windows.Forms.Label();
+            this.lblOrdineLuogo = new System.Windows.Forms.Label();
+            this.lblScontrinoNome = new System.Windows.Forms.Label();
+            this.lblPriceB = new System.Windows.Forms.Label();
+            this.lblPriceA = new System.Windows.Forms.Label();
             this.btnOrdinaDessert3 = new System.Windows.Forms.Button();
             this.btnOrdinaDessert2 = new System.Windows.Forms.Button();
             this.btnOrdinaDessert1 = new System.Windows.Forms.Button();
@@ -170,6 +177,7 @@
             this.lblAntipasto1 = new System.Windows.Forms.Label();
             this.lblAntipasti = new System.Windows.Forms.Label();
             this.lblNomeRistoranteProp = new System.Windows.Forms.Label();
+            this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
             this.pnlScegliOpzione = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnOrdina = new System.Windows.Forms.Button();
@@ -177,6 +185,7 @@
             this.textBoxTotale = new System.Windows.Forms.TextBox();
             this.btnUltimoOrdine = new System.Windows.Forms.Button();
             this.pnlProfiloeNome = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNomeProprietario = new System.Windows.Forms.Label();
             this.btnEsci = new System.Windows.Forms.Button();
             this.btnVisualizzaMenu = new System.Windows.Forms.Button();
@@ -190,12 +199,14 @@
             this.pnlClienteRegistra = new System.Windows.Forms.Panel();
             this.textBoxClienteEmail = new System.Windows.Forms.TextBox();
             this.lblEmailCliente = new System.Windows.Forms.Label();
+            this.btnShowHidePassClienteRegistra = new System.Windows.Forms.Button();
             this.btnClienteRegistrato = new System.Windows.Forms.Button();
             this.textBoxClientePassword = new System.Windows.Forms.TextBox();
             this.textBoxClienteNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlClienteAccedi = new System.Windows.Forms.Panel();
+            this.btnShowHideClienteAccedi = new System.Windows.Forms.Button();
             this.btnClienteAccediProsegui = new System.Windows.Forms.Button();
             this.textBoxClientePassAccedi = new System.Windows.Forms.TextBox();
             this.textBoxClienteNomeAccedi = new System.Windows.Forms.TextBox();
@@ -223,18 +234,8 @@
             this.lblPinCliente = new System.Windows.Forms.Label();
             this.textBoxPinCliente = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnPiatto1Elimina = new System.Windows.Forms.Button();
-            this.btnPiatto3Ripristina = new System.Windows.Forms.Button();
-            this.btnPiatto2Ripristina = new System.Windows.Forms.Button();
-            this.btnPiatto1Ripristina = new System.Windows.Forms.Button();
-            this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnShowHideClienteAccedi = new System.Windows.Forms.Button();
-            this.btnShowHidePassClienteRegistra = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnShowPass = new System.Windows.Forms.Button();
-            this.btnPiatto2Elimina = new System.Windows.Forms.Button();
-            this.btnPiatto3Elimina = new System.Windows.Forms.Button();
+            this.textBoxEmailCheck = new System.Windows.Forms.TextBox();
             this.pnlAccesso.SuspendLayout();
             this.pnlEmailInviata.SuspendLayout();
             this.pnlPin.SuspendLayout();
@@ -244,13 +245,15 @@
             this.pnlCestino.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlUltimoOrdine.SuspendLayout();
-            this.pnlOrdine.SuspendLayout();
             this.pnlAggiungi.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlOrdine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
             this.pnlScegliOpzione.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlProfiloeNome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCliente.SuspendLayout();
             this.pnlClienteRegistra.SuspendLayout();
             this.pnlClienteAccedi.SuspendLayout();
@@ -258,8 +261,6 @@
             this.pnlForgotPassword.SuspendLayout();
             this.pnlEmailInviataCliente.SuspendLayout();
             this.pnlRispristinaCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnProprietario
@@ -300,6 +301,18 @@
             this.pnlAccesso.Name = "pnlAccesso";
             this.pnlAccesso.Size = new System.Drawing.Size(404, 248);
             this.pnlAccesso.TabIndex = 3;
+            // 
+            // btnShowPass
+            // 
+            this.btnShowPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowPass.BackgroundImage")));
+            this.btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowPass.Location = new System.Drawing.Point(316, 97);
+            this.btnShowPass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowPass.Name = "btnShowPass";
+            this.btnShowPass.Size = new System.Drawing.Size(39, 30);
+            this.btnShowPass.TabIndex = 6;
+            this.btnShowPass.UseVisualStyleBackColor = true;
+            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
             // 
             // btnAccedi
             // 
@@ -374,7 +387,7 @@
             this.pnlEmailInviata.Controls.Add(this.btnOK);
             this.pnlEmailInviata.Controls.Add(this.lblSpam);
             this.pnlEmailInviata.Controls.Add(this.lblEmailInviata);
-            this.pnlEmailInviata.Location = new System.Drawing.Point(792, 14);
+            this.pnlEmailInviata.Location = new System.Drawing.Point(794, 12);
             this.pnlEmailInviata.Name = "pnlEmailInviata";
             this.pnlEmailInviata.Size = new System.Drawing.Size(402, 246);
             this.pnlEmailInviata.TabIndex = 8;
@@ -571,7 +584,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(8, 12);
+            this.pnlPrincipale.Location = new System.Drawing.Point(12, 14);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -632,10 +645,84 @@
             this.pnlCestino.Controls.Add(this.lblEliminato2);
             this.pnlCestino.Controls.Add(this.button2);
             this.pnlCestino.Controls.Add(this.lblEliminato);
-            this.pnlCestino.Location = new System.Drawing.Point(220, 59);
+            this.pnlCestino.Location = new System.Drawing.Point(225, 184);
             this.pnlCestino.Name = "pnlCestino";
             this.pnlCestino.Size = new System.Drawing.Size(233, 143);
             this.pnlCestino.TabIndex = 22;
+            // 
+            // btnPiatto3Elimina
+            // 
+            this.btnPiatto3Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
+            this.btnPiatto3Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto3Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto3Elimina.Location = new System.Drawing.Point(190, 95);
+            this.btnPiatto3Elimina.Name = "btnPiatto3Elimina";
+            this.btnPiatto3Elimina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto3Elimina.TabIndex = 12;
+            this.btnPiatto3Elimina.UseVisualStyleBackColor = true;
+            this.btnPiatto3Elimina.Click += new System.EventHandler(this.btnPiatto3Elimina_Click);
+            // 
+            // btnPiatto2Elimina
+            // 
+            this.btnPiatto2Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
+            this.btnPiatto2Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto2Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto2Elimina.Location = new System.Drawing.Point(190, 65);
+            this.btnPiatto2Elimina.Name = "btnPiatto2Elimina";
+            this.btnPiatto2Elimina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto2Elimina.TabIndex = 11;
+            this.btnPiatto2Elimina.UseVisualStyleBackColor = true;
+            this.btnPiatto2Elimina.Click += new System.EventHandler(this.btnPiatto2Elimina_Click);
+            // 
+            // btnPiatto1Elimina
+            // 
+            this.btnPiatto1Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
+            this.btnPiatto1Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto1Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto1Elimina.Location = new System.Drawing.Point(190, 35);
+            this.btnPiatto1Elimina.Name = "btnPiatto1Elimina";
+            this.btnPiatto1Elimina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto1Elimina.TabIndex = 10;
+            this.btnPiatto1Elimina.UseVisualStyleBackColor = true;
+            this.btnPiatto1Elimina.Click += new System.EventHandler(this.btnPiatto1Elimina_Click);
+            // 
+            // btnPiatto3Ripristina
+            // 
+            this.btnPiatto3Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina4;
+            this.btnPiatto3Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto3Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto3Ripristina.Image = global::RISTORANTE.Properties.Resources.ripristina;
+            this.btnPiatto3Ripristina.Location = new System.Drawing.Point(151, 95);
+            this.btnPiatto3Ripristina.Name = "btnPiatto3Ripristina";
+            this.btnPiatto3Ripristina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto3Ripristina.TabIndex = 9;
+            this.btnPiatto3Ripristina.UseVisualStyleBackColor = true;
+            this.btnPiatto3Ripristina.Click += new System.EventHandler(this.btnPiatto3Ripristina_Click);
+            // 
+            // btnPiatto2Ripristina
+            // 
+            this.btnPiatto2Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina3;
+            this.btnPiatto2Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto2Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto2Ripristina.Image = global::RISTORANTE.Properties.Resources.ripristina;
+            this.btnPiatto2Ripristina.Location = new System.Drawing.Point(151, 65);
+            this.btnPiatto2Ripristina.Name = "btnPiatto2Ripristina";
+            this.btnPiatto2Ripristina.Size = new System.Drawing.Size(40, 31);
+            this.btnPiatto2Ripristina.TabIndex = 8;
+            this.btnPiatto2Ripristina.UseVisualStyleBackColor = true;
+            this.btnPiatto2Ripristina.Click += new System.EventHandler(this.btnPiatto2Ripristina_Click);
+            // 
+            // btnPiatto1Ripristina
+            // 
+            this.btnPiatto1Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina2;
+            this.btnPiatto1Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPiatto1Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiatto1Ripristina.Location = new System.Drawing.Point(151, 35);
+            this.btnPiatto1Ripristina.Name = "btnPiatto1Ripristina";
+            this.btnPiatto1Ripristina.Size = new System.Drawing.Size(40, 30);
+            this.btnPiatto1Ripristina.TabIndex = 7;
+            this.btnPiatto1Ripristina.UseVisualStyleBackColor = true;
+            this.btnPiatto1Ripristina.Click += new System.EventHandler(this.btnPiatto1Ripristina_Click);
             // 
             // lblEliminato3
             // 
@@ -906,148 +993,6 @@
             this.lblUltimoOrdinePanel.TabIndex = 3;
             this.lblUltimoOrdinePanel.Text = "ULTIMO ORDINE";
             // 
-            // pnlOrdine
-            // 
-            this.pnlOrdine.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlOrdine.Controls.Add(this.lblArrivederci);
-            this.pnlOrdine.Controls.Add(this.lblScontrinoPrezzo);
-            this.pnlOrdine.Controls.Add(this.lblScontrinoIva);
-            this.pnlOrdine.Controls.Add(this.lblDescrizione);
-            this.pnlOrdine.Controls.Add(this.lblDocumentoCommerciale);
-            this.pnlOrdine.Controls.Add(this.lblSep2);
-            this.pnlOrdine.Controls.Add(this.lblSep1);
-            this.pnlOrdine.Controls.Add(this.lblScontrinoTel);
-            this.pnlOrdine.Controls.Add(this.lblOrdineLuogo);
-            this.pnlOrdine.Controls.Add(this.lblScontrinoNome);
-            this.pnlOrdine.Location = new System.Drawing.Point(406, 7);
-            this.pnlOrdine.Name = "pnlOrdine";
-            this.pnlOrdine.Size = new System.Drawing.Size(341, 528);
-            this.pnlOrdine.TabIndex = 70;
-            // 
-            // lblArrivederci
-            // 
-            this.lblArrivederci.AutoSize = true;
-            this.lblArrivederci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArrivederci.Location = new System.Drawing.Point(88, 497);
-            this.lblArrivederci.Name = "lblArrivederci";
-            this.lblArrivederci.Size = new System.Drawing.Size(167, 20);
-            this.lblArrivederci.TabIndex = 11;
-            this.lblArrivederci.Text = "Arrivederci e Grazie";
-            // 
-            // lblScontrinoPrezzo
-            // 
-            this.lblScontrinoPrezzo.AutoSize = true;
-            this.lblScontrinoPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoPrezzo.Location = new System.Drawing.Point(231, 135);
-            this.lblScontrinoPrezzo.Name = "lblScontrinoPrezzo";
-            this.lblScontrinoPrezzo.Size = new System.Drawing.Size(107, 20);
-            this.lblScontrinoPrezzo.TabIndex = 10;
-            this.lblScontrinoPrezzo.Text = "PREZZO (€)";
-            // 
-            // lblScontrinoIva
-            // 
-            this.lblScontrinoIva.AutoSize = true;
-            this.lblScontrinoIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoIva.Location = new System.Drawing.Point(171, 135);
-            this.lblScontrinoIva.Name = "lblScontrinoIva";
-            this.lblScontrinoIva.Size = new System.Drawing.Size(39, 20);
-            this.lblScontrinoIva.TabIndex = 9;
-            this.lblScontrinoIva.Text = "IVA";
-            // 
-            // lblDescrizione
-            // 
-            this.lblDescrizione.AutoSize = true;
-            this.lblDescrizione.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescrizione.Location = new System.Drawing.Point(13, 133);
-            this.lblDescrizione.Name = "lblDescrizione";
-            this.lblDescrizione.Size = new System.Drawing.Size(103, 20);
-            this.lblDescrizione.TabIndex = 8;
-            this.lblDescrizione.Text = "Descrizione";
-            // 
-            // lblDocumentoCommerciale
-            // 
-            this.lblDocumentoCommerciale.AutoSize = true;
-            this.lblDocumentoCommerciale.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocumentoCommerciale.Location = new System.Drawing.Point(6, 98);
-            this.lblDocumentoCommerciale.Name = "lblDocumentoCommerciale";
-            this.lblDocumentoCommerciale.Size = new System.Drawing.Size(332, 25);
-            this.lblDocumentoCommerciale.TabIndex = 7;
-            this.lblDocumentoCommerciale.Text = "DOCUMENTO COMMERCIALE";
-            // 
-            // lblSep2
-            // 
-            this.lblSep2.AutoSize = true;
-            this.lblSep2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSep2.Location = new System.Drawing.Point(4, 435);
-            this.lblSep2.Name = "lblSep2";
-            this.lblSep2.Size = new System.Drawing.Size(334, 25);
-            this.lblSep2.TabIndex = 6;
-            this.lblSep2.Text = "----------------------------------------------";
-            // 
-            // lblSep1
-            // 
-            this.lblSep1.AutoSize = true;
-            this.lblSep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSep1.Location = new System.Drawing.Point(4, 80);
-            this.lblSep1.Name = "lblSep1";
-            this.lblSep1.Size = new System.Drawing.Size(334, 25);
-            this.lblSep1.TabIndex = 5;
-            this.lblSep1.Text = "----------------------------------------------";
-            // 
-            // lblScontrinoTel
-            // 
-            this.lblScontrinoTel.AutoSize = true;
-            this.lblScontrinoTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoTel.Location = new System.Drawing.Point(101, 58);
-            this.lblScontrinoTel.Name = "lblScontrinoTel";
-            this.lblScontrinoTel.Size = new System.Drawing.Size(144, 20);
-            this.lblScontrinoTel.TabIndex = 4;
-            this.lblScontrinoTel.Text = "TEL: 366 985 0629";
-            // 
-            // lblOrdineLuogo
-            // 
-            this.lblOrdineLuogo.AutoSize = true;
-            this.lblOrdineLuogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdineLuogo.Location = new System.Drawing.Point(92, 40);
-            this.lblOrdineLuogo.Name = "lblOrdineLuogo";
-            this.lblOrdineLuogo.Size = new System.Drawing.Size(169, 20);
-            this.lblOrdineLuogo.TabIndex = 3;
-            this.lblOrdineLuogo.Text = "24060 TELGATE (BG)";
-            // 
-            // lblScontrinoNome
-            // 
-            this.lblScontrinoNome.AutoSize = true;
-            this.lblScontrinoNome.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScontrinoNome.Location = new System.Drawing.Point(44, 13);
-            this.lblScontrinoNome.Name = "lblScontrinoNome";
-            this.lblScontrinoNome.Size = new System.Drawing.Size(262, 26);
-            this.lblScontrinoNome.TabIndex = 0;
-            this.lblScontrinoNome.Text = "BOTEZ\'S RESTAURANT";
-            // 
-            // lblPriceB
-            // 
-            this.lblPriceB.AutoSize = true;
-            this.lblPriceB.BackColor = System.Drawing.Color.White;
-            this.lblPriceB.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceB.ForeColor = System.Drawing.Color.Black;
-            this.lblPriceB.Location = new System.Drawing.Point(847, 104);
-            this.lblPriceB.Name = "lblPriceB";
-            this.lblPriceB.Size = new System.Drawing.Size(22, 24);
-            this.lblPriceB.TabIndex = 69;
-            this.lblPriceB.Text = "€";
-            // 
-            // lblPriceA
-            // 
-            this.lblPriceA.AutoSize = true;
-            this.lblPriceA.BackColor = System.Drawing.Color.White;
-            this.lblPriceA.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceA.ForeColor = System.Drawing.Color.Black;
-            this.lblPriceA.Location = new System.Drawing.Point(494, 104);
-            this.lblPriceA.Name = "lblPriceA";
-            this.lblPriceA.Size = new System.Drawing.Size(22, 24);
-            this.lblPriceA.TabIndex = 68;
-            this.lblPriceA.Text = "€";
-            // 
             // pnlAggiungi
             // 
             this.pnlAggiungi.Controls.Add(this.panel2);
@@ -1270,6 +1215,148 @@
             this.lblCreaPiatto.Size = new System.Drawing.Size(304, 33);
             this.lblCreaPiatto.TabIndex = 1;
             this.lblCreaPiatto.Text = "CREA NUOVO PIATTO";
+            // 
+            // pnlOrdine
+            // 
+            this.pnlOrdine.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlOrdine.Controls.Add(this.lblArrivederci);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoPrezzo);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoIva);
+            this.pnlOrdine.Controls.Add(this.lblDescrizione);
+            this.pnlOrdine.Controls.Add(this.lblDocumentoCommerciale);
+            this.pnlOrdine.Controls.Add(this.lblSep2);
+            this.pnlOrdine.Controls.Add(this.lblSep1);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoTel);
+            this.pnlOrdine.Controls.Add(this.lblOrdineLuogo);
+            this.pnlOrdine.Controls.Add(this.lblScontrinoNome);
+            this.pnlOrdine.Location = new System.Drawing.Point(406, 7);
+            this.pnlOrdine.Name = "pnlOrdine";
+            this.pnlOrdine.Size = new System.Drawing.Size(341, 528);
+            this.pnlOrdine.TabIndex = 70;
+            // 
+            // lblArrivederci
+            // 
+            this.lblArrivederci.AutoSize = true;
+            this.lblArrivederci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrivederci.Location = new System.Drawing.Point(88, 497);
+            this.lblArrivederci.Name = "lblArrivederci";
+            this.lblArrivederci.Size = new System.Drawing.Size(167, 20);
+            this.lblArrivederci.TabIndex = 11;
+            this.lblArrivederci.Text = "Arrivederci e Grazie";
+            // 
+            // lblScontrinoPrezzo
+            // 
+            this.lblScontrinoPrezzo.AutoSize = true;
+            this.lblScontrinoPrezzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoPrezzo.Location = new System.Drawing.Point(231, 135);
+            this.lblScontrinoPrezzo.Name = "lblScontrinoPrezzo";
+            this.lblScontrinoPrezzo.Size = new System.Drawing.Size(107, 20);
+            this.lblScontrinoPrezzo.TabIndex = 10;
+            this.lblScontrinoPrezzo.Text = "PREZZO (€)";
+            // 
+            // lblScontrinoIva
+            // 
+            this.lblScontrinoIva.AutoSize = true;
+            this.lblScontrinoIva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoIva.Location = new System.Drawing.Point(171, 135);
+            this.lblScontrinoIva.Name = "lblScontrinoIva";
+            this.lblScontrinoIva.Size = new System.Drawing.Size(39, 20);
+            this.lblScontrinoIva.TabIndex = 9;
+            this.lblScontrinoIva.Text = "IVA";
+            // 
+            // lblDescrizione
+            // 
+            this.lblDescrizione.AutoSize = true;
+            this.lblDescrizione.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescrizione.Location = new System.Drawing.Point(13, 133);
+            this.lblDescrizione.Name = "lblDescrizione";
+            this.lblDescrizione.Size = new System.Drawing.Size(103, 20);
+            this.lblDescrizione.TabIndex = 8;
+            this.lblDescrizione.Text = "Descrizione";
+            // 
+            // lblDocumentoCommerciale
+            // 
+            this.lblDocumentoCommerciale.AutoSize = true;
+            this.lblDocumentoCommerciale.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumentoCommerciale.Location = new System.Drawing.Point(6, 98);
+            this.lblDocumentoCommerciale.Name = "lblDocumentoCommerciale";
+            this.lblDocumentoCommerciale.Size = new System.Drawing.Size(332, 25);
+            this.lblDocumentoCommerciale.TabIndex = 7;
+            this.lblDocumentoCommerciale.Text = "DOCUMENTO COMMERCIALE";
+            // 
+            // lblSep2
+            // 
+            this.lblSep2.AutoSize = true;
+            this.lblSep2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSep2.Location = new System.Drawing.Point(4, 435);
+            this.lblSep2.Name = "lblSep2";
+            this.lblSep2.Size = new System.Drawing.Size(334, 25);
+            this.lblSep2.TabIndex = 6;
+            this.lblSep2.Text = "----------------------------------------------";
+            // 
+            // lblSep1
+            // 
+            this.lblSep1.AutoSize = true;
+            this.lblSep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSep1.Location = new System.Drawing.Point(4, 80);
+            this.lblSep1.Name = "lblSep1";
+            this.lblSep1.Size = new System.Drawing.Size(334, 25);
+            this.lblSep1.TabIndex = 5;
+            this.lblSep1.Text = "----------------------------------------------";
+            // 
+            // lblScontrinoTel
+            // 
+            this.lblScontrinoTel.AutoSize = true;
+            this.lblScontrinoTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoTel.Location = new System.Drawing.Point(101, 58);
+            this.lblScontrinoTel.Name = "lblScontrinoTel";
+            this.lblScontrinoTel.Size = new System.Drawing.Size(144, 20);
+            this.lblScontrinoTel.TabIndex = 4;
+            this.lblScontrinoTel.Text = "TEL: 366 985 0629";
+            // 
+            // lblOrdineLuogo
+            // 
+            this.lblOrdineLuogo.AutoSize = true;
+            this.lblOrdineLuogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdineLuogo.Location = new System.Drawing.Point(92, 40);
+            this.lblOrdineLuogo.Name = "lblOrdineLuogo";
+            this.lblOrdineLuogo.Size = new System.Drawing.Size(169, 20);
+            this.lblOrdineLuogo.TabIndex = 3;
+            this.lblOrdineLuogo.Text = "24060 TELGATE (BG)";
+            // 
+            // lblScontrinoNome
+            // 
+            this.lblScontrinoNome.AutoSize = true;
+            this.lblScontrinoNome.Font = new System.Drawing.Font("Algerian", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScontrinoNome.Location = new System.Drawing.Point(44, 13);
+            this.lblScontrinoNome.Name = "lblScontrinoNome";
+            this.lblScontrinoNome.Size = new System.Drawing.Size(262, 26);
+            this.lblScontrinoNome.TabIndex = 0;
+            this.lblScontrinoNome.Text = "BOTEZ\'S RESTAURANT";
+            // 
+            // lblPriceB
+            // 
+            this.lblPriceB.AutoSize = true;
+            this.lblPriceB.BackColor = System.Drawing.Color.White;
+            this.lblPriceB.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceB.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceB.Location = new System.Drawing.Point(847, 104);
+            this.lblPriceB.Name = "lblPriceB";
+            this.lblPriceB.Size = new System.Drawing.Size(22, 24);
+            this.lblPriceB.TabIndex = 69;
+            this.lblPriceB.Text = "€";
+            // 
+            // lblPriceA
+            // 
+            this.lblPriceA.AutoSize = true;
+            this.lblPriceA.BackColor = System.Drawing.Color.White;
+            this.lblPriceA.Font = new System.Drawing.Font("Algerian", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceA.ForeColor = System.Drawing.Color.Black;
+            this.lblPriceA.Location = new System.Drawing.Point(494, 104);
+            this.lblPriceA.Name = "lblPriceA";
+            this.lblPriceA.Size = new System.Drawing.Size(22, 24);
+            this.lblPriceA.TabIndex = 68;
+            this.lblPriceA.Text = "€";
             // 
             // btnOrdinaDessert3
             // 
@@ -2003,6 +2090,16 @@
             this.lblNomeRistoranteProp.TabIndex = 3;
             this.lblNomeRistoranteProp.Text = "BOTEZ\'S RESTAURANT";
             // 
+            // pictureBoxMenu
+            // 
+            this.pictureBoxMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenu.BackgroundImage")));
+            this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxMenu.Location = new System.Drawing.Point(201, 5);
+            this.pictureBoxMenu.Name = "pictureBoxMenu";
+            this.pictureBoxMenu.Size = new System.Drawing.Size(788, 562);
+            this.pictureBoxMenu.TabIndex = 5;
+            this.pictureBoxMenu.TabStop = false;
+            // 
             // pnlScegliOpzione
             // 
             this.pnlScegliOpzione.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -2088,6 +2185,16 @@
             this.pnlProfiloeNome.Name = "pnlProfiloeNome";
             this.pnlProfiloeNome.Size = new System.Drawing.Size(200, 143);
             this.pnlProfiloeNome.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblNomeProprietario
             // 
@@ -2175,7 +2282,7 @@
             this.pnlCliente.Controls.Add(this.btnClienteRegistrati);
             this.pnlCliente.Controls.Add(this.btnClienteOspite);
             this.pnlCliente.Controls.Add(this.btnClienteAccedi);
-            this.pnlCliente.Location = new System.Drawing.Point(134, 510);
+            this.pnlCliente.Location = new System.Drawing.Point(131, 517);
             this.pnlCliente.Name = "pnlCliente";
             this.pnlCliente.Size = new System.Drawing.Size(404, 289);
             this.pnlCliente.TabIndex = 12;
@@ -2232,7 +2339,7 @@
             this.pnlClienteRegistra.Controls.Add(this.textBoxClienteNome);
             this.pnlClienteRegistra.Controls.Add(this.label1);
             this.pnlClienteRegistra.Controls.Add(this.label2);
-            this.pnlClienteRegistra.Location = new System.Drawing.Point(162, 494);
+            this.pnlClienteRegistra.Location = new System.Drawing.Point(150, 497);
             this.pnlClienteRegistra.Name = "pnlClienteRegistra";
             this.pnlClienteRegistra.Size = new System.Drawing.Size(404, 245);
             this.pnlClienteRegistra.TabIndex = 17;
@@ -2255,6 +2362,18 @@
             this.lblEmailCliente.Size = new System.Drawing.Size(71, 25);
             this.lblEmailCliente.TabIndex = 7;
             this.lblEmailCliente.Text = "Email:";
+            // 
+            // btnShowHidePassClienteRegistra
+            // 
+            this.btnShowHidePassClienteRegistra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHidePassClienteRegistra.BackgroundImage")));
+            this.btnShowHidePassClienteRegistra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowHidePassClienteRegistra.Location = new System.Drawing.Point(316, 132);
+            this.btnShowHidePassClienteRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowHidePassClienteRegistra.Name = "btnShowHidePassClienteRegistra";
+            this.btnShowHidePassClienteRegistra.Size = new System.Drawing.Size(39, 30);
+            this.btnShowHidePassClienteRegistra.TabIndex = 6;
+            this.btnShowHidePassClienteRegistra.UseVisualStyleBackColor = true;
+            this.btnShowHidePassClienteRegistra.Click += new System.EventHandler(this.btnShowHidePassClienteRegistra_Click);
             // 
             // btnClienteRegistrato
             // 
@@ -2318,10 +2437,22 @@
             this.pnlClienteAccedi.Controls.Add(this.lblClientePassAccedi);
             this.pnlClienteAccedi.Controls.Add(this.lblClienteNomeAccedi);
             this.pnlClienteAccedi.Controls.Add(this.clientePassDimenticata);
-            this.pnlClienteAccedi.Location = new System.Drawing.Point(195, 453);
+            this.pnlClienteAccedi.Location = new System.Drawing.Point(176, 475);
             this.pnlClienteAccedi.Name = "pnlClienteAccedi";
             this.pnlClienteAccedi.Size = new System.Drawing.Size(404, 270);
             this.pnlClienteAccedi.TabIndex = 18;
+            // 
+            // btnShowHideClienteAccedi
+            // 
+            this.btnShowHideClienteAccedi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHideClienteAccedi.BackgroundImage")));
+            this.btnShowHideClienteAccedi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowHideClienteAccedi.Location = new System.Drawing.Point(316, 97);
+            this.btnShowHideClienteAccedi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowHideClienteAccedi.Name = "btnShowHideClienteAccedi";
+            this.btnShowHideClienteAccedi.Size = new System.Drawing.Size(39, 30);
+            this.btnShowHideClienteAccedi.TabIndex = 6;
+            this.btnShowHideClienteAccedi.UseVisualStyleBackColor = true;
+            this.btnShowHideClienteAccedi.Click += new System.EventHandler(this.btnShowHideClienteAccedi_Click);
             // 
             // btnClienteAccediProsegui
             // 
@@ -2396,7 +2527,7 @@
             this.pnlEmailNome.Controls.Add(this.textBoxEmailNome);
             this.pnlEmailNome.Controls.Add(this.lblClientResert);
             this.pnlEmailNome.Controls.Add(this.btnEmailNome);
-            this.pnlEmailNome.Location = new System.Drawing.Point(782, 23);
+            this.pnlEmailNome.Location = new System.Drawing.Point(775, 23);
             this.pnlEmailNome.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEmailNome.Name = "pnlEmailNome";
             this.pnlEmailNome.Size = new System.Drawing.Size(402, 268);
@@ -2484,7 +2615,7 @@
             this.pnlEmailInviataCliente.Controls.Add(this.btnEmailInviataCliente);
             this.pnlEmailInviataCliente.Controls.Add(this.label3);
             this.pnlEmailInviataCliente.Controls.Add(this.label4);
-            this.pnlEmailInviataCliente.Location = new System.Drawing.Point(226, 431);
+            this.pnlEmailInviataCliente.Location = new System.Drawing.Point(214, 451);
             this.pnlEmailInviataCliente.Name = "pnlEmailInviataCliente";
             this.pnlEmailInviataCliente.Size = new System.Drawing.Size(402, 280);
             this.pnlEmailInviataCliente.TabIndex = 21;
@@ -2534,7 +2665,7 @@
             this.pnlRispristinaCliente.Controls.Add(this.btnPinCliente);
             this.pnlRispristinaCliente.Controls.Add(this.lblPinCliente);
             this.pnlRispristinaCliente.Controls.Add(this.textBoxPinCliente);
-            this.pnlRispristinaCliente.Location = new System.Drawing.Point(254, 410);
+            this.pnlRispristinaCliente.Location = new System.Drawing.Point(231, 431);
             this.pnlRispristinaCliente.Name = "pnlRispristinaCliente";
             this.pnlRispristinaCliente.Size = new System.Drawing.Size(402, 297);
             this.pnlRispristinaCliente.TabIndex = 10;
@@ -2617,101 +2748,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 52);
+            this.textBox1.Location = new System.Drawing.Point(7, 488);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 22;
-            // 
-            // btnPiatto1Elimina
-            // 
-            this.btnPiatto1Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
-            this.btnPiatto1Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPiatto1Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiatto1Elimina.Location = new System.Drawing.Point(190, 35);
-            this.btnPiatto1Elimina.Name = "btnPiatto1Elimina";
-            this.btnPiatto1Elimina.Size = new System.Drawing.Size(40, 30);
-            this.btnPiatto1Elimina.TabIndex = 10;
-            this.btnPiatto1Elimina.UseVisualStyleBackColor = true;
-            // 
-            // btnPiatto3Ripristina
-            // 
-            this.btnPiatto3Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina4;
-            this.btnPiatto3Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPiatto3Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiatto3Ripristina.Image = global::RISTORANTE.Properties.Resources.ripristina;
-            this.btnPiatto3Ripristina.Location = new System.Drawing.Point(151, 95);
-            this.btnPiatto3Ripristina.Name = "btnPiatto3Ripristina";
-            this.btnPiatto3Ripristina.Size = new System.Drawing.Size(40, 30);
-            this.btnPiatto3Ripristina.TabIndex = 9;
-            this.btnPiatto3Ripristina.UseVisualStyleBackColor = true;
-            // 
-            // btnPiatto2Ripristina
-            // 
-            this.btnPiatto2Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina3;
-            this.btnPiatto2Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPiatto2Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiatto2Ripristina.Image = global::RISTORANTE.Properties.Resources.ripristina;
-            this.btnPiatto2Ripristina.Location = new System.Drawing.Point(151, 65);
-            this.btnPiatto2Ripristina.Name = "btnPiatto2Ripristina";
-            this.btnPiatto2Ripristina.Size = new System.Drawing.Size(40, 31);
-            this.btnPiatto2Ripristina.TabIndex = 8;
-            this.btnPiatto2Ripristina.UseVisualStyleBackColor = true;
-            // 
-            // btnPiatto1Ripristina
-            // 
-            this.btnPiatto1Ripristina.BackgroundImage = global::RISTORANTE.Properties.Resources.ripristina2;
-            this.btnPiatto1Ripristina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPiatto1Ripristina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiatto1Ripristina.Location = new System.Drawing.Point(151, 35);
-            this.btnPiatto1Ripristina.Name = "btnPiatto1Ripristina";
-            this.btnPiatto1Ripristina.Size = new System.Drawing.Size(40, 30);
-            this.btnPiatto1Ripristina.TabIndex = 7;
-            this.btnPiatto1Ripristina.UseVisualStyleBackColor = true;
-            this.btnPiatto1Ripristina.Click += new System.EventHandler(this.btnPiatto1Ripristina_Click);
-            // 
-            // pictureBoxMenu
-            // 
-            this.pictureBoxMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMenu.BackgroundImage")));
-            this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxMenu.Location = new System.Drawing.Point(201, 5);
-            this.pictureBoxMenu.Name = "pictureBoxMenu";
-            this.pictureBoxMenu.Size = new System.Drawing.Size(788, 562);
-            this.pictureBoxMenu.TabIndex = 5;
-            this.pictureBoxMenu.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnShowHideClienteAccedi
-            // 
-            this.btnShowHideClienteAccedi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHideClienteAccedi.BackgroundImage")));
-            this.btnShowHideClienteAccedi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowHideClienteAccedi.Location = new System.Drawing.Point(316, 97);
-            this.btnShowHideClienteAccedi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnShowHideClienteAccedi.Name = "btnShowHideClienteAccedi";
-            this.btnShowHideClienteAccedi.Size = new System.Drawing.Size(39, 30);
-            this.btnShowHideClienteAccedi.TabIndex = 6;
-            this.btnShowHideClienteAccedi.UseVisualStyleBackColor = true;
-            this.btnShowHideClienteAccedi.Click += new System.EventHandler(this.btnShowHideClienteAccedi_Click);
-            // 
-            // btnShowHidePassClienteRegistra
-            // 
-            this.btnShowHidePassClienteRegistra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowHidePassClienteRegistra.BackgroundImage")));
-            this.btnShowHidePassClienteRegistra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowHidePassClienteRegistra.Location = new System.Drawing.Point(316, 132);
-            this.btnShowHidePassClienteRegistra.Margin = new System.Windows.Forms.Padding(2);
-            this.btnShowHidePassClienteRegistra.Name = "btnShowHidePassClienteRegistra";
-            this.btnShowHidePassClienteRegistra.Size = new System.Drawing.Size(39, 30);
-            this.btnShowHidePassClienteRegistra.TabIndex = 6;
-            this.btnShowHidePassClienteRegistra.UseVisualStyleBackColor = true;
-            this.btnShowHidePassClienteRegistra.Click += new System.EventHandler(this.btnShowHidePassClienteRegistra_Click);
             // 
             // btnBack
             // 
@@ -2729,39 +2769,12 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnShowPass
+            // textBoxEmailCheck
             // 
-            this.btnShowPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowPass.BackgroundImage")));
-            this.btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowPass.Location = new System.Drawing.Point(316, 97);
-            this.btnShowPass.Margin = new System.Windows.Forms.Padding(2);
-            this.btnShowPass.Name = "btnShowPass";
-            this.btnShowPass.Size = new System.Drawing.Size(39, 30);
-            this.btnShowPass.TabIndex = 6;
-            this.btnShowPass.UseVisualStyleBackColor = true;
-            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
-            // 
-            // btnPiatto2Elimina
-            // 
-            this.btnPiatto2Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
-            this.btnPiatto2Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPiatto2Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiatto2Elimina.Location = new System.Drawing.Point(190, 65);
-            this.btnPiatto2Elimina.Name = "btnPiatto2Elimina";
-            this.btnPiatto2Elimina.Size = new System.Drawing.Size(40, 30);
-            this.btnPiatto2Elimina.TabIndex = 11;
-            this.btnPiatto2Elimina.UseVisualStyleBackColor = true;
-            // 
-            // btnPiatto3Elimina
-            // 
-            this.btnPiatto3Elimina.BackgroundImage = global::RISTORANTE.Properties.Resources.elimina;
-            this.btnPiatto3Elimina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPiatto3Elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiatto3Elimina.Location = new System.Drawing.Point(190, 95);
-            this.btnPiatto3Elimina.Name = "btnPiatto3Elimina";
-            this.btnPiatto3Elimina.Size = new System.Drawing.Size(40, 30);
-            this.btnPiatto3Elimina.TabIndex = 12;
-            this.btnPiatto3Elimina.UseVisualStyleBackColor = true;
+            this.textBoxEmailCheck.Location = new System.Drawing.Point(7, 513);
+            this.textBoxEmailCheck.Name = "textBoxEmailCheck";
+            this.textBoxEmailCheck.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEmailCheck.TabIndex = 23;
             // 
             // Form1
             // 
@@ -2769,6 +2782,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(51)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.textBoxEmailCheck);
             this.Controls.Add(this.pnlPrincipale);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pnlRispristinaCliente);
@@ -2809,19 +2823,21 @@
             this.panel4.PerformLayout();
             this.pnlUltimoOrdine.ResumeLayout(false);
             this.pnlUltimoOrdine.PerformLayout();
-            this.pnlOrdine.ResumeLayout(false);
-            this.pnlOrdine.PerformLayout();
             this.pnlAggiungi.ResumeLayout(false);
             this.pnlAggiungi.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlOrdine.ResumeLayout(false);
+            this.pnlOrdine.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
             this.pnlScegliOpzione.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlProfiloeNome.ResumeLayout(false);
             this.pnlProfiloeNome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCliente.ResumeLayout(false);
             this.pnlClienteRegistra.ResumeLayout(false);
             this.pnlClienteRegistra.PerformLayout();
@@ -2835,8 +2851,6 @@
             this.pnlEmailInviataCliente.PerformLayout();
             this.pnlRispristinaCliente.ResumeLayout(false);
             this.pnlRispristinaCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3050,6 +3064,7 @@
         private System.Windows.Forms.Button btnPiatto1Elimina;
         private System.Windows.Forms.Button btnPiatto3Elimina;
         private System.Windows.Forms.Button btnPiatto2Elimina;
+        private System.Windows.Forms.TextBox textBoxEmailCheck;
     }
 }
 

@@ -40,6 +40,8 @@ namespace RISTORANTE
         bool showPassCr = false;
         bool showPassCa = false;
 
+        bool ricerca = false;
+
         bool Ant1 = false;
         bool Ant2 = false;
         bool Ant3 = false;
@@ -57,7 +59,6 @@ namespace RISTORANTE
 
         string emailClientePerModifica = "";
 
-        bool ricerca = false;
         public struct piatto
         {
             public string nome;
@@ -104,6 +105,8 @@ namespace RISTORANTE
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBoxEmailCheck.Hide();
+            textBox1.Hide();
             contapiatti = contaPiatti(filePiatti);
 
             textBoxPINCheck.Hide();
@@ -466,7 +469,7 @@ namespace RISTORANTE
         public static int sendEmail(string userEmail)
         {
             string fromMail = "boteznoreply@gmail.com";
-            string fromPassword = "yuwllbjajuurqzcv";
+            string fromPassword = "dxoccemljyqxyqsj";
             int pin = pinGenerate();
 
             MailMessage message = new MailMessage();
@@ -593,6 +596,14 @@ namespace RISTORANTE
             string nome = sr.ReadLine();
             sr.Close();
             return nome;
+        }
+
+        public static string leggiNumeroClienti()
+        {
+            StreamReader sr = new StreamReader(fileNameP);
+            string n = sr.ReadLine();
+            sr.Close();
+            return n;
         }
 
         public static string leggiPasswordP(string filename)
@@ -2343,6 +2354,7 @@ namespace RISTORANTE
                         nascondiPulsantiOrdine();
                         panel3.Show();
                         pnlPrincipale.Show();
+                        btnUltimoOrdine.Hide();
                         return;
                     }
                 }
@@ -2393,6 +2405,7 @@ namespace RISTORANTE
                     */
                     textBoxPinCliente.Text = textBoxPINCheck.Text;
                     emailClientePerModifica = userEmail;
+                    textBoxEmailCheck.Text = userEmail;
                     return;
                 }
             }
@@ -2441,64 +2454,81 @@ namespace RISTORANTE
         }
 
         private void btnOkNuovoXCliente_Click(object sender, EventArgs e)
-        {/*
-            int check = comboBoxRipristinaCliente.SelectedIndex;
-            
-            for (int i = 0; i < 15; i++)
+        {
+            string email = textBoxEmailCheck.Text;
+            bool nome;
+
+            if (textBoxNuovoXCliente.Text == "")
             {
-                if (infoCliente(i + 1, 0) == emailClientePerModifica)
+                MessageBox.Show("Inserire una nuova password/nome.");
+                return;
+            }
+
+            if (comboBoxRipristinaCliente.SelectedIndex == 0)//nome
+            {
+                nome = true;
+                string s = textBoxNuovoXCliente.Text;
+                eliminaCliente(@"./loginCliente.txt", email, leggiClientiNumero(), s, nome);
+                MessageBox.Show("Nuovo nome impostato.");
+            }
+            else if (comboBoxRipristinaCliente.SelectedIndex == 1)//password
+            {
+                nome = false;
+                string s = textBoxNuovoXCliente.Text;
+                eliminaCliente(@"./loginCliente.txt", email, leggiClientiNumero(), s, nome);
+                MessageBox.Show("Nuova password impostata.");
+            }
+
+            pnlRispristinaCliente.Hide();
+            window = 10;
+        }
+
+        public static void eliminaCliente(string filename, string email, int contaclienti, string modifica, bool nom)
+        {
+            StreamReader sr = new StreamReader(@"./loginCliente.txt");
+            string[] tuttiClienti = new string[14];
+            int n = 0;
+            string pass = null, nome = null;
+            string stringa;
+
+            for (int i = 0; i < contaclienti; i++)
+            {
+                tuttiClienti[i] = sr.ReadLine();
+
+                if (tuttiClienti[i].Split(';')[0] == email)
                 {
-                    int clienteNumeroModifica = i + 1;
+                    nome = tuttiClienti[i].Split(';')[1];
+                    pass = tuttiClienti[i].Split(';')[2];
+                    n = i;
+                }
+            }
+            sr.Close();
 
-                    bool verifica = false;
-
-                    for (int l = 0; l < leggiClientiNumero(); l++)
-                    {
-                        if (l == i)
-                        {
-                            verifica = true;
-                        }
-                        else
-                        {
-                            string s;
-                            s = scriviCliente();
-                            AggiungiSuFileTmp(s, @"./votiTMP.txt");
-                        }
-                    }
-
-                    eliminaFile(@"./voti.txt");
-                    rinominaFile(@"./votiTMP.txt", @"./voti.txt");
-                    if (verifica == true)
-                    {
-                        contClienti--;
-                        AggiungiSuFileCont(contstudenti, @"./contClienti.txt");//diminuisce e riscrive il valore del conta numero studenti
-                    }
-
-
+            StreamWriter sw = new StreamWriter(filename, append: true);
+            for (int i = 0; i < contaclienti; i++)
+            {
+                if (n != i)
+                {
+                    AggiungiSuFileTmp(tuttiClienti[i], @"./tmpCl.txt");
                 }
             }
 
-
-
-
-            if (check == 0) //nome
+            stringa = email;
+            if (nom == true)
             {
-  
-
-                textBoxNuovoXCliente
-                cercaCliente(emailClientePerModifica);
+                stringa = stringa + ";" + modifica + ";" + pass + ";";
             }
-            else if (check == 1) //password
-            { 
-                
+            else if (nom == false)
+            {
+                stringa = stringa + ";" + nome + ";" + modifica + ";";
             }
 
-            string nuovaPassP = textBoxNuovaPass.Text;
-            scrivi(nomeProprietario, nuovaPassP, fileNameP);
-            textBoxNuovoXCliente.Text = "";
-            MessageBox.Show("Nuova password impostata");
-            pnlRispristinaCliente.Hide();
-            window = 0;*/
+            AggiungiSuFileTmp(stringa, @"./tmpCl.txt");
+
+            sw.Close();
+
+            eliminaFile(@"./loginCliente.txt");
+            rinominaFile(@"./tmpCl.txt", @"./loginCliente.txt");
         }
 
         public static void eliminaFile(string filename)
@@ -2859,5 +2889,29 @@ namespace RISTORANTE
             return array[1] + ";" + array[2] + ";" + array[3] + ";" + array[4] + ";" + array[5] + ";" + array[6] + ";" + array[7] + ";";
         }
 
+        private void btnPiatto1Elimina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPiatto2Ripristina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPiatto2Elimina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPiatto3Ripristina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPiatto3Elimina_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
