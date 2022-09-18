@@ -1,0 +1,11 @@
+Carbonara;4,00;primo;spaghetti;guanciale;uova;pecorino;
+Pizza Diavola;5,00;primo;mozzarella;salsa di pomodoro;salame piccante;
+Insalata Russa;3,00;antipasto;insalata mix;;;;
+Bruschette;2,00;antipasto;;;;;
+Risotto;3,50;primo;zafferano;formaggio;;;
+Omlette;2,50;primo;uovo;farina;;
+Polpette;3,50;secondo;;;;
+Lasagne;6,00;secondo;;;;;
+Grissini;3,00;antipasto;;;;;
+Gelato;1,50;dessert;limone;cioccolato;cocco;
+Cioccolato;1,55;dessert;;;;;
