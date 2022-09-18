@@ -2394,16 +2394,6 @@ namespace RISTORANTE
                     textBoxEmailNome.Text = "";
                     pnlEmailInviataCliente.Show();
                     pnlEmailNome.Hide();
-                    /*
-                    //
-                    //
-                    //
-                    //
-                    //
-                    //
-                    //
-                    */
-                    textBoxPinCliente.Text = textBoxPINCheck.Text;
                     emailClientePerModifica = userEmail;
                     textBoxEmailCheck.Text = userEmail;
                     return;
@@ -2844,6 +2834,7 @@ namespace RISTORANTE
         {
             string ripristina = lblEliminato.Text;
             ripristinaPiatto(ripristina, contapiatti);
+            lblEliminato.Text = "/";
             pnlCestino.Hide();
         }
 
@@ -2851,6 +2842,7 @@ namespace RISTORANTE
         {
             StreamReader sr = new StreamReader(filePiatti);
             string[] tuttiPiatti = new string[14];
+            string stringa;
 
             for (int i = 0; i < c; i++)
             {
@@ -2858,7 +2850,8 @@ namespace RISTORANTE
 
                 if (tuttiPiatti[i].Split(';')[0] == "*" && tuttiPiatti[i].Split(';')[1] == r)
                 {
-                    splitAsterisco(tuttiPiatti[i]);
+                    stringa = tuttiPiatti[i].Split(';')[1] + ";" + tuttiPiatti[i].Split(';')[2] + ";" + tuttiPiatti[i].Split(';')[3] + ";" + tuttiPiatti[i].Split(';')[4] + ";" + tuttiPiatti[i].Split(';')[5] + ";" + tuttiPiatti[i].Split(';')[6] + ";" + tuttiPiatti[i].Split(';')[7];
+                    tuttiPiatti[i] = stringa;
                 }
             }
             sr.Close();
@@ -2874,44 +2867,75 @@ namespace RISTORANTE
             rinominaFile(@"./tmp.txt", @"./piatti.txt");
         }
 
-        public static string splitAsterisco(string s)
-        {
-            string[] piattoDiviso = s.Split(new char[] { ';' });
-
-            string[] array = new string[9];
-            int i = 0;
-
-            foreach (var sub in piattoDiviso)
-            {
-                array[i] = ($"{sub}");
-                i++;
-            }
-            return array[1] + ";" + array[2] + ";" + array[3] + ";" + array[4] + ";" + array[5] + ";" + array[6] + ";" + array[7] + ";";
-        }
-
         private void btnPiatto1Elimina_Click(object sender, EventArgs e)
         {
-
+            string piatto;
+            piatto = lblEliminato.Text;
+            eliminaPiattoFisico(filePiatti, piatto, ref contapiatti);
+            lblEliminato.Text = "/";
         }
+        public static void eliminaPiattoFisico(string filename, string piatto,ref int contapiatti)
+        {
+            StreamReader sr = new StreamReader(filename);
+            string[] tuttiPiatti = new string[14];
+            int n = 0;
 
+            for (int i = 0; i < contapiatti; i++)
+            {
+                tuttiPiatti[i] = sr.ReadLine();
+
+                if (tuttiPiatti[i].Split(';')[1] == piatto)
+                {
+                    n = i;
+                }
+            }
+            sr.Close();
+
+            StreamWriter sw = new StreamWriter(filename, append: true);
+            for (int i = 0; i < contapiatti; i++)
+            {
+                if (n != i)
+                {
+                    AggiungiSuFileTmp(tuttiPiatti[i], @"./tmp.txt");
+                }
+            }
+            sw.Close();
+            contapiatti--;
+            eliminaFile(@"./piatti.txt");
+            rinominaFile(@"./tmp.txt", @"./piatti.txt");
+        }
         private void btnPiatto2Ripristina_Click(object sender, EventArgs e)
         {
-
+            string ripristina = lblEliminato2.Text;
+            ripristinaPiatto(ripristina, contapiatti);
+            lblEliminato2.Text = "/";
+            pnlCestino.Hide();
         }
 
         private void btnPiatto2Elimina_Click(object sender, EventArgs e)
         {
-
+            string piatto;
+            piatto = lblEliminato2.Text;
+            eliminaPiattoFisico(filePiatti, piatto, ref contapiatti);
+            lblEliminato.Text = "/";
+            pnlCestino.Hide();
         }
 
         private void btnPiatto3Ripristina_Click(object sender, EventArgs e)
         {
-
+            string ripristina = lblEliminato3.Text;
+            ripristinaPiatto(ripristina, contapiatti);
+            lblEliminato3.Text = "/";
+            pnlCestino.Hide();
         }
 
         private void btnPiatto3Elimina_Click(object sender, EventArgs e)
         {
-
+            string piatto;
+            piatto = lblEliminato3.Text;
+            eliminaPiattoFisico(filePiatti, piatto, ref contapiatti);
+            lblEliminato.Text = "/";
+            pnlCestino.Hide();
         }
     }
 }

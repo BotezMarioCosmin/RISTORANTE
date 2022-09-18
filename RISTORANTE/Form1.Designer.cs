@@ -584,7 +584,7 @@
             this.pnlPrincipale.Controls.Add(this.lblNomeRistoranteProp);
             this.pnlPrincipale.Controls.Add(this.pictureBoxMenu);
             this.pnlPrincipale.Controls.Add(this.pnlScegliOpzione);
-            this.pnlPrincipale.Location = new System.Drawing.Point(12, 14);
+            this.pnlPrincipale.Location = new System.Drawing.Point(12, 15);
             this.pnlPrincipale.Name = "pnlPrincipale";
             this.pnlPrincipale.Size = new System.Drawing.Size(995, 574);
             this.pnlPrincipale.TabIndex = 10;
@@ -645,7 +645,7 @@
             this.pnlCestino.Controls.Add(this.lblEliminato2);
             this.pnlCestino.Controls.Add(this.button2);
             this.pnlCestino.Controls.Add(this.lblEliminato);
-            this.pnlCestino.Location = new System.Drawing.Point(225, 184);
+            this.pnlCestino.Location = new System.Drawing.Point(224, 178);
             this.pnlCestino.Name = "pnlCestino";
             this.pnlCestino.Size = new System.Drawing.Size(233, 143);
             this.pnlCestino.TabIndex = 22;
@@ -2437,7 +2437,7 @@
             this.pnlClienteAccedi.Controls.Add(this.lblClientePassAccedi);
             this.pnlClienteAccedi.Controls.Add(this.lblClienteNomeAccedi);
             this.pnlClienteAccedi.Controls.Add(this.clientePassDimenticata);
-            this.pnlClienteAccedi.Location = new System.Drawing.Point(176, 475);
+            this.pnlClienteAccedi.Location = new System.Drawing.Point(169, 469);
             this.pnlClienteAccedi.Name = "pnlClienteAccedi";
             this.pnlClienteAccedi.Size = new System.Drawing.Size(404, 270);
             this.pnlClienteAccedi.TabIndex = 18;
@@ -2527,7 +2527,7 @@
             this.pnlEmailNome.Controls.Add(this.textBoxEmailNome);
             this.pnlEmailNome.Controls.Add(this.lblClientResert);
             this.pnlEmailNome.Controls.Add(this.btnEmailNome);
-            this.pnlEmailNome.Location = new System.Drawing.Point(775, 23);
+            this.pnlEmailNome.Location = new System.Drawing.Point(775, 22);
             this.pnlEmailNome.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEmailNome.Name = "pnlEmailNome";
             this.pnlEmailNome.Size = new System.Drawing.Size(402, 268);
@@ -2615,7 +2615,7 @@
             this.pnlEmailInviataCliente.Controls.Add(this.btnEmailInviataCliente);
             this.pnlEmailInviataCliente.Controls.Add(this.label3);
             this.pnlEmailInviataCliente.Controls.Add(this.label4);
-            this.pnlEmailInviataCliente.Location = new System.Drawing.Point(214, 451);
+            this.pnlEmailInviataCliente.Location = new System.Drawing.Point(196, 448);
             this.pnlEmailInviataCliente.Name = "pnlEmailInviataCliente";
             this.pnlEmailInviataCliente.Size = new System.Drawing.Size(402, 280);
             this.pnlEmailInviataCliente.TabIndex = 21;
@@ -2665,7 +2665,7 @@
             this.pnlRispristinaCliente.Controls.Add(this.btnPinCliente);
             this.pnlRispristinaCliente.Controls.Add(this.lblPinCliente);
             this.pnlRispristinaCliente.Controls.Add(this.textBoxPinCliente);
-            this.pnlRispristinaCliente.Location = new System.Drawing.Point(231, 431);
+            this.pnlRispristinaCliente.Location = new System.Drawing.Point(241, 431);
             this.pnlRispristinaCliente.Name = "pnlRispristinaCliente";
             this.pnlRispristinaCliente.Size = new System.Drawing.Size(402, 297);
             this.pnlRispristinaCliente.TabIndex = 10;
