@@ -1686,7 +1686,7 @@ namespace RISTORANTE
 
                     scriviPiatto(p, @"./ultimoOrdine.txt");
                 }
-
+                  
                 if (btnOrdinaPrimo1.Text == "X")
                 {
                     piatto p;
