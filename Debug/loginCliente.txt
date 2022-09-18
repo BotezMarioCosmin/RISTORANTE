@@ -1,0 +1,4 @@
+giorgio@gmail.com;giorgio;prova;
+marco@gmail.com;marco;a;
+giovanni@gmail.com;giovanni;giovanni;
+
