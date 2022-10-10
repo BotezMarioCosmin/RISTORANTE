@@ -1,0 +1,3 @@
+Insalata Russa;3;antipasto;insalata mix; ; ; ;
+Bruschette;2;antipasto;; ; ; ;
+Grissini;2;antipasto;; ; ; ;
