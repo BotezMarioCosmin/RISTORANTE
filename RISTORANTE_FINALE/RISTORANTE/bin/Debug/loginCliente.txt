@@ -1,4 +1,0 @@
-mario@gmail.com,mario;1234;
-giovanni@gmail.com;giovanni;giovanni;
-giorgio@gmail.com;giorgione;giorgio;
-botezcosmin2005@gmail.com;cosmin;cosmin;
